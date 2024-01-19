@@ -1,0 +1,1813 @@
+[
+    {
+        "label": "binascii",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "binascii",
+        "description": "binascii",
+        "detail": "binascii",
+        "documentation": {}
+    },
+    {
+        "label": "struct",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "struct",
+        "description": "struct",
+        "detail": "struct",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "key_system",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt_text",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_text",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "sys,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys.",
+        "description": "sys.",
+        "detail": "sys.",
+        "documentation": {}
+    },
+    {
+        "label": "lexers",
+        "importPath": "sphinx.highlighting",
+        "description": "sphinx.highlighting",
+        "isExtraImport": true,
+        "detail": "sphinx.highlighting",
+        "documentation": {}
+    },
+    {
+        "label": "lexers",
+        "importPath": "sphinx.highlighting",
+        "description": "sphinx.highlighting",
+        "isExtraImport": true,
+        "detail": "sphinx.highlighting",
+        "documentation": {}
+    },
+    {
+        "label": "lexers",
+        "importPath": "sphinx.highlighting",
+        "description": "sphinx.highlighting",
+        "isExtraImport": true,
+        "detail": "sphinx.highlighting",
+        "documentation": {}
+    },
+    {
+        "label": "PhpLexer",
+        "importPath": "pygments.lexers.web",
+        "description": "pygments.lexers.web",
+        "isExtraImport": true,
+        "detail": "pygments.lexers.web",
+        "documentation": {}
+    },
+    {
+        "label": "PhpLexer",
+        "importPath": "pygments.lexers.web",
+        "description": "pygments.lexers.web",
+        "isExtraImport": true,
+        "detail": "pygments.lexers.web",
+        "documentation": {}
+    },
+    {
+        "label": "PhpLexer",
+        "importPath": "pygments.lexers.web",
+        "description": "pygments.lexers.web",
+        "isExtraImport": true,
+        "detail": "pygments.lexers.web",
+        "documentation": {}
+    },
+    {
+        "label": "guzzle_sphinx_theme",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "guzzle_sphinx_theme",
+        "description": "guzzle_sphinx_theme",
+        "detail": "guzzle_sphinx_theme",
+        "documentation": {}
+    },
+    {
+        "label": "abspath",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "expanduser",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "importPath": "itertools",
+        "description": "itertools",
+        "isExtraImport": true,
+        "detail": "itertools",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "vis",
+        "importPath": "vis",
+        "description": "vis",
+        "isExtraImport": true,
+        "detail": "vis",
+        "documentation": {}
+    },
+    {
+        "label": "unvis",
+        "importPath": "vis",
+        "description": "vis",
+        "isExtraImport": true,
+        "detail": "vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_WHITE",
+        "importPath": "vis",
+        "description": "vis",
+        "isExtraImport": true,
+        "detail": "vis",
+        "documentation": {}
+    },
+    {
+        "label": "CDLL",
+        "importPath": "ctypes",
+        "description": "ctypes",
+        "isExtraImport": true,
+        "detail": "ctypes",
+        "documentation": {}
+    },
+    {
+        "label": "c_char_p",
+        "importPath": "ctypes",
+        "description": "ctypes",
+        "isExtraImport": true,
+        "detail": "ctypes",
+        "documentation": {}
+    },
+    {
+        "label": "c_int",
+        "importPath": "ctypes",
+        "description": "ctypes",
+        "isExtraImport": true,
+        "detail": "ctypes",
+        "documentation": {}
+    },
+    {
+        "label": "find_library",
+        "importPath": "ctypes.util",
+        "description": "ctypes.util",
+        "isExtraImport": true,
+        "detail": "ctypes.util",
+        "documentation": {}
+    },
+    {
+        "label": "sphinx_rtd_theme",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sphinx_rtd_theme",
+        "description": "sphinx_rtd_theme",
+        "detail": "sphinx_rtd_theme",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Popen",
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "isExtraImport": true,
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "PIPE",
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "isExtraImport": true,
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "key_system",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def key_system(key: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[float, float]:\n    if len(key) != 16:\n        raise Exception(\"key must be 16 characters\")\n    encrypted = None\n    last = y_minus_1\n    secondLast = y_minus_2\n    for i in range(16):\n        encrypted = f(ord(key[i]) + c1 * last + c2 * secondLast)\n        secondLast = last\n        last = encrypted",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def f(x: float) -> float:\n    return (x % 2) - 1\ndef encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:\n    if len(plain_text) == 0:\n        raise Exception(\"Plain text length must be greater than 0\")\n    cipher_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    # for c in plain_text:\n        # encrypted = normalizeY(normalizeASCII(ord(c)) + c1 * last + c2 * second_last)",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt_text",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:\n    if len(plain_text) == 0:\n        raise Exception(\"Plain text length must be greater than 0\")\n    cipher_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    # for c in plain_text:\n        # encrypted = normalizeY(normalizeASCII(ord(c)) + c1 * last + c2 * second_last)\n        # cipher_text += chr(round(denormalizeASCII(encrypted)))\n        # second_last = last",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_text",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:\n    if len(cipher_text) == 0:\n        raise Exception(\"Cipher text length must be greater than 0\")\n    plain_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    # for c in cipher_text:\n    #     normalized = normalizeASCII(ord(c))\n    #     decrypted = denormalizeASCII(denormalizeY(normalized) - c1 * last - c2 * second_last)\n    #     plain_text += chr(round(decrypted))",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "normalizeASCII",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def normalizeASCII(x: float) -> float:\n    return (x - 127.5) / 127.5\ndef denormalizeASCII(x: float) -> float:\n    return x * 127.5 + 127.5\ndef normalizeY(y: float) -> float:\n    return y / 3\ndef denormalizeY(y: float) -> float:\n    return y * 3",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "denormalizeASCII",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def denormalizeASCII(x: float) -> float:\n    return x * 127.5 + 127.5\ndef normalizeY(y: float) -> float:\n    return y / 3\ndef denormalizeY(y: float) -> float:\n    return y * 3",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "normalizeY",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def normalizeY(y: float) -> float:\n    return y / 3\ndef denormalizeY(y: float) -> float:\n    return y * 3",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "denormalizeY",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def denormalizeY(y: float) -> float:\n    return y * 3",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "dotenv_path",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "dotenv_path = Path(\"../.env\")\nload_dotenv(dotenv_path=dotenv_path)\nKEY_SYSTEM_C1 = os.getenv(\"C1\")\nKEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C1",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_C1 = os.getenv(\"C1\")\nKEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C2",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C1",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C2",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "encrypted",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "encrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "decrypted",
+        "kind": 5,
+        "importPath": "scripts.test",
+        "description": "scripts.test",
+        "peekOfCode": "decrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "detail": "scripts.test",
+        "documentation": {}
+    },
+    {
+        "label": "key_system",
+        "kind": 2,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "def key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):\n        temp = ord(key[i]) + c1 * y_array[i - 1] + c2 * y_array[i - 2]\n        y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(16):",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt",
+        "kind": 2,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "def encrypt(plaintext, c1Prime, c2Prime):\n    answer_array.append(ord(plaintext[0]) + c1Prime * yneg1prime + c2Prime * yneg2prime)\n    answer_array.append(ord(plaintext[1]) + c1Prime * answer_array[0] + c2Prime * yneg1prime)\n    for i in range(2, len(plaintext)):\n        answer_array.append(ord(plaintext[i]) + c1Prime * answer_array[i - 1] + c2Prime * answer_array[i - 2])\n    for i in range(len(plaintext)):\n        print(chr(round(answer_array[i])))\n    decrypt(answer_array, c1Prime, c2Prime)\ndef decrypt(answer_array, c1Prime, c2Prime):\n    decrypt_array.append((answer_array[0]) - c1Prime * yneg1prime - c2Prime * yneg2prime)",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt",
+        "kind": 2,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "def decrypt(answer_array, c1Prime, c2Prime):\n    decrypt_array.append((answer_array[0]) - c1Prime * yneg1prime - c2Prime * yneg2prime)\n    decrypt_array.append((answer_array[1]) - c1Prime * answer_array[0] - c2Prime * yneg1prime)\n    for i in range(2, len(plaintext)):\n        decrypt_array.append((answer_array[i]) - c1Prime * answer_array[i - 1] - c2Prime * answer_array[i - 2])\n    for i in range(len(decrypt_array)):\n        print(chr(round(decrypt_array[i])))\nkey = input(\"Enter your 16-character key: \")\nplaintext = input(\"Enter your plain text: \")\nif len(key) != 16:",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "c1",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "c1 = -0.125\nc2 = 0.234\nyneg1 = 0.492\nyneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "c2",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "c2 = 0.234\nyneg1 = 0.492\nyneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "yneg1",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "yneg1 = 0.492\nyneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "yneg2",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "yneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "yneg1prime",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "yneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "yneg2prime",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "yneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "y_array",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "y_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "answer_array",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "answer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_array",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "decrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):\n        temp = ord(key[i]) + c1 * y_array[i - 1] + c2 * y_array[i - 2]",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "temp",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "temp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):\n        temp = ord(key[i]) + c1 * y_array[i - 1] + c2 * y_array[i - 2]\n        y_array.append(math.fmod(temp, 2.0) - 1)",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "key",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "key = input(\"Enter your 16-character key: \")\nplaintext = input(\"Enter your plain text: \")\nif len(key) != 16:\n    print(\"Key is not 16 characters long.\")\nelse:\n    key_system(key)",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "plaintext",
+        "kind": 5,
+        "importPath": "scripts.tmp",
+        "description": "scripts.tmp",
+        "peekOfCode": "plaintext = input(\"Enter your plain text: \")\nif len(key) != 16:\n    print(\"Key is not 16 characters long.\")\nelse:\n    key_system(key)",
+        "detail": "scripts.tmp",
+        "documentation": {}
+    },
+    {
+        "label": "lexers['php']",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "lexers['php'] = PhpLexer(startinline=True, linenos=1)\nlexers['php-annotations'] = PhpLexer(startinline=True, linenos=1)\nprimary_domain = 'php'\nextensions = []\ntemplates_path = ['_templates']\nsource_suffix = '.rst'\nmaster_doc = 'index'\nproject = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "lexers['php-annotations']",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "lexers['php-annotations'] = PhpLexer(startinline=True, linenos=1)\nprimary_domain = 'php'\nextensions = []\ntemplates_path = ['_templates']\nsource_suffix = '.rst'\nmaster_doc = 'index'\nproject = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "primary_domain",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "primary_domain = 'php'\nextensions = []\ntemplates_path = ['_templates']\nsource_suffix = '.rst'\nmaster_doc = 'index'\nproject = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "extensions = []\ntemplates_path = ['_templates']\nsource_suffix = '.rst'\nmaster_doc = 'index'\nproject = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "templates_path",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "templates_path = ['_templates']\nsource_suffix = '.rst'\nmaster_doc = 'index'\nproject = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "source_suffix",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "source_suffix = '.rst'\nmaster_doc = 'index'\nproject = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "master_doc",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "master_doc = 'index'\nproject = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "project = u'Guzzle'\ncopyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme\nhtml_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "copyright = u'2015, Michael Dowling'\nversion = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme\nhtml_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'\nhtml_theme_path = guzzle_sphinx_theme.html_theme_path()",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "version",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "version = '7'\nhtml_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme\nhtml_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'\nhtml_theme_path = guzzle_sphinx_theme.html_theme_path()\nhtml_theme = 'guzzle_sphinx_theme'",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_title",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_title = \"Guzzle Documentation\"\nhtml_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme\nhtml_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'\nhtml_theme_path = guzzle_sphinx_theme.html_theme_path()\nhtml_theme = 'guzzle_sphinx_theme'\n# Custom sidebar templates, maps document names to template names.",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_short_title",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_short_title = \"Guzzle 7\"\nexclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme\nhtml_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'\nhtml_theme_path = guzzle_sphinx_theme.html_theme_path()\nhtml_theme = 'guzzle_sphinx_theme'\n# Custom sidebar templates, maps document names to template names.\nhtml_sidebars = {",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "exclude_patterns = ['_build']\nhtml_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme\nhtml_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'\nhtml_theme_path = guzzle_sphinx_theme.html_theme_path()\nhtml_theme = 'guzzle_sphinx_theme'\n# Custom sidebar templates, maps document names to template names.\nhtml_sidebars = {\n    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_static_path",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_static_path = ['_static']\n##### Guzzle sphinx theme\nimport guzzle_sphinx_theme\nhtml_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'\nhtml_theme_path = guzzle_sphinx_theme.html_theme_path()\nhtml_theme = 'guzzle_sphinx_theme'\n# Custom sidebar templates, maps document names to template names.\nhtml_sidebars = {\n    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']\n}",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_translator_class",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'\nhtml_theme_path = guzzle_sphinx_theme.html_theme_path()\nhtml_theme = 'guzzle_sphinx_theme'\n# Custom sidebar templates, maps document names to template names.\nhtml_sidebars = {\n    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']\n}\n# Register the theme as an extension to generate a sitemap.xml\nextensions.append(\"guzzle_sphinx_theme\")\n# Guzzle theme options (see theme.conf for more information)",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme_path",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_theme_path = guzzle_sphinx_theme.html_theme_path()\nhtml_theme = 'guzzle_sphinx_theme'\n# Custom sidebar templates, maps document names to template names.\nhtml_sidebars = {\n    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']\n}\n# Register the theme as an extension to generate a sitemap.xml\nextensions.append(\"guzzle_sphinx_theme\")\n# Guzzle theme options (see theme.conf for more information)\nhtml_theme_options = {",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_theme = 'guzzle_sphinx_theme'\n# Custom sidebar templates, maps document names to template names.\nhtml_sidebars = {\n    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']\n}\n# Register the theme as an extension to generate a sitemap.xml\nextensions.append(\"guzzle_sphinx_theme\")\n# Guzzle theme options (see theme.conf for more information)\nhtml_theme_options = {\n    # Set the path to a special layout to include for the homepage",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_sidebars",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_sidebars = {\n    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']\n}\n# Register the theme as an extension to generate a sitemap.xml\nextensions.append(\"guzzle_sphinx_theme\")\n# Guzzle theme options (see theme.conf for more information)\nhtml_theme_options = {\n    # Set the path to a special layout to include for the homepage\n    # \"index_template\": \"homepage.html\",\n    # Allow a separate homepage from the master_doc",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme_options",
+        "kind": 5,
+        "importPath": "vendor.guzzlehttp.guzzle.docs.conf",
+        "description": "vendor.guzzlehttp.guzzle.docs.conf",
+        "peekOfCode": "html_theme_options = {\n    # Set the path to a special layout to include for the homepage\n    # \"index_template\": \"homepage.html\",\n    # Allow a separate homepage from the master_doc\n    # homepage = index\n    # Set the name of the project to appear in the nav menu\n    # \"project_nav_name\": \"Guzzle\",\n    # Set your Disqus short name to enable comments\n    # \"disqus_comments_shortname\": \"my_disqus_comments_short_name\",\n    # Set you GA account ID to enable tracking",
+        "detail": "vendor.guzzlehttp.guzzle.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#needs_sphinx",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#needs_sphinx = '1.0'\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    'sphinx.ext.todo',\n    'sphinx_rtd_theme',\n]\n# Add any paths that contain templates here, relative to this directory.\ntemplates_path = ['_templates']",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "extensions = [\n    'sphinx.ext.todo',\n    'sphinx_rtd_theme',\n]\n# Add any paths that contain templates here, relative to this directory.\ntemplates_path = ['_templates']\n# The suffix of source filenames.\nsource_suffix = '.rst'\n# The encoding of source files.\n#source_encoding = 'utf-8-sig'",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "templates_path",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "templates_path = ['_templates']\n# The suffix of source filenames.\nsource_suffix = '.rst'\n# The encoding of source files.\n#source_encoding = 'utf-8-sig'\n# The master toctree document.\nmaster_doc = 'index'\n# General information about the project.\nproject = u'Mockery Docs'\ncopyright = u'Pádraic Brady, Dave Marshall and contributors'",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "source_suffix",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "source_suffix = '.rst'\n# The encoding of source files.\n#source_encoding = 'utf-8-sig'\n# The master toctree document.\nmaster_doc = 'index'\n# General information about the project.\nproject = u'Mockery Docs'\ncopyright = u'Pádraic Brady, Dave Marshall and contributors'\n# The version info for the project you're documenting, acts as replacement for\n# |version| and |release|, also used in various other places throughout the",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#source_encoding",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#source_encoding = 'utf-8-sig'\n# The master toctree document.\nmaster_doc = 'index'\n# General information about the project.\nproject = u'Mockery Docs'\ncopyright = u'Pádraic Brady, Dave Marshall and contributors'\n# The version info for the project you're documenting, acts as replacement for\n# |version| and |release|, also used in various other places throughout the\n# built documents.\n#",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "master_doc",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "master_doc = 'index'\n# General information about the project.\nproject = u'Mockery Docs'\ncopyright = u'Pádraic Brady, Dave Marshall and contributors'\n# The version info for the project you're documenting, acts as replacement for\n# |version| and |release|, also used in various other places throughout the\n# built documents.\n#\n# The short X.Y version.\nversion = '1.6'",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "project = u'Mockery Docs'\ncopyright = u'Pádraic Brady, Dave Marshall and contributors'\n# The version info for the project you're documenting, acts as replacement for\n# |version| and |release|, also used in various other places throughout the\n# built documents.\n#\n# The short X.Y version.\nversion = '1.6'\n# The full version, including alpha/beta/rc tags.\nrelease = '1.6.6'",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "copyright = u'Pádraic Brady, Dave Marshall and contributors'\n# The version info for the project you're documenting, acts as replacement for\n# |version| and |release|, also used in various other places throughout the\n# built documents.\n#\n# The short X.Y version.\nversion = '1.6'\n# The full version, including alpha/beta/rc tags.\nrelease = '1.6.6'\n# The language for content autogenerated by Sphinx. Refer to documentation",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "version",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "version = '1.6'\n# The full version, including alpha/beta/rc tags.\nrelease = '1.6.6'\n# The language for content autogenerated by Sphinx. Refer to documentation\n# for a list of supported languages.\n#language = None\n# There are two options for replacing |today|: either, you set today to some\n# non-false value, then it is used:\n#today = ''\n# Else, today_fmt is used as the format for a strftime call.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "release",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "release = '1.6.6'\n# The language for content autogenerated by Sphinx. Refer to documentation\n# for a list of supported languages.\n#language = None\n# There are two options for replacing |today|: either, you set today to some\n# non-false value, then it is used:\n#today = ''\n# Else, today_fmt is used as the format for a strftime call.\n#today_fmt = '%B %d, %Y'\n# List of patterns, relative to source directory, that match files and",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#language",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#language = None\n# There are two options for replacing |today|: either, you set today to some\n# non-false value, then it is used:\n#today = ''\n# Else, today_fmt is used as the format for a strftime call.\n#today_fmt = '%B %d, %Y'\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\nexclude_patterns = ['_build']\n# The reST default role (used for this markup: `text`) to use for all",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#today",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#today = ''\n# Else, today_fmt is used as the format for a strftime call.\n#today_fmt = '%B %d, %Y'\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\nexclude_patterns = ['_build']\n# The reST default role (used for this markup: `text`) to use for all\n# documents.\n#default_role = None\n# If true, '()' will be appended to :func: etc. cross-reference text.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#today_fmt",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#today_fmt = '%B %d, %Y'\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\nexclude_patterns = ['_build']\n# The reST default role (used for this markup: `text`) to use for all\n# documents.\n#default_role = None\n# If true, '()' will be appended to :func: etc. cross-reference text.\n#add_function_parentheses = True\n# If true, the current module name will be prepended to all description",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "exclude_patterns = ['_build']\n# The reST default role (used for this markup: `text`) to use for all\n# documents.\n#default_role = None\n# If true, '()' will be appended to :func: etc. cross-reference text.\n#add_function_parentheses = True\n# If true, the current module name will be prepended to all description\n# unit titles (such as .. function::).\n#add_module_names = True\n# If true, sectionauthor and moduleauthor directives will be shown in the",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#default_role",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#default_role = None\n# If true, '()' will be appended to :func: etc. cross-reference text.\n#add_function_parentheses = True\n# If true, the current module name will be prepended to all description\n# unit titles (such as .. function::).\n#add_module_names = True\n# If true, sectionauthor and moduleauthor directives will be shown in the\n# output. They are ignored by default.\n#show_authors = False\n# The name of the Pygments (syntax highlighting) style to use.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#add_function_parentheses",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#add_function_parentheses = True\n# If true, the current module name will be prepended to all description\n# unit titles (such as .. function::).\n#add_module_names = True\n# If true, sectionauthor and moduleauthor directives will be shown in the\n# output. They are ignored by default.\n#show_authors = False\n# The name of the Pygments (syntax highlighting) style to use.\npygments_style = 'sphinx'\n# A list of ignored prefixes for module index sorting.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#add_module_names",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#add_module_names = True\n# If true, sectionauthor and moduleauthor directives will be shown in the\n# output. They are ignored by default.\n#show_authors = False\n# The name of the Pygments (syntax highlighting) style to use.\npygments_style = 'sphinx'\n# A list of ignored prefixes for module index sorting.\n#modindex_common_prefix = []\n# If true, keep warnings as \"system message\" paragraphs in the built documents.\n#keep_warnings = False",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#show_authors",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#show_authors = False\n# The name of the Pygments (syntax highlighting) style to use.\npygments_style = 'sphinx'\n# A list of ignored prefixes for module index sorting.\n#modindex_common_prefix = []\n# If true, keep warnings as \"system message\" paragraphs in the built documents.\n#keep_warnings = False\n# -- Options for HTML output ----------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "pygments_style",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "pygments_style = 'sphinx'\n# A list of ignored prefixes for module index sorting.\n#modindex_common_prefix = []\n# If true, keep warnings as \"system message\" paragraphs in the built documents.\n#keep_warnings = False\n# -- Options for HTML output ----------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\nhtml_theme = 'sphinx_rtd_theme'\n# Theme options are theme-specific and customize the look and feel of a theme",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#modindex_common_prefix",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#modindex_common_prefix = []\n# If true, keep warnings as \"system message\" paragraphs in the built documents.\n#keep_warnings = False\n# -- Options for HTML output ----------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\nhtml_theme = 'sphinx_rtd_theme'\n# Theme options are theme-specific and customize the look and feel of a theme\n# further.  For a list of options available for each theme, see the\n# documentation.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#keep_warnings",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#keep_warnings = False\n# -- Options for HTML output ----------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\nhtml_theme = 'sphinx_rtd_theme'\n# Theme options are theme-specific and customize the look and feel of a theme\n# further.  For a list of options available for each theme, see the\n# documentation.\n#html_theme_options = {}\n# Add any paths that contain custom themes here, relative to this directory.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "html_theme = 'sphinx_rtd_theme'\n# Theme options are theme-specific and customize the look and feel of a theme\n# further.  For a list of options available for each theme, see the\n# documentation.\n#html_theme_options = {}\n# Add any paths that contain custom themes here, relative to this directory.\n#html_theme_path = []\n# The name of an image file (within the static path) to use as favicon of the\n# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32\n# pixels large.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_theme_options",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_theme_options = {}\n# Add any paths that contain custom themes here, relative to this directory.\n#html_theme_path = []\n# The name of an image file (within the static path) to use as favicon of the\n# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32\n# pixels large.\n#html_favicon = None\n# Add any paths that contain custom static files (such as style sheets) here,\n# relative to this directory. They are copied after the builtin static files,\n# so a file named \"default.css\" will overwrite the builtin \"default.css\".",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_theme_path",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_theme_path = []\n# The name of an image file (within the static path) to use as favicon of the\n# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32\n# pixels large.\n#html_favicon = None\n# Add any paths that contain custom static files (such as style sheets) here,\n# relative to this directory. They are copied after the builtin static files,\n# so a file named \"default.css\" will overwrite the builtin \"default.css\".\nhtml_static_path = ['_static']\n# Add any extra paths that contain custom files (such as robots.txt or",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_favicon",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_favicon = None\n# Add any paths that contain custom static files (such as style sheets) here,\n# relative to this directory. They are copied after the builtin static files,\n# so a file named \"default.css\" will overwrite the builtin \"default.css\".\nhtml_static_path = ['_static']\n# Add any extra paths that contain custom files (such as robots.txt or\n# .htaccess) here, relative to this directory. These files are copied\n# directly to the root of the documentation.\n#html_extra_path = []\n# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_static_path",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "html_static_path = ['_static']\n# Add any extra paths that contain custom files (such as robots.txt or\n# .htaccess) here, relative to this directory. These files are copied\n# directly to the root of the documentation.\n#html_extra_path = []\n# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,\n# using the given strftime format.\n#html_last_updated_fmt = '%b %d, %Y'\n# If true, SmartyPants will be used to convert quotes and dashes to\n# typographically correct entities.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_extra_path",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_extra_path = []\n# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,\n# using the given strftime format.\n#html_last_updated_fmt = '%b %d, %Y'\n# If true, SmartyPants will be used to convert quotes and dashes to\n# typographically correct entities.\n#html_use_smartypants = True\n# Custom sidebar templates, maps document names to template names.\n#html_sidebars = {}\n# Additional templates that should be rendered to pages, maps page names to",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_last_updated_fmt",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_last_updated_fmt = '%b %d, %Y'\n# If true, SmartyPants will be used to convert quotes and dashes to\n# typographically correct entities.\n#html_use_smartypants = True\n# Custom sidebar templates, maps document names to template names.\n#html_sidebars = {}\n# Additional templates that should be rendered to pages, maps page names to\n# template names.\n#html_additional_pages = {}\n# If false, no module index is generated.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_use_smartypants",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_use_smartypants = True\n# Custom sidebar templates, maps document names to template names.\n#html_sidebars = {}\n# Additional templates that should be rendered to pages, maps page names to\n# template names.\n#html_additional_pages = {}\n# If false, no module index is generated.\n#html_domain_indices = True\n# If false, no index is generated.\n#html_use_index = True",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_sidebars",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_sidebars = {}\n# Additional templates that should be rendered to pages, maps page names to\n# template names.\n#html_additional_pages = {}\n# If false, no module index is generated.\n#html_domain_indices = True\n# If false, no index is generated.\n#html_use_index = True\n# If true, the index is split into individual pages for each letter.\n#html_split_index = False",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_additional_pages",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_additional_pages = {}\n# If false, no module index is generated.\n#html_domain_indices = True\n# If false, no index is generated.\n#html_use_index = True\n# If true, the index is split into individual pages for each letter.\n#html_split_index = False\n# If true, links to the reST sources are added to the pages.\n#html_show_sourcelink = True\n# If true, \"Created using Sphinx\" is shown in the HTML footer. Default is True.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_domain_indices",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_domain_indices = True\n# If false, no index is generated.\n#html_use_index = True\n# If true, the index is split into individual pages for each letter.\n#html_split_index = False\n# If true, links to the reST sources are added to the pages.\n#html_show_sourcelink = True\n# If true, \"Created using Sphinx\" is shown in the HTML footer. Default is True.\n#html_show_sphinx = True\n# If true, \"(C) Copyright ...\" is shown in the HTML footer. Default is True.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_use_index",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_use_index = True\n# If true, the index is split into individual pages for each letter.\n#html_split_index = False\n# If true, links to the reST sources are added to the pages.\n#html_show_sourcelink = True\n# If true, \"Created using Sphinx\" is shown in the HTML footer. Default is True.\n#html_show_sphinx = True\n# If true, \"(C) Copyright ...\" is shown in the HTML footer. Default is True.\n#html_show_copyright = True\n# If true, an OpenSearch description file will be output, and all pages will",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_split_index",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_split_index = False\n# If true, links to the reST sources are added to the pages.\n#html_show_sourcelink = True\n# If true, \"Created using Sphinx\" is shown in the HTML footer. Default is True.\n#html_show_sphinx = True\n# If true, \"(C) Copyright ...\" is shown in the HTML footer. Default is True.\n#html_show_copyright = True\n# If true, an OpenSearch description file will be output, and all pages will\n# contain a <link> tag referring to it.  The value of this option must be the\n# base URL from which the finished HTML is served.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_show_sourcelink",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_show_sourcelink = True\n# If true, \"Created using Sphinx\" is shown in the HTML footer. Default is True.\n#html_show_sphinx = True\n# If true, \"(C) Copyright ...\" is shown in the HTML footer. Default is True.\n#html_show_copyright = True\n# If true, an OpenSearch description file will be output, and all pages will\n# contain a <link> tag referring to it.  The value of this option must be the\n# base URL from which the finished HTML is served.\n#html_use_opensearch = ''\n# This is the file name suffix for HTML files (e.g. \".xhtml\").",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_show_sphinx",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_show_sphinx = True\n# If true, \"(C) Copyright ...\" is shown in the HTML footer. Default is True.\n#html_show_copyright = True\n# If true, an OpenSearch description file will be output, and all pages will\n# contain a <link> tag referring to it.  The value of this option must be the\n# base URL from which the finished HTML is served.\n#html_use_opensearch = ''\n# This is the file name suffix for HTML files (e.g. \".xhtml\").\n#html_file_suffix = None\n# Output file base name for HTML help builder.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_show_copyright",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_show_copyright = True\n# If true, an OpenSearch description file will be output, and all pages will\n# contain a <link> tag referring to it.  The value of this option must be the\n# base URL from which the finished HTML is served.\n#html_use_opensearch = ''\n# This is the file name suffix for HTML files (e.g. \".xhtml\").\n#html_file_suffix = None\n# Output file base name for HTML help builder.\nhtmlhelp_basename = 'MockeryDocsdoc'\n# -- Options for LaTeX output ---------------------------------------------",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_use_opensearch",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_use_opensearch = ''\n# This is the file name suffix for HTML files (e.g. \".xhtml\").\n#html_file_suffix = None\n# Output file base name for HTML help builder.\nhtmlhelp_basename = 'MockeryDocsdoc'\n# -- Options for LaTeX output ---------------------------------------------\nlatex_elements = {\n# The paper size ('letterpaper' or 'a4paper').\n#'papersize': 'letterpaper',\n# The font size ('10pt', '11pt' or '12pt').",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#html_file_suffix",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#html_file_suffix = None\n# Output file base name for HTML help builder.\nhtmlhelp_basename = 'MockeryDocsdoc'\n# -- Options for LaTeX output ---------------------------------------------\nlatex_elements = {\n# The paper size ('letterpaper' or 'a4paper').\n#'papersize': 'letterpaper',\n# The font size ('10pt', '11pt' or '12pt').\n#'pointsize': '10pt',\n# Additional stuff for the LaTeX preamble.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "htmlhelp_basename",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "htmlhelp_basename = 'MockeryDocsdoc'\n# -- Options for LaTeX output ---------------------------------------------\nlatex_elements = {\n# The paper size ('letterpaper' or 'a4paper').\n#'papersize': 'letterpaper',\n# The font size ('10pt', '11pt' or '12pt').\n#'pointsize': '10pt',\n# Additional stuff for the LaTeX preamble.\n#'preamble': '',\n}",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "latex_elements",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "latex_elements = {\n# The paper size ('letterpaper' or 'a4paper').\n#'papersize': 'letterpaper',\n# The font size ('10pt', '11pt' or '12pt').\n#'pointsize': '10pt',\n# Additional stuff for the LaTeX preamble.\n#'preamble': '',\n}\n# Grouping the document tree into LaTeX files. List of tuples\n# (source start file, target name, title,",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "latex_documents",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "latex_documents = [\n  ('index', 'MockeryDocs.tex', u'Mockery Docs Documentation',\n   u'Pádraic Brady, Dave Marshall, Wouter, Graham Campbell', 'manual'),\n]\n# The name of an image file (relative to this directory) to place at the top of\n# the title page.\n#latex_logo = None\n# For \"manual\" documents, if this is true, then toplevel headings are parts,\n# not chapters.\n#latex_use_parts = False",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#latex_logo",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#latex_logo = None\n# For \"manual\" documents, if this is true, then toplevel headings are parts,\n# not chapters.\n#latex_use_parts = False\n# If true, show page references after internal links.\n#latex_show_pagerefs = False\n# If true, show URL addresses after external links.\n#latex_show_urls = False\n# Documents to append as an appendix to all manuals.\n#latex_appendices = []",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#latex_use_parts",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#latex_use_parts = False\n# If true, show page references after internal links.\n#latex_show_pagerefs = False\n# If true, show URL addresses after external links.\n#latex_show_urls = False\n# Documents to append as an appendix to all manuals.\n#latex_appendices = []\n# If false, no module index is generated.\n#latex_domain_indices = True\n# -- Options for manual page output ---------------------------------------",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#latex_show_pagerefs",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#latex_show_pagerefs = False\n# If true, show URL addresses after external links.\n#latex_show_urls = False\n# Documents to append as an appendix to all manuals.\n#latex_appendices = []\n# If false, no module index is generated.\n#latex_domain_indices = True\n# -- Options for manual page output ---------------------------------------\n# One entry per manual page. List of tuples\n# (source start file, name, description, authors, manual section).",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#latex_show_urls",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#latex_show_urls = False\n# Documents to append as an appendix to all manuals.\n#latex_appendices = []\n# If false, no module index is generated.\n#latex_domain_indices = True\n# -- Options for manual page output ---------------------------------------\n# One entry per manual page. List of tuples\n# (source start file, name, description, authors, manual section).\nman_pages = [\n    ('index', 'mockerydocs', u'Mockery Docs Documentation',",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#latex_appendices",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#latex_appendices = []\n# If false, no module index is generated.\n#latex_domain_indices = True\n# -- Options for manual page output ---------------------------------------\n# One entry per manual page. List of tuples\n# (source start file, name, description, authors, manual section).\nman_pages = [\n    ('index', 'mockerydocs', u'Mockery Docs Documentation',\n     [u'Pádraic Brady, Dave Marshall, Wouter, Graham Campbell'], 1)\n]",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#latex_domain_indices",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#latex_domain_indices = True\n# -- Options for manual page output ---------------------------------------\n# One entry per manual page. List of tuples\n# (source start file, name, description, authors, manual section).\nman_pages = [\n    ('index', 'mockerydocs', u'Mockery Docs Documentation',\n     [u'Pádraic Brady, Dave Marshall, Wouter, Graham Campbell'], 1)\n]\n# If true, show URL addresses after external links.\n#man_show_urls = False",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "man_pages",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "man_pages = [\n    ('index', 'mockerydocs', u'Mockery Docs Documentation',\n     [u'Pádraic Brady, Dave Marshall, Wouter, Graham Campbell'], 1)\n]\n# If true, show URL addresses after external links.\n#man_show_urls = False\n# -- Options for Texinfo output -------------------------------------------\n# Grouping the document tree into Texinfo files. List of tuples\n# (source start file, target name, title, author,\n#  dir menu entry, description, category)",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#man_show_urls",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#man_show_urls = False\n# -- Options for Texinfo output -------------------------------------------\n# Grouping the document tree into Texinfo files. List of tuples\n# (source start file, target name, title, author,\n#  dir menu entry, description, category)\ntexinfo_documents = [\n  ('index', 'MockeryDocs', u'Mockery Docs Documentation',\n   u'Pádraic Brady, Dave Marshall, Wouter, Graham Campbell', 'MockeryDocs', 'One line description of project.',\n   'Miscellaneous'),\n]",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "texinfo_documents",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "texinfo_documents = [\n  ('index', 'MockeryDocs', u'Mockery Docs Documentation',\n   u'Pádraic Brady, Dave Marshall, Wouter, Graham Campbell', 'MockeryDocs', 'One line description of project.',\n   'Miscellaneous'),\n]\n# Documents to append as an appendix to all manuals.\n#texinfo_appendices = []\n# If false, no module index is generated.\n#texinfo_domain_indices = True\n# How to display URL addresses: 'footnote', 'no', or 'inline'.",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#texinfo_appendices",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#texinfo_appendices = []\n# If false, no module index is generated.\n#texinfo_domain_indices = True\n# How to display URL addresses: 'footnote', 'no', or 'inline'.\n#texinfo_show_urls = 'footnote'\n# If true, do not generate a @detailmenu in the \"Top\" node's menu.\n#texinfo_no_detailmenu = False\n#on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org\non_rtd = os.environ.get('READTHEDOCS', None) == 'True'\nif not on_rtd:  # only import and set the theme if we're building docs locally",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#texinfo_domain_indices",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#texinfo_domain_indices = True\n# How to display URL addresses: 'footnote', 'no', or 'inline'.\n#texinfo_show_urls = 'footnote'\n# If true, do not generate a @detailmenu in the \"Top\" node's menu.\n#texinfo_no_detailmenu = False\n#on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org\non_rtd = os.environ.get('READTHEDOCS', None) == 'True'\nif not on_rtd:  # only import and set the theme if we're building docs locally\n    import sphinx_rtd_theme\n    html_theme = 'sphinx_rtd_theme'",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#texinfo_show_urls",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#texinfo_show_urls = 'footnote'\n# If true, do not generate a @detailmenu in the \"Top\" node's menu.\n#texinfo_no_detailmenu = False\n#on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org\non_rtd = os.environ.get('READTHEDOCS', None) == 'True'\nif not on_rtd:  # only import and set the theme if we're building docs locally\n    import sphinx_rtd_theme\n    html_theme = 'sphinx_rtd_theme'\n    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]\n    print(sphinx_rtd_theme.get_html_theme_path())",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "#texinfo_no_detailmenu",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "#texinfo_no_detailmenu = False\n#on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org\non_rtd = os.environ.get('READTHEDOCS', None) == 'True'\nif not on_rtd:  # only import and set the theme if we're building docs locally\n    import sphinx_rtd_theme\n    html_theme = 'sphinx_rtd_theme'\n    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]\n    print(sphinx_rtd_theme.get_html_theme_path())\n# load PhpLexer\nfrom sphinx.highlighting import lexers",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "on_rtd",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "on_rtd = os.environ.get('READTHEDOCS', None) == 'True'\nif not on_rtd:  # only import and set the theme if we're building docs locally\n    import sphinx_rtd_theme\n    html_theme = 'sphinx_rtd_theme'\n    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]\n    print(sphinx_rtd_theme.get_html_theme_path())\n# load PhpLexer\nfrom sphinx.highlighting import lexers\nfrom pygments.lexers.web import PhpLexer\n# enable highlighting for PHP code not between <?php ... ?> by default",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "lexers['php']",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "lexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "lexers['php-annotations']",
+        "kind": 5,
+        "importPath": "vendor.mockery.mockery.docs.conf",
+        "description": "vendor.mockery.mockery.docs.conf",
+        "peekOfCode": "lexers['php-annotations'] = PhpLexer(startinline=True)",
+        "detail": "vendor.mockery.mockery.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "__dir__",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "description": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "peekOfCode": "__dir__ = dirname(abspath(__file__))\nOUTPUT_FILE = join(__dir__, '..', 'fixtures', 'unvis_fixtures.json')\n# Add custom fixtures here\nCUSTOM_FIXTURES = [\n    # test long multibyte string\n    ''.join(chr(cp) for cp in range(1024)),\n    'foo bar',\n    'foo\\nbar',\n    \"$bar = 'baz';\",\n    r'$foo = \"\\x20\\\\x20\\\\\\x20\\\\\\\\x20\"',",
+        "detail": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_FILE",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "description": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "peekOfCode": "OUTPUT_FILE = join(__dir__, '..', 'fixtures', 'unvis_fixtures.json')\n# Add custom fixtures here\nCUSTOM_FIXTURES = [\n    # test long multibyte string\n    ''.join(chr(cp) for cp in range(1024)),\n    'foo bar',\n    'foo\\nbar',\n    \"$bar = 'baz';\",\n    r'$foo = \"\\x20\\\\x20\\\\\\x20\\\\\\\\x20\"',\n    '$foo = function($bar) use($baz) {\\n\\treturn $baz->getFoo()\\n};'",
+        "detail": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "documentation": {}
+    },
+    {
+        "label": "CUSTOM_FIXTURES",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "description": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "peekOfCode": "CUSTOM_FIXTURES = [\n    # test long multibyte string\n    ''.join(chr(cp) for cp in range(1024)),\n    'foo bar',\n    'foo\\nbar',\n    \"$bar = 'baz';\",\n    r'$foo = \"\\x20\\\\x20\\\\\\x20\\\\\\\\x20\"',\n    '$foo = function($bar) use($baz) {\\n\\treturn $baz->getFoo()\\n};'\n]\nRANGES = {",
+        "detail": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "documentation": {}
+    },
+    {
+        "label": "RANGES",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "description": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "peekOfCode": "RANGES = {\n    # All valid codepoints in the BMP\n    'bmp': chain(range(0x0000, 0xD800), range(0xE000, 0xFFFF)),\n    # Smaller set of pertinent? codepoints inside BMP\n    # see: http://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane\n    'small': chain(\n        # latin blocks\n        range(0x0000, 0x0250),\n        # Greek, Cyrillic\n        range(0x0370, 0x0530),",
+        "detail": "vendor.psy.psysh.test.tools.gen_unvis_fixtures",
+        "documentation": {}
+    },
+    {
+        "label": "vis",
+        "kind": 2,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "def vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.\n    `flags` must be one of the VIS_* constants\n    C definition:\n    int strvis(char *dst, char *src, int flags);\n    \"\"\"\n    src = bytes(src, 'utf-8')\n    dst_p = c_char_p(bytes(len(src) * 4))\n    src_p = c_char_p(src)",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "unvis",
+        "kind": 2,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "def unvis(src):\n    \"\"\"\n    Decodes a string encoded by vis.\n    C definition:\n    int strunvis(char *dst, char *src);\n    \"\"\"\n    src = bytes(src, 'utf-8')\n    dst_p = c_char_p(bytes(len(src)))\n    src_p = c_char_p(src)\n    bytes_written = _strunvis(dst_p, src_p)",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "__all__",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "__all__ = [\n    'vis', 'unvis',\n    'VIS_OCTAL', 'VIS_CSTYLE',\n    'VIS_SP', 'VIS_TAB', 'VIS_NL', 'VIS_WHITE', 'VIS_SAFE',\n    'VIS_NOSLASH', 'VIS_HTTP1808', 'VIS_HTTPSTYLE', 'VIS_MIMESTYLE',\n    'VIS_HTTP1866', 'VIS_NOESCAPE', 'VIS_GLOB'\n]\n#############################################################\n# Constants from bsd/vis.h\n#############################################################",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_OCTAL",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_OCTAL = 0x0001\nVIS_CSTYLE = 0x0002\n# to alter set of characters encoded\n# (default is to encode all non-graphic except space, tab, and newline).\nVIS_SP = 0x0004\nVIS_TAB = 0x0008\nVIS_NL = 0x0010\nVIS_WHITE = VIS_SP | VIS_TAB | VIS_NL\nVIS_SAFE = 0x0020\n# other",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_CSTYLE",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_CSTYLE = 0x0002\n# to alter set of characters encoded\n# (default is to encode all non-graphic except space, tab, and newline).\nVIS_SP = 0x0004\nVIS_TAB = 0x0008\nVIS_NL = 0x0010\nVIS_WHITE = VIS_SP | VIS_TAB | VIS_NL\nVIS_SAFE = 0x0020\n# other\nVIS_NOSLASH = 0x0040",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_SP",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_SP = 0x0004\nVIS_TAB = 0x0008\nVIS_NL = 0x0010\nVIS_WHITE = VIS_SP | VIS_TAB | VIS_NL\nVIS_SAFE = 0x0020\n# other\nVIS_NOSLASH = 0x0040\nVIS_HTTP1808 = 0x0080\nVIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_TAB",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_TAB = 0x0008\nVIS_NL = 0x0010\nVIS_WHITE = VIS_SP | VIS_TAB | VIS_NL\nVIS_SAFE = 0x0020\n# other\nVIS_NOSLASH = 0x0040\nVIS_HTTP1808 = 0x0080\nVIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_NL",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_NL = 0x0010\nVIS_WHITE = VIS_SP | VIS_TAB | VIS_NL\nVIS_SAFE = 0x0020\n# other\nVIS_NOSLASH = 0x0040\nVIS_HTTP1808 = 0x0080\nVIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_WHITE",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_WHITE = VIS_SP | VIS_TAB | VIS_NL\nVIS_SAFE = 0x0020\n# other\nVIS_NOSLASH = 0x0040\nVIS_HTTP1808 = 0x0080\nVIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_SAFE",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_SAFE = 0x0020\n# other\nVIS_NOSLASH = 0x0040\nVIS_HTTP1808 = 0x0080\nVIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000\n#############################################################",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_NOSLASH",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_NOSLASH = 0x0040\nVIS_HTTP1808 = 0x0080\nVIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000\n#############################################################\n# Import libbsd/vis functions\n#############################################################",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_HTTP1808",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_HTTP1808 = 0x0080\nVIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000\n#############################################################\n# Import libbsd/vis functions\n#############################################################\n_libbsd = CDLL(find_library('bsd'))",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_HTTPSTYLE",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_HTTPSTYLE = 0x0080\nVIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000\n#############################################################\n# Import libbsd/vis functions\n#############################################################\n_libbsd = CDLL(find_library('bsd'))\n_strvis = _libbsd.strvis",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_MIMESTYLE",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_MIMESTYLE = 0x0100\nVIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000\n#############################################################\n# Import libbsd/vis functions\n#############################################################\n_libbsd = CDLL(find_library('bsd'))\n_strvis = _libbsd.strvis\n_strvis.argtypes = [c_char_p, c_char_p, c_int]",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_HTTP1866",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_HTTP1866 = 0x0200\nVIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000\n#############################################################\n# Import libbsd/vis functions\n#############################################################\n_libbsd = CDLL(find_library('bsd'))\n_strvis = _libbsd.strvis\n_strvis.argtypes = [c_char_p, c_char_p, c_int]\n_strvis.restype = c_int",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_NOESCAPE",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_NOESCAPE = 0x0400\nVIS_GLOB = 0x1000\n#############################################################\n# Import libbsd/vis functions\n#############################################################\n_libbsd = CDLL(find_library('bsd'))\n_strvis = _libbsd.strvis\n_strvis.argtypes = [c_char_p, c_char_p, c_int]\n_strvis.restype = c_int\n_strunvis = _libbsd.strunvis",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "VIS_GLOB",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "VIS_GLOB = 0x1000\n#############################################################\n# Import libbsd/vis functions\n#############################################################\n_libbsd = CDLL(find_library('bsd'))\n_strvis = _libbsd.strvis\n_strvis.argtypes = [c_char_p, c_char_p, c_int]\n_strvis.restype = c_int\n_strunvis = _libbsd.strunvis\n_strvis.argtypes = [c_char_p, c_char_p]",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "_libbsd",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "_libbsd = CDLL(find_library('bsd'))\n_strvis = _libbsd.strvis\n_strvis.argtypes = [c_char_p, c_char_p, c_int]\n_strvis.restype = c_int\n_strunvis = _libbsd.strunvis\n_strvis.argtypes = [c_char_p, c_char_p]\n_strvis.restype = c_int\ndef vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "_strvis",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "_strvis = _libbsd.strvis\n_strvis.argtypes = [c_char_p, c_char_p, c_int]\n_strvis.restype = c_int\n_strunvis = _libbsd.strunvis\n_strvis.argtypes = [c_char_p, c_char_p]\n_strvis.restype = c_int\ndef vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.\n    `flags` must be one of the VIS_* constants",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "_strvis.argtypes",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "_strvis.argtypes = [c_char_p, c_char_p, c_int]\n_strvis.restype = c_int\n_strunvis = _libbsd.strunvis\n_strvis.argtypes = [c_char_p, c_char_p]\n_strvis.restype = c_int\ndef vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.\n    `flags` must be one of the VIS_* constants\n    C definition:",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "_strvis.restype",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "_strvis.restype = c_int\n_strunvis = _libbsd.strunvis\n_strvis.argtypes = [c_char_p, c_char_p]\n_strvis.restype = c_int\ndef vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.\n    `flags` must be one of the VIS_* constants\n    C definition:\n    int strvis(char *dst, char *src, int flags);",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "_strunvis",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "_strunvis = _libbsd.strunvis\n_strvis.argtypes = [c_char_p, c_char_p]\n_strvis.restype = c_int\ndef vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.\n    `flags` must be one of the VIS_* constants\n    C definition:\n    int strvis(char *dst, char *src, int flags);\n    \"\"\"",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "_strvis.argtypes",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "_strvis.argtypes = [c_char_p, c_char_p]\n_strvis.restype = c_int\ndef vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.\n    `flags` must be one of the VIS_* constants\n    C definition:\n    int strvis(char *dst, char *src, int flags);\n    \"\"\"\n    src = bytes(src, 'utf-8')",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "_strvis.restype",
+        "kind": 5,
+        "importPath": "vendor.psy.psysh.test.tools.vis",
+        "description": "vendor.psy.psysh.test.tools.vis",
+        "peekOfCode": "_strvis.restype = c_int\ndef vis(src, flags=VIS_WHITE):\n    \"\"\"\n    Encodes the string `src` into libbsd's vis encoding.\n    `flags` must be one of the VIS_* constants\n    C definition:\n    int strvis(char *dst, char *src, int flags);\n    \"\"\"\n    src = bytes(src, 'utf-8')\n    dst_p = c_char_p(bytes(len(src) * 4))",
+        "detail": "vendor.psy.psysh.test.tools.vis",
+        "documentation": {}
+    },
+    {
+        "label": "get_version",
+        "kind": 2,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "def get_version():\n    if os.environ.get('READTHEDOCS') == 'True':\n        return os.environ.get('READTHEDOCS_VERSION')\n    pipe = Popen('git branch | grep \\*', stdout=PIPE, shell=True, universal_newlines=True)\n    version = pipe.stdout.read()\n    if version:\n        return version[2:]\n    else:\n        return 'unknown'\n# -- Project information -----------------------------------------------------",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "project = 'ramsey/uuid'\ncopyright = '2012-{year}, Ben Ramsey'.format(year = datetime.date.today().strftime('%Y'))\nauthor = 'Ben Ramsey'\nversion = get_version().strip()\nrelease = version\ntoday = datetime.date.today().strftime('%Y-%m-%d')\n# -- General configuration ---------------------------------------------------\nmaster_doc = 'index'\nhighlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "copyright = '2012-{year}, Ben Ramsey'.format(year = datetime.date.today().strftime('%Y'))\nauthor = 'Ben Ramsey'\nversion = get_version().strip()\nrelease = version\ntoday = datetime.date.today().strftime('%Y-%m-%d')\n# -- General configuration ---------------------------------------------------\nmaster_doc = 'index'\nhighlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default\nlexers['php'] = PhpLexer(startinline=True)",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "author",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "author = 'Ben Ramsey'\nversion = get_version().strip()\nrelease = version\ntoday = datetime.date.today().strftime('%Y-%m-%d')\n# -- General configuration ---------------------------------------------------\nmaster_doc = 'index'\nhighlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default\nlexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "version",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "version = get_version().strip()\nrelease = version\ntoday = datetime.date.today().strftime('%Y-%m-%d')\n# -- General configuration ---------------------------------------------------\nmaster_doc = 'index'\nhighlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default\nlexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)\n# Add any Sphinx extension module names here, as strings. They can be",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "release",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "release = version\ntoday = datetime.date.today().strftime('%Y-%m-%d')\n# -- General configuration ---------------------------------------------------\nmaster_doc = 'index'\nhighlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default\nlexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "today",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "today = datetime.date.today().strftime('%Y-%m-%d')\n# -- General configuration ---------------------------------------------------\nmaster_doc = 'index'\nhighlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default\nlexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "master_doc",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "master_doc = 'index'\nhighlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default\nlexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    'sphinx.ext.autodoc',",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "highlight_language",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "highlight_language = 'php'\n# enable highlighting for PHP code not between ``<?php ... ?>`` by default\nlexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.todo',",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "lexers['php']",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "lexers['php'] = PhpLexer(startinline=True)\nlexers['php-annotations'] = PhpLexer(startinline=True)\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.todo',\n    'sphinxcontrib.phpdomain',\n]",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "lexers['php-annotations']",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "lexers['php-annotations'] = PhpLexer(startinline=True)\n# Add any Sphinx extension module names here, as strings. They can be\n# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom\n# ones.\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.todo',\n    'sphinxcontrib.phpdomain',\n]\n# Add any paths that contain templates here, relative to this directory.",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "extensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.todo',\n    'sphinxcontrib.phpdomain',\n]\n# Add any paths that contain templates here, relative to this directory.\ntemplates_path = ['_templates']\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "templates_path",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "templates_path = ['_templates']\n# List of patterns, relative to source directory, that match files and\n# directories to ignore when looking for source files.\n# This pattern also affects html_static_path and html_extra_path.\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\npygments_style = 'sphinx'\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\npygments_style = 'sphinx'\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#\nhtml_theme = \"sphinx_rtd_theme\"\nhtml_theme_options = {\n    'collapse_navigation': False,\n    'display_version': False",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "pygments_style",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "pygments_style = 'sphinx'\n# -- Options for HTML output -------------------------------------------------\n# The theme to use for HTML and HTML Help pages.  See the documentation for\n# a list of builtin themes.\n#\nhtml_theme = \"sphinx_rtd_theme\"\nhtml_theme_options = {\n    'collapse_navigation': False,\n    'display_version': False\n}",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "html_theme = \"sphinx_rtd_theme\"\nhtml_theme_options = {\n    'collapse_navigation': False,\n    'display_version': False\n}\n# Add any paths that contain custom static files (such as style sheets) here,\n# relative to this directory. They are copied after the builtin static files,\n# so a file named \"default.css\" will overwrite the builtin \"default.css\".\nhtml_static_path = ['_static']\nhtml_title = \"ramsey/uuid %s Manual\" % get_version()",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme_options",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "html_theme_options = {\n    'collapse_navigation': False,\n    'display_version': False\n}\n# Add any paths that contain custom static files (such as style sheets) here,\n# relative to this directory. They are copied after the builtin static files,\n# so a file named \"default.css\" will overwrite the builtin \"default.css\".\nhtml_static_path = ['_static']\nhtml_title = \"ramsey/uuid %s Manual\" % get_version()\nhtml_show_sphinx = False",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_static_path",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "html_static_path = ['_static']\nhtml_title = \"ramsey/uuid %s Manual\" % get_version()\nhtml_show_sphinx = False\nhtmlhelp_basename = 'ramsey-uuid-doc'\nhtml_context = {\n    \"display_github\": True,\n    \"github_user\": \"ramsey\",\n    \"github_repo\": \"uuid\",\n    \"github_version\": version,\n    \"conf_py_path\": \"/docs/\",",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_title",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "html_title = \"ramsey/uuid %s Manual\" % get_version()\nhtml_show_sphinx = False\nhtmlhelp_basename = 'ramsey-uuid-doc'\nhtml_context = {\n    \"display_github\": True,\n    \"github_user\": \"ramsey\",\n    \"github_repo\": \"uuid\",\n    \"github_version\": version,\n    \"conf_py_path\": \"/docs/\",\n}",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_show_sphinx",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "html_show_sphinx = False\nhtmlhelp_basename = 'ramsey-uuid-doc'\nhtml_context = {\n    \"display_github\": True,\n    \"github_user\": \"ramsey\",\n    \"github_repo\": \"uuid\",\n    \"github_version\": version,\n    \"conf_py_path\": \"/docs/\",\n}\ncurrent_year = datetime.date.today().strftime('%Y')",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "htmlhelp_basename",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "htmlhelp_basename = 'ramsey-uuid-doc'\nhtml_context = {\n    \"display_github\": True,\n    \"github_user\": \"ramsey\",\n    \"github_repo\": \"uuid\",\n    \"github_version\": version,\n    \"conf_py_path\": \"/docs/\",\n}\ncurrent_year = datetime.date.today().strftime('%Y')\nrst_prolog = \"\"\"",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_context",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "html_context = {\n    \"display_github\": True,\n    \"github_user\": \"ramsey\",\n    \"github_repo\": \"uuid\",\n    \"github_version\": version,\n    \"conf_py_path\": \"/docs/\",\n}\ncurrent_year = datetime.date.today().strftime('%Y')\nrst_prolog = \"\"\"\n.. |current_year| replace:: {0}",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "current_year",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "current_year = datetime.date.today().strftime('%Y')\nrst_prolog = \"\"\"\n.. |current_year| replace:: {0}\n\"\"\".format(current_year)",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "rst_prolog",
+        "kind": 5,
+        "importPath": "vendor.ramsey.uuid.docs.conf",
+        "description": "vendor.ramsey.uuid.docs.conf",
+        "peekOfCode": "rst_prolog = \"\"\"\n.. |current_year| replace:: {0}\n\"\"\".format(current_year)",
+        "detail": "vendor.ramsey.uuid.docs.conf",
+        "documentation": {}
+    }
+]

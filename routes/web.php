@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\AudioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix("/audio")->group(function () {
+    Route::get("encrypt", function () {
+        return view("audio.encrypt");
+    });
+
+    Route::post("encrypt", [AudioController::class, "encrypt"]);
 });
 
 Route::prefix("/video")->group(function () {
