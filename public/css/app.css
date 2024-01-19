@@ -635,6 +635,9 @@ video {
 .border {
   border-width: 1px;
 }
+.border-2 {
+  border-width: 2px;
+}
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -780,6 +783,18 @@ video {
 .hover\:bg-gray-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+.focus\:outline-0:focus {
+  outline-width: 0px;
+}
+.focus\:outline-1:focus {
+  outline-width: 1px;
+}
+.focus\:outline-gray-300:focus {
+  outline-color: #d1d5db;
 }
 @media (min-width: 768px) {
 

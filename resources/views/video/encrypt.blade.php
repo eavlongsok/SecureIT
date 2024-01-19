@@ -34,7 +34,16 @@
 									<circle cx="16.5" cy="7.5" r=".5"/>
 								</svg>
 								<span class="text-lg">Input a 16-character key for encryption and decryption.</span>
-
+								<input
+									type="text"
+									name="key"
+									maxlength="16"
+									id="key"
+									class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip"
+									placeholder="Enter key here"
+									required
+								/>
+								<span class="cursor-pointer hover:underline select-none" onclick="generateKey()">Generate</span>
 							</div>
 							<div
 								class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
@@ -61,6 +70,7 @@
 									type="file"
 									name="video"
 									id="video"
+									required
 									onchange="submitForm()"
 									class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 overflow-clip"
 								/>
@@ -142,8 +152,27 @@
     const recorderContainer = document.getElementById('recorder-container');
     const videoInput = document.getElementById('video');
     const recordingSubmitBtn = document.getElementById('recording-submit-btn');
-    const cancelBtn = document.getElementById('cancel-btn')
+    const cancelBtn = document.getElementById('cancel-btn');
+    const keyInput = document.getElementById('key');
     let recording = false;
+
+    function generateKey() {
+        let key = "";
+        let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-:/?,.+=!@#$%^&*(){}[]|";
+        for (let i = 0; i < 16; i++) {
+            key += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        keyInput.value = key;
+    }
+
+    function submitForm() {
+        if (key.value.length !== 16) {
+            alert("Key must be 16 characters long.");
+            return;
+        }
+        showSubmitting();
+        form.submit();
+    }
 
     function showSubmitting() {
         submitting.classList.remove('hidden');

@@ -30,7 +30,7 @@ MAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)
 
 MAIN_ALGO_C1, MAIN_ALGO_C2 = key_system("OMGOMGOMGOMGOMGO", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)
 print(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
-encrypted = encrypt_text("paragon", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+encrypted = encrypt_text("helloworld123lol", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
 decrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
 
 print("encrypted", encrypted, len(encrypted))

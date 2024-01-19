@@ -16,7 +16,7 @@ def key_system(key: str, c1: float, c2: float, y_minus_1: float, y_minus_2: floa
         secondLast = last
         last = encrypted
 
-    return last, secondLast
+    return secondLast, last
 
 
 def f(x: float) -> float:
