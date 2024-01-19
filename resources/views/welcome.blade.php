@@ -24,7 +24,7 @@
 					<div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
 						<a
 							class="flex items-center gap-2 hover:bg-gray-200 p-2 rounded transition-colors duration-200"
-							href="#"
+							href="{{ route('text.view') }}"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

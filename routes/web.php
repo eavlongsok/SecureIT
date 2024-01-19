@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TextController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\AudioController;
 use Illuminate\Support\Facades\Route;
@@ -34,3 +35,17 @@ Route::prefix("/video")->group(function () {
 
     Route::post("encrypt", [VideoController::class, "encrypt"]);
 });
+
+// Display forms
+Route::get('/text/encrypt', [TextController::class, 'showEncryptForm'])->name('encrypt.form');
+Route::get('/text/decrypt', [TextController::class, 'showDecryptForm'])->name('decrypt.form');
+
+// Process encryption and decryption
+Route::post('/text/encrypt', [TextController::class, 'encryptText'])->name('encrypt.text');
+Route::post('/text/decrypt', [TextController::class, 'decryptText'])->name('decrypt.text');
+
+Route::post('/text/decryption', [TextController::class, 'decryptResult'])->name('decrypt.result');
+Route::post('/text/encryption', [TextController::class, 'encryptResult'])->name('encrypt.result');
+
+// Show text page
+Route::get('/text', [TextController::class, 'showText'])->name('text.view');
