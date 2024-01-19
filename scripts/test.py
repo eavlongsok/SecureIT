@@ -35,4 +35,3 @@ decrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINU
 
 print("encrypted", encrypted, len(encrypted))
 print("decrypted", decrypted, len(decrypted))
-
