@@ -20,7 +20,7 @@ def key_system(key: str, c1: float, c2: float, y_minus_1: float, y_minus_2: floa
 
 
 def f(x: float) -> float:
-    return (x % 2) - 1
+    return ((x + 1) % 2) - 1
 
 
 def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:
@@ -30,17 +30,23 @@ def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minu
     last = y_minus_1
     second_last = y_minus_2
 
-    # for c in plain_text:
-        # encrypted = normalizeY(normalizeASCII(ord(c)) + c1 * last + c2 * second_last)
-        # cipher_text += chr(round(denormalizeASCII(encrypted)))
-        # second_last = last
-        # last = encrypted
-
     for c in plain_text:
-        encrypted = ord(c) + c1 * last + c2 * second_last
-        cipher_text += chr(round(encrypted))
+        # print(normalizeASCII(ord(c)))
+        print(round(c1), round(c2))
+        encrypted = normalizeASCII(ord(c)) + round(c1) * last + round(c2) * second_last
+        a = ((encrypted + 1) % 2) - 1
+        encrypted = a
+        print(encrypted, denormalizeASCII(encrypted))
+        cipher_text += chr(int(denormalizeASCII(encrypted)))
         second_last = last
         last = encrypted
+
+    # for c in plain_text:
+    #     print(ord(c))
+    #     encrypted = ord(c) + c1 * last + c2 * second_last
+    #     cipher_text += chr(round(encrypted))
+    #     second_last = last
+    #     last = encrypted
 
     return cipher_text
 
@@ -52,18 +58,26 @@ def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_min
     last = y_minus_1
     second_last = y_minus_2
 
+    for c in cipher_text:
+        normalized = normalizeASCII(ord(c))
+
+        # decrypted = denormalizeASCII(denormalizeY(normalized) - c1 * last - c2 * second_last)
+        # a = ((decrypted + 1) % 2) - 1
+
+        decrypted = normalizeASCII(ord(c)) - round(c1) * last - round(c2) * second_last
+        a = ((decrypted + 1) % 2) - 1
+        print(a)
+
+
+        plain_text += chr(round(denormalizeASCII(a)))
+        second_last = last
+        last = normalized
+
     # for c in cipher_text:
-    #     normalized = normalizeASCII(ord(c))
-    #     decrypted = denormalizeASCII(denormalizeY(normalized) - c1 * last - c2 * second_last)
+    #     decrypted = ord(c) - c1 * last - c2 * second_last
     #     plain_text += chr(round(decrypted))
     #     second_last = last
-    #     last = normalized
-
-    for c in cipher_text:
-        decrypted = ord(c) - c1 * last - c2 * second_last
-        plain_text += chr(round(decrypted))
-        second_last = last
-        last = ord(c)
+    #     last = ord(c)
 
     return plain_text
 
@@ -73,7 +87,7 @@ def normalizeASCII(x: float) -> float:
 
 
 def denormalizeASCII(x: float) -> float:
-    return x * 127.5 + 127.5
+    return (x * 127.5) + 127.5
 
 
 def normalizeY(y: float) -> float:

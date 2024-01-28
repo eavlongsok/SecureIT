@@ -43,7 +43,9 @@ def encrypt(plaintext, c1Prime, c2Prime):
         answer_array.append(ord(plaintext[i]) + c1Prime * answer_array[i - 1] + c2Prime * answer_array[i - 2])
 
     for i in range(len(plaintext)):
-        print(chr(round(answer_array[i])))
+        print(chr(round(answer_array[i])), end="")
+
+    print()
 
     decrypt(answer_array, c1Prime, c2Prime)
 
@@ -56,7 +58,9 @@ def decrypt(answer_array, c1Prime, c2Prime):
         decrypt_array.append((answer_array[i]) - c1Prime * answer_array[i - 1] - c2Prime * answer_array[i - 2])
 
     for i in range(len(decrypt_array)):
-        print(chr(round(decrypt_array[i])))
+        print(chr(round(decrypt_array[i])), end="")
+
+    print()
 
 
 

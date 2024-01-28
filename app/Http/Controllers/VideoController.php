@@ -17,5 +17,4 @@ class VideoController extends Controller
         $file->storeAs("public", "video." . $extension);
         return redirect("/video/encrypt/result");
     }
-
 }
