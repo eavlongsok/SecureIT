@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\TextController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\ImageEncryptionController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +56,26 @@ Route::post('/text/encryption', [TextController::class, 'encryptResult'])->name(
 
 // Show text page
 Route::get('/text', [TextController::class, 'showText'])->name('text.view');
+
+
+
+
+//Image
+Route::get('/image', [ImageController::class, 'showImagePage'])->name('image.show');
+Route::post('/image/upload', [ImageEncryptionController::class, 'uploadImage'])->name('image.upload');
+
+Route::prefix('/image')->name('image.')->group(function () {
+    Route::get('encrypt', function () {
+        return view('image.encrypt_image');
+    })->name('encrypt');
+
+    Route::post('encrypt', [ImageController::class, 'encrypt'])->name('encrypt.post');
+});
+//Image decryption
+Route::prefix('/image')->name('image.')->group(function () {
+    Route::get('decrypt', function () {
+        return view('image.decrypt_image');
+    })->name('decrypt');
+   
+    Route::post('decrypt', [ImageController::class, 'decrypt'])->name('decrypt.post');
+});
