@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\AudioController;
 use App\Http\Controllers\TextController;
 use App\Http\Controllers\VideoController;
-use App\Http\Controllers\AudioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,8 +32,12 @@ Route::prefix("/video")->group(function () {
     Route::get("encrypt", function () {
         return view("video.encrypt");
     });
+    Route::get("decrypt", function () {
+        return view("video.decrypt");
+    });
 
     Route::post("encrypt", [VideoController::class, "encrypt"]);
+    Route::post("decrypt", [VideoController::class, "decrypt"]);
 });
 
 // Display forms

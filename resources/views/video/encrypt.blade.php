@@ -9,7 +9,7 @@
 
 <div class="flex flex-col min-h-screen">
 	@include("header")
-	<form method="post" action="/video/encrypt" enctype="multipart/form-data" id="form"
+	<form method="post" action="/video/decrypt" enctype="multipart/form-data" id="form"
 	>
 		@csrf
 		<main class="flex-1 py-12 px-4 md:px-6 bg-gray-100">
@@ -42,6 +42,7 @@
 									class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip"
 									placeholder="Enter key here"
 									required
+									onkeyup="checkKeyLength()"
 								/>
 								<span class="cursor-pointer hover:underline select-none" onclick="generateKey()">Generate</span>
 							</div>
@@ -71,6 +72,7 @@
 									name="video"
 									id="video"
 									required
+									disabled
 									onchange="submitForm()"
 									class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 overflow-clip"
 								/>
@@ -94,8 +96,8 @@
 								</svg>
 								<span class="text-lg">Record a new video (max 5 seconds).</span>
 								<button
-									class="ml-auto bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow select-none"
-									onclick="showRecordVideo()" type="button"
+									class="ml-auto cursor-pointer disabled:bg-gray-200 bg-gray-300 hover:bg-gray-400 disabled:hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 border border-gray-400 disabled:border-none disabled:text-gray-400 rounded shadow select-none"
+									onclick="showRecordVideo()" type="button" disabled id="recordBtn"
 								>
 									Record
 								</button>
@@ -154,6 +156,7 @@
     const recordingSubmitBtn = document.getElementById('recording-submit-btn');
     const cancelBtn = document.getElementById('cancel-btn');
     const keyInput = document.getElementById('key');
+    const recordBtn = document.getElementById('recordBtn');
     let recording = false;
 
     function generateKey() {
@@ -163,27 +166,29 @@
             key += characters.charAt(Math.floor(Math.random() * characters.length));
         }
         keyInput.value = key;
+        checkKeyLength();
     }
 
     function submitForm() {
-        if (key.value.length !== 16) {
+        if (keyInput.value.length !== 16) {
             alert("Key must be 16 characters long.");
             return;
         }
         showSubmitting();
+        submitting.classList.remove('hidden');
+        submitting.classList.add('block');
+        cancelRecordVideo();
         form.submit();
+    }
+
+    function checkKeyLength() {
+        videoInput.disabled = keyInput.value.length !== 16;
+        recordBtn.disabled = keyInput.value.length !== 16;
     }
 
     function showSubmitting() {
         submitting.classList.remove('hidden');
         submitting.classList.add('block')
-    }
-
-    function submitForm() {
-        form.submit();
-        submitting.classList.remove('hidden');
-        submitting.classList.add('block');
-        cancelRecordVideo();
     }
 
     function showRecordVideo() {
@@ -220,7 +225,7 @@
                 const recorder = new MediaRecorder(stream);
                 const chunks = [];
                 recorder.ondataavailable = e => chunks.push(e.data);
-                recorder.onstop = e => {
+                recorder.onstop = () => {
                     const completeBlob = new Blob(chunks, {type: "video/webm"});
                     const completeVideoURL = URL.createObjectURL(completeBlob);
                     player.srcObject = null;
@@ -254,6 +259,7 @@
             }
         );
     }
+
 </script>
 </body>
 </html>
