@@ -1,99 +1,11 @@
-import numpy as np
-from typing import Union
-
-def key_system(key: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[float, float]:
-    if len(key) != 16:
-        raise Exception("key must be 16 characters")
-
-    encrypted = None
-    last = y_minus_1
-    secondLast = y_minus_2
-
-    for i in range(16):
-        encrypted = f(ord(key[i]) + c1 * last + c2 * secondLast)
-        secondLast = last
-        last = encrypted
-
-    return secondLast, last
-
-
-def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:
-    if len(plain_text) == 0:
-        raise Exception("Plain text length must be greater than 0")
-    cipher_text = ""
-    last = y_minus_1
-    second_last = y_minus_2
-
-    decrypt_last = last
-    decrypt_second_last = second_last
-
-    print(len(plain_text))
-    for i in range(len(plain_text)):
-        # print("last:", last)
-        c = plain_text[i]
-        encrypted = f(normalizeASCII(ord(c)) + c1 * last + c2 * second_last)
-
-        # print(i, last, second_last)
-        # print("decrypt last:", decrypt_last)
-
-        denormalized = denormalizeASCII(encrypted)
-        while True:
-            tmp_cipher_text = chr(int(denormalized))
-            decrypted_char, tmp_decrypt_last, tmp_decrypt_second_last = decrypt_text(tmp_cipher_text, c1, c2, decrypt_last, decrypt_second_last, True)
-            # print(c, decrypted_char, c == decrypted_char)
-            # print(ord(c) - ord(decrypted_char))
-            denormalized += ord(c) - ord(decrypted_char)
-            # print(c, decrypted_char)
-            if ord(c) - ord(decrypted_char) == 0:
-                break
-
-        decrypt_last = tmp_decrypt_last
-        decrypt_second_last = tmp_decrypt_second_last
-
-        cipher_text += chr(int(denormalized))
-        second_last = decrypt_second_last
-        last = decrypt_last
-
-    return cipher_text
-
-
-def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float, test=False) -> Union[str, tuple[str, float, float]]:
-    if len(cipher_text) == 0:
-        raise Exception("Cipher text length must be greater than 0")
-
-    plain_text = ""
-    last = y_minus_1
-    second_last = y_minus_2
-
-    # real_plain_text_len = 10
-    for i in range(len(cipher_text)):
-        # if not test:
-        #     print("last:", last)
-        c = cipher_text[i]
-        # if test:
-        #     print(i, last, second_last)
-        normalized = normalizeASCII(ord(c))
-
-        decrypted = f(normalized - c1 * last - c2 * second_last)
-
-        plain_text += chr(int(denormalizeASCII(decrypted)))
-        second_last = last
-        last = normalized
-
-    if test:
-        return plain_text, last, second_last
-
-    return plain_text
-
-
 def f(x: float) -> float:
     return ((x + 1) % 2) - 1
 
 
-def normalizeASCII(x: float) -> float:
+def normalize(x: float) -> float:
     return (x - 127.5) / 127.5
 
 
-def denormalizeASCII(x: float) -> float:
+def denormalize(x: float) -> float:
     return (x * 127.5) + 127.5
 
