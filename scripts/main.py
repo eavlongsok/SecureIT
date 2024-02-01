@@ -1,9 +1,20 @@
 from dotenv import load_dotenv
 import os
 from pathlib import Path
+from key import key_system
 from encrypt import *
 from decrypt import *
-from key import key_system
+
+'''
+define the arguments of the script here
+should look something like this when running the script
+
+    python main.py --type encrypt --format text --key 1234567890123456 --path "C://...../storage/image.jpg"
+    or
+    python main.py -t encrypt -f text -k 1234567890123456 -p "C://...../storage/image.jpg"
+
+probably will use argument parser library
+'''
 
 dotenv_path = Path("../.env")
 load_dotenv(dotenv_path=dotenv_path)
@@ -29,11 +40,5 @@ KEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)
 MAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)
 MAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)
 
-MAIN_ALGO_C1, MAIN_ALGO_C2 = key_system("abcdefghijklmnop", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)
-# MAIN_ALGO_C1, MAIN_ALGO_C2 = (1, 10)
-print(MAIN_ALGO_C1, MAIN_ALGO_C2)
-encrypted = encrypt_text("Hello world, my name is Eav Long, this is the final project for CS312 :)", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
-print("encrypted:", encrypted, len(encrypted))
-decrypted = decrypt_text(encrypted,  MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
-
-print("decrypted:", decrypted, len(decrypted))
+MAIN_ALGO_C1, MAIN_ALGO_C2 = key_system("abcdefghijklmnop", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1,
+                                        KEY_SYSTEM_Y_MINUS_2)
