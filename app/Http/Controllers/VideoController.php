@@ -3,33 +3,65 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class VideoController extends Controller
 {
-    //
+    public function showEncryptForm()
+    {
+        return view('video.encrypt');
+    }
+
+    public function showDecryptForm()
+    {
+        return view('video.decrypt');
+    }
+
     public function encrypt(Request $request)
     {
         $validation = $request->validate([
-            "video" => "required|mimes:mp4,webm|extensions:mp4,webm|max:10000"
+            "video" => "required|mimes:mp4,webm|max:10000" 
         ]);
 
-        // save file from request as its own type
         $file = $request->file("video");
-        // get file extension
-        $extension = $file->getClientOriginalExtension();
-        // store file
-        $file->storeAs("public", "video." . $extension);
-        return redirect("/video/encrypt/result");
+        if ($file) {
+            $extension = $file->getClientOriginalExtension();
+            $filename = 'encrypted_' . time() . '.' . $extension;
+            $file->storeAs("public/videos", $filename);
+
+            return redirect()->route('video.result')->with('filename', $filename)->with('status', 'Video encrypted successfully!');
+        }
+
+        return back()->withErrors(['video' => 'Please upload a valid video file.']);
     }
 
     public function decrypt(Request $request)
     {
-        // save file from request as its own type
+        $validation = $request->validate([
+            "video" => "required|mimes:mp4,webm|max:10000" 
+        ]);
+
         $file = $request->file("video");
-        // get file extension
-        $extension = $file->getClientOriginalExtension();
-        // store file
-        $file->storeAs("public", "video." . $extension);
-        return redirect("/video/decrypt/result");
+        if ($file) {
+            $extension = $file->getClientOriginalExtension();
+            $filename = 'decrypted_' . time() . '.' . $extension;
+            $file->storeAs("public/videos", $filename);
+            
+
+            return redirect()->route('video.result')->with('filename', $filename)->with('status', 'Video decrypted successfully!');
+        }
+
+        return back()->withErrors(['video' => 'Please upload a valid video file.']);
     }
+
+    public function showResult()
+    {
+        return view('video.result');
+    }
+
+    public function showVideo()
+    {
+        return view('video.video');
+    }
+
 }
