@@ -1,5 +1,5 @@
 <header class="flex items-center justify-center h-16 px-4 md:px-6 bg-gray-800 text-white">
-	<a class="flex items-center gap-2" href="#">
+	<a class="flex items-center gap-2" href="/">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="24"

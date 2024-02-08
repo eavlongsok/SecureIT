@@ -7,7 +7,16 @@ use Illuminate\Support\Facades\Validator;
 
 class VideoController extends Controller
 {
-    //
+    public function showEncryptForm()
+    {
+        return view('video.encrypt');
+    }
+
+    public function showDecryptForm()
+    {
+        return view('video.decrypt');
+    }
+
     public function encrypt(Request $request)
     {
 
@@ -37,12 +46,14 @@ class VideoController extends Controller
         $file->storeAs("public", "video_to_encrypt." . $extension);
 //        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
-        
+
         return redirect("/video/encrypt/result");
+
     }
 
     public function decrypt(Request $request)
     {
+
 //        dd($request->files, $request->file("video")->getClientMimeType(), $request->file("video")->getMimeType());
         $validate = Validator::make($request->all(), [
             "video" => "required|max:10240",
@@ -68,5 +79,17 @@ class VideoController extends Controller
 //        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
         return redirect("/video/decrypt/result");
+
     }
+
+    public function showResult()
+    {
+        return view('video.result');
+    }
+
+    public function showVideo()
+    {
+        return view('video.video');
+    }
+
 }
