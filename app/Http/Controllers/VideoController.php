@@ -3,33 +3,70 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class VideoController extends Controller
 {
     //
     public function encrypt(Request $request)
     {
-        $validation = $request->validate([
-            "video" => "required|mimes:mp4,webm|extensions:mp4,webm|max:10000"
+
+//        dd($request, $request->file("video")->getMimeType(), $request->file("video")->getClientMimeType());
+
+        $validate = Validator::make($request->all(), [
+            "video" => "required|mimes:mp4,webm,mkv|max:10240",
+            "key" => "required|size:16"
+        ], [
+            "video.required" => "Please upload a video file or record one",
+            "video.mimes" => "The video must be of type mp4 or webm or mkv",
+            "video.max" => "The video must be less than 10mb",
+            "key.required" => "Please enter a key",
+            "key.size" => "The key must be 16 characters long"
         ]);
+
+        if ($validate->fails()) {
+            return redirect("/video/encrypt")->withErrors($validate);
+        }
 
         // save file from request as its own type
         $file = $request->file("video");
+        $key = $request->input("key");
         // get file extension
         $extension = $file->getClientOriginalExtension();
         // store file
-        $file->storeAs("public", "video." . $extension);
+        $file->storeAs("public", "video_to_encrypt." . $extension);
+//        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+        
         return redirect("/video/encrypt/result");
     }
 
     public function decrypt(Request $request)
     {
-        // save file from request as its own type
+//        dd($request->files, $request->file("video")->getClientMimeType(), $request->file("video")->getMimeType());
+        $validate = Validator::make($request->all(), [
+            "video" => "required|max:10240",
+            "key" => "required|size:16"
+        ], [
+            "video.required" => "Please upload a video file or record one",
+            "video.max" => "The video must be less than 10mb",
+            "key.required" => "Please enter a key",
+            "key.size" => "The key must be 16 characters long"
+        ]);
+        if ($validate->fails()) {
+            return redirect("/video/decrypt")->withErrors($validate);
+        }
+
+
         $file = $request->file("video");
+        $key = $request->input("key");
         // get file extension
         $extension = $file->getClientOriginalExtension();
         // store file
-        $file->storeAs("public", "video." . $extension);
+        $file->storeAs("public", "video_to_decrypt." . $extension);
+
+//        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
+        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
         return redirect("/video/decrypt/result");
     }
 }

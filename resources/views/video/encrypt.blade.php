@@ -9,7 +9,7 @@
 
 <div class="flex flex-col min-h-screen">
 	@include("header")
-	<form method="post" action="/video/decrypt" enctype="multipart/form-data" id="form"
+	<form method="post" action="/video/encrypt" enctype="multipart/form-data" id="form"
 	>
 		@csrf
 		<main class="flex-1 py-12 px-4 md:px-6 bg-gray-100">
@@ -21,6 +21,15 @@
 						<p class="text-sm text-muted-foreground">Choose to upload a video or record a new one for
 							encryption.</p>
 					</div>
+					@if ($errors->any())
+						<div class="alert alert-danger">
+							<ul>
+								@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif
 					<div class="p-6">
 						<div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
 							<div
@@ -67,7 +76,7 @@
 								<span class="text-lg">Select a video file from your device.</span>
 
 								<input
-									accept="video/mp4 video/webm"
+									accept="video/mp4 video/webm video/x-matroska"
 									type="file"
 									name="video"
 									id="video"
@@ -222,11 +231,11 @@
         }).then(stream => {
                 player.srcObject = stream;
                 player.play();
-                const recorder = new MediaRecorder(stream);
+                const recorder = new MediaRecorder(stream, {mimeType: "video/x-matroska"});
                 const chunks = [];
                 recorder.ondataavailable = e => chunks.push(e.data);
                 recorder.onstop = () => {
-                    const completeBlob = new Blob(chunks, {type: "video/webm"});
+                    const completeBlob = new Blob(chunks, {type: "video/x-matroska"});
                     const completeVideoURL = URL.createObjectURL(completeBlob);
                     player.srcObject = null;
                     player.src = completeVideoURL;
@@ -234,8 +243,8 @@
                     player.muted = true;
                     player.play();
                     let time = new Date().getTime();
-                    let file = new File(chunks, "video-" + time + ".webm", {
-                        type: "video/webm"
+                    let file = new File(chunks, "video-" + time + ".mkv", {
+                        type: "video/x-matroska"
                     });
                     let dataTransfer = new ClipboardEvent('').clipboardData || new DataTransfer();
                     dataTransfer.items.add(file);  // Add the file to the DT object
