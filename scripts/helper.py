@@ -1,16 +1,21 @@
 import argparse
+import numpy as np
+from numba import njit
 
 
+@njit
 def f(x: float) -> float:
     return ((x + 1) % 2) - 1
 
 
-def normalize(x: float) -> float:
-    return (x - 127.5) / 127.5
+@njit
+def normalize(x: float | int | np.uint8) -> float:
+    return (x - 128) / 128
 
 
-def denormalize(x: float) -> float:
-    return (x * 127.5) + 127.5
+@njit
+def denormalize(x: float | int | np.uint8) -> float:
+    return (x * 128) + 128
 
 
 def file(path: str):
