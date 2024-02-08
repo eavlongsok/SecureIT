@@ -9,7 +9,7 @@
 <body class="bg-gray-100">
     <!-- Header Start -->
     <header class="flex items-center justify-center h-16 px-4 md:px-6 bg-gray-800 text-white">
-        <a class="flex items-center gap-2" href="#">
+        <a class="flex items-center gap-2" href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white">
                 <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
@@ -36,6 +36,7 @@
                     <input type="file" class="mt-1 block w-full" id="file" name="file" accept=".txt">
                 </div>
                 <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">decrypt</button>
+                <a href="{{ route('text.view') }}" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">Back to Menu</a>
             </form>
         </div>
     </div>
