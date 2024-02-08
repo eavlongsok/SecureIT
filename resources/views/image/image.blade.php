@@ -20,10 +20,10 @@
     <!-- Header End -->
     <div class="flex justify-center items-center h-screen">
     <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-        <h1 class="text-2xl font-bold mb-4">Text Cryptography</h1>
+        <h1 class="text-2xl font-bold mb-4">Image Cryptography</h1>
         <div class="flex flex-col space-y-4">
-            <a href="{{ route('encrypt.form') }}" class="bg-black text-white py-2 px-4 rounded-md shadow-md text-center hover:bg-gray-800 hover:text-white transition duration-300">Encryption</a>
-            <a href="{{ route('decrypt.form') }}" class="bg-black text-white py-2 px-4 rounded-md shadow-md text-center hover:bg-gray-800 hover:text-white transition duration-300">Decryption</a>
+            <a href="{{ route('image.encrypt.form') }}" class="bg-black text-white py-2 px-4 rounded-md shadow-md text-center hover:bg-gray-800 hover:text-white transition duration-300">Encryption</a>
+            <a href="{{ route('image.decrypt.form') }}" class="bg-black text-white py-2 px-4 rounded-md shadow-md text-center hover:bg-gray-800 hover:text-white transition duration-300">Decryption</a>
             <a href="{{ route('welcome') }}" class="bg-black text-white py-2 px-4 rounded-md shadow-md text-center hover:bg-gray-800 hover:text-white transition duration-300">Back to Menu</a>
         </div>
     </div>

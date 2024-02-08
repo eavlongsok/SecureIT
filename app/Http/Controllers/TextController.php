@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Storage;
 
 class TextController extends Controller
 {
@@ -18,14 +20,33 @@ class TextController extends Controller
 
     public function encryptText(Request $request)
     {
-        $encryptedText = $this->performEncryption($request->input('text'));
+        $validated = $this->validateTextOrFile($request);
+
+        if ($request->hasFile('file')) {
+            $text = file_get_contents($request->file('file')->getRealPath());
+        } else {
+            $text = $request->input('text');
+        }
+
+        $encryptedText = Crypt::encryptString($text);
 
         return view('text.encrypt-result', compact('encryptedText'));
     }
 
     public function decryptText(Request $request)
     {
-        $decryptedText = $this->performDecryption($request->input('text'));
+        $validated = $this->validateTextOrFile($request);
+
+        try {
+            if ($request->hasFile('file')) {
+                $text = file_get_contents($request->file('file')->getRealPath());
+                $decryptedText = Crypt::decryptString($text);
+            } else {
+                $decryptedText = Crypt::decryptString($request->input('text'));
+            }
+        } catch (\Exception $e) {
+            return back()->withErrors(['msg' => 'Decryption failed. Please ensure the encrypted content is correct.']);
+        }
 
         return view('text.decrypt-result', compact('decryptedText'));
     }
@@ -35,13 +56,13 @@ class TextController extends Controller
         return view('text.text');
     }
 
-    private function performEncryption($text)
+    private function validateTextOrFile(Request $request)
     {
-        return base64_encode($text);
+        return $request->validate([
+            'encryptionKey' => 'required|min:5',
+            'text' => 'required_without:file|min:8',
+            'file' => 'required_without:text|file|mimes:txt|max:1024',
+        ]);
     }
-
-    private function performDecryption($text)
-    {
-        return base64_decode($text);
-    }
+    
 }
