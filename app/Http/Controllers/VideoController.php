@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
 class VideoController extends Controller
@@ -47,8 +48,7 @@ class VideoController extends Controller
 //        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
 
-        return redirect("/video/encrypt/result");
-
+        return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => 'public/encrypted_video.' . $extension]);
     }
 
     public function decrypt(Request $request)
@@ -78,13 +78,19 @@ class VideoController extends Controller
 
 //        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
-        return redirect("/video/decrypt/result");
 
+        return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => 'public/decrypted_video.' . $extension]);
     }
 
     public function showResult()
     {
-        return view('video.result');
+        if (session()->has("type") && session()->has("key") && session()->has("video_path")) {
+            return view('video.result', [
+                "type" => session("type"),
+                "key" => session("key"),
+                "video_path" => session("video_path")]);
+        }
+        return Redirect::route('video.view');
     }
 
     public function showVideo()

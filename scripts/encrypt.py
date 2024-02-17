@@ -64,7 +64,7 @@ def encrypt_video():
 
 @njit
 def _encrypt_image(image: cv.typing.MatLike, cipher_image: np.ndarray[np.uint8], c1: float, c2: float, y_minus_1: float, y_minus_2: float,
-                   returnVal=False) ->  [np.ndarray[np.uint8], float, float]:
+                   returnVal=False) -> [np.ndarray[np.uint8], float, float]:
     last = y_minus_1
     second_last = y_minus_2
 
