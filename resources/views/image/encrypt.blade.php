@@ -14,15 +14,22 @@
                             <h3 class="whitespace-nowrap tracking-tight text-2xl font-semibold">Image Decryption</h3>
                             <p class="text-sm text-muted-foreground">Choose to upload an image or capture a new one for decryption.</p>
                         </div>
+                        @if ($errors->any())
+                        <div class="text-red-700 font-bold px-6">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
                         <div class="p-6">
                             <div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
-                                <!-- Key Input Section -->
                                 <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="lucide lucide-key-round">
-                                        <path
-                                            d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z" />
+                                        <path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z" />
                                         <circle cx="16.5" cy="7.5" r=".5" />
                                     </svg>
                                     <span class="text-lg">Input a 16-character key for decryption</span>
@@ -59,7 +66,7 @@
                                     <span class="text-lg">Capture an image from the webcam.</span>
                                     <button
                                         class="ml-auto bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow select-none"
-                                        onclick="showTakeImage()" type="button">
+                                        onclick="showTakeImage()" type="button"  >
                                         Capture
                                     </button>
                                 </div>
@@ -106,129 +113,139 @@
     </div>
 
     <script>
-        const player = document.getElementById('player');
-        const submitting = document.getElementById('submitting');
-        const form = document.getElementById('form');
-        const imageInput = document.getElementById('image');
-        const recordingSubmitBtn = document.getElementById('recording-submit-btn');
-        const cancelBtn = document.getElementById('cancel-btn');
-        const keyInput = document.getElementById('key');
-        let recording = false;
-        const recorderContainer = document.getElementById('recorder-container'); // Define recorderContainer
+    const player = document.getElementById('player');
+    const submitting = document.getElementById('submitting');
+    const form = document.getElementById('form');
+    const imageInput = document.getElementById('image');
+    const recordingSubmitBtn = document.getElementById('recording-submit-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const keyInput = document.getElementById('key');
+    const recordBtn = document.getElementById('recordBtn');
+    let recording = false;
+    const recorderContainer = document.getElementById('recorder-container');
 
-        function generateKey() {
-            let key = "";
-            let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-:/?,.+=!@#$%^&*(){}[]|";
-            for (let i = 0; i < 16; i++) {
-                key += characters.charAt(Math.floor(Math.random() * characters.length));
-            }
-            keyInput.value = key;
+    function generateKey() {
+        let key = "";
+        let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-:/?,.+=!@#$%^&*(){}[]|";
+        for (let i = 0; i < 16; i++) {
+            key += characters.charAt(Math.floor(Math.random() * characters.length));
         }
+        keyInput.value = key;
+        navigator.clipboard.writeText(key);
+        checkKeyLength();
+    }
 
-        async function submitForm() {
-            if (keyInput.value.length !== 16) {
-                alert("Key must be 16 characters long.");
-                return;
-            }
-            showSubmitting();
-
-            const formData = new FormData(form);
-
-            try {
-                const response = await fetch('/image/upload', {
-                    method: 'POST',
-                    body: formData,
-                });
-
-                if (!response.ok) {
-                    throw new Error('Image upload failed');
-                }
-
-                window.location.href = 'http://127.0.0.1:8001/image/decrypt/result';
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Error uploading image. Please try again.');
-            }
+    async function submitForm() {
+        if (keyInput.value.length !== 16) {
+            alert("Key must be 16 characters long.");
+            return;
         }
+        showSubmitting();
 
-        function showSubmitting() {
-            submitting.classList.remove('hidden');
-            submitting.classList.add('block');
-        }
+        const formData = new FormData(form);
 
-        function showTakeImage() {
-            recorderContainer.classList.remove('hidden');
-            recorderContainer.classList.add('flex');
-        }
-
-        function cancelTakeImage() {
-            if (!recording) {
-                recorderContainer.classList.remove('flex');
-                recorderContainer.classList.add('hidden');
-                player.src = null;
-                cancelBtn.classList.remove("hidden");
-                recordingSubmitBtn.classList.add("hidden");
-            }
-        }
-        function preventClickThrough(event) {
-            event.stopPropagation();
-        }
-
-        function startRecordingImage() {
-            recording = true;
-            cancelBtn.classList.add("hidden");
-            recordingSubmitBtn.classList.add('hidden');
-
-            navigator.mediaDevices.getUserMedia({
-                video: true,
-                audio: false
-            }).then(stream => {
-                player.srcObject = stream;
-                player.play();
-
-                const imageCaptureInterval = setInterval(() => {
-                    captureImage(stream);
-                }, 2000);
-
-                const stopImageRecording = () => {
-                    clearInterval(imageCaptureInterval);
-                    stream.getTracks().forEach(track => track.stop());
-                    recording = false;
-                    cancelBtn.classList.remove("hidden");
-                    recordingSubmitBtn.classList.remove('hidden');
-                    document.getElementById('start').classList.remove('hidden');
-                    document.getElementById('stop').classList.add('hidden');
-                };
-
-                document.getElementById('stop').onclick = stopImageRecording;
-
-                setTimeout(stopImageRecording, 5000);
+        try {
+            const response = await fetch('/image/upload', {
+                method: 'POST',
+                body: formData,
             });
+
+            if (!response.ok) {
+                throw new Error('Image upload failed');
+            }
+
+            window.location.href = '{{ route("image.result") }}';
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error uploading image. Please try again.');
         }
+    }
 
-        function captureImage(stream) {
-            const canvas = document.createElement('canvas');
-            const context = canvas.getContext('2d');
-            const video = document.getElementById('player');
+    function checkKeyLength() {
+        videoInput.disabled = keyInput.value.length !== 16;
+        recordBtn.disabled = keyInput.value.length !== 16;
+    }
 
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
+    function showSubmitting() {
+        submitting.classList.remove('hidden');
+        submitting.classList.add('block');
+    }
 
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    function showTakeImage() {
+        recorderContainer.classList.remove('hidden');
+        recorderContainer.classList.add('flex');
+    }
 
-            canvas.toBlob(blob => {
-                const time = new Date().getTime();
-                const file = new File([blob], "image-" + time + ".png", {
-                    type: "image/png"
-                });
-
-                const dataTransfer = new ClipboardEvent('').clipboardData || new DataTransfer();
-                dataTransfer.items.add(file);
-
-                imageInput.files = dataTransfer.files;
-            }, 'image/png');
+    function cancelTakeImage() {
+        if (!recording) {
+            recorderContainer.classList.remove('flex');
+            recorderContainer.classList.add('hidden');
+            player.src = null;
+            cancelBtn.classList.remove("hidden");
+            recordingSubmitBtn.classList.add("hidden");
         }
-    </script>
+    }
+
+    function preventClickThrough(event) {
+        event.stopPropagation();
+    }
+
+    function startRecordingImage() {
+        recording = true;
+        cancelBtn.classList.add("hidden");
+        recordingSubmitBtn.classList.add('hidden');
+
+        navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false
+        }).then(stream => {
+            player.srcObject = stream;
+            player.play();
+
+            const imageCaptureInterval = setInterval(() => {
+                captureImage(stream);
+            }, 2000);
+
+            const stopImageRecording = () => {
+                clearInterval(imageCaptureInterval);
+                stream.getTracks().forEach(track => track.stop());
+                recording = false;
+                cancelBtn.classList.remove("hidden");
+                recordingSubmitBtn.classList.remove('hidden');
+                document.getElementById('start').classList.remove('hidden');
+                document.getElementById('stop').classList.add('hidden');
+            };
+
+            document.getElementById('stop').onclick = stopImageRecording;
+
+            setTimeout(stopImageRecording, 5000);
+        });
+    }
+
+    function captureImage(stream) {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        const video = document.getElementById('player');
+
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        canvas.toBlob(blob => {
+            const time = new Date().getTime();
+            const file = new File([blob], "image-" + time + ".png", {
+                type: "image/png"
+            });
+
+            const dataTransfer = new ClipboardEvent('').clipboardData || new DataTransfer();
+            dataTransfer.items.add(file);
+
+            imageInput.files = dataTransfer.files;
+        }, 'image/png');
+    }
+</script>
+
 </body>
 
 </html>

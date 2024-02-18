@@ -1,99 +1,57 @@
+import argparse
 import numpy as np
-from typing import Union
-
-def key_system(key: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[float, float]:
-    if len(key) != 16:
-        raise Exception("key must be 16 characters")
-
-    encrypted = None
-    last = y_minus_1
-    secondLast = y_minus_2
-
-    for i in range(16):
-        encrypted = f(ord(key[i]) + c1 * last + c2 * secondLast)
-        secondLast = last
-        last = encrypted
-
-    return secondLast, last
+from numba import njit
 
 
-def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:
-    if len(plain_text) == 0:
-        raise Exception("Plain text length must be greater than 0")
-    cipher_text = ""
-    last = y_minus_1
-    second_last = y_minus_2
-
-    decrypt_last = last
-    decrypt_second_last = second_last
-
-    print(len(plain_text))
-    for i in range(len(plain_text)):
-        # print("last:", last)
-        c = plain_text[i]
-        encrypted = f(normalizeASCII(ord(c)) + c1 * last + c2 * second_last)
-
-        # print(i, last, second_last)
-        # print("decrypt last:", decrypt_last)
-
-        denormalized = denormalizeASCII(encrypted)
-        while True:
-            tmp_cipher_text = chr(int(denormalized))
-            decrypted_char, tmp_decrypt_last, tmp_decrypt_second_last = decrypt_text(tmp_cipher_text, c1, c2, decrypt_last, decrypt_second_last, True)
-            # print(c, decrypted_char, c == decrypted_char)
-            # print(ord(c) - ord(decrypted_char))
-            denormalized += ord(c) - ord(decrypted_char)
-            # print(c, decrypted_char)
-            if ord(c) - ord(decrypted_char) == 0:
-                break
-
-        decrypt_last = tmp_decrypt_last
-        decrypt_second_last = tmp_decrypt_second_last
-
-        cipher_text += chr(int(denormalized))
-        second_last = decrypt_second_last
-        last = decrypt_last
-
-    return cipher_text
-
-
-def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float, test=False) -> Union[str, tuple[str, float, float]]:
-    if len(cipher_text) == 0:
-        raise Exception("Cipher text length must be greater than 0")
-
-    plain_text = ""
-    last = y_minus_1
-    second_last = y_minus_2
-
-    # real_plain_text_len = 10
-    for i in range(len(cipher_text)):
-        # if not test:
-        #     print("last:", last)
-        c = cipher_text[i]
-        # if test:
-        #     print(i, last, second_last)
-        normalized = normalizeASCII(ord(c))
-
-        decrypted = f(normalized - c1 * last - c2 * second_last)
-
-        plain_text += chr(int(denormalizeASCII(decrypted)))
-        second_last = last
-        last = normalized
-
-    if test:
-        return plain_text, last, second_last
-
-    return plain_text
-
-
+@njit
 def f(x: float) -> float:
     return ((x + 1) % 2) - 1
 
 
-def normalizeASCII(x: float) -> float:
-    return (x - 127.5) / 127.5
+@njit
+def normalize(x: float | int | np.uint8) -> float:
+    return (x - 128) / 128
 
 
-def denormalizeASCII(x: float) -> float:
-    return (x * 127.5) + 127.5
+@njit
+def denormalize(x: float | int | np.uint8) -> float:
+    return (x * 128) + 128
 
+
+def file(path: str):
+    from os.path import exists
+    if not exists(path):
+        raise ValueError("Path doesn't exist")
+    return path
+
+
+def key_type(key: str):
+    if len(key) != 16:
+        print("length")
+        raise ValueError("Key must be 16 character long")
+    if not key.isascii():
+        print("ascii")
+        raise ValueError("Key must be valid ASCII characters")
+    return key
+
+
+def parse_arguments() -> tuple[str, str, str, str]:
+    parser = argparse.ArgumentParser(prog="SecureIT", description="Secure your data with our service")
+
+    parser.add_argument("-t", "--type", required=True, help="type of service. Available types = [encrypt, decrypt]",
+                        type=str.lower, choices=["encrypt", "decrypt"])
+    parser.add_argument("-f", "--format", required=True, help="file format. Available types = [text, audio, image, video]",
+                        type=str.lower, choices=["text", "audio", "image", "video"])
+    parser.add_argument("-k", "--key", required=True,
+                        help="key for encryption and decryption process. Must be 16 ASCII characters", type=key_type)
+    parser.add_argument("-p", "--path", required=True, help="path of the file for encryption or decryption process",
+                        type=file)
+
+    args: argparse.Namespace = parser.parse_args()
+
+    service_type: str = args.type
+    file_format: str = args.format
+    key: str = args.key
+    file_path: str = args.path
+
+    return service_type, file_format, key, file_path

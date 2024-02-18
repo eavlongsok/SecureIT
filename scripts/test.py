@@ -1,8 +1,9 @@
 from dotenv import load_dotenv
 import os
 from pathlib import Path
-from helper import key_system, encrypt_text, decrypt_text
-import sys
+from encrypt import *
+from decrypt import *
+from key import key_system
 
 dotenv_path = Path("../.env")
 load_dotenv(dotenv_path=dotenv_path)
