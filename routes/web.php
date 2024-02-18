@@ -42,16 +42,16 @@ Route::prefix('text')->group(function () {
 });
 
 // Image
-Route::post('/image/upload', [ImageEncryptionController::class, 'uploadImage'])->name('image.upload');
-Route::get('/encrypt', [ImageController::class, 'showEncryptForm'])->name('image.encrypt.form');
-Route::get('/decrypt', [ImageController::class, 'showDecryptForm'])->name('image.decrypt.form');
-Route::post('/encrypt', [ImageController::class, 'encrypt'])->name('image.encrypt');
-Route::post('/decrypt', [ImageController::class, 'decrypt'])->name('image.decrypt');
-Route::get('/result', [ImageController::class, 'showResult'])->name('image.result'); // Added route
-Route::get('/image', [ImageController::class, 'showImagePage'])->name('image.show');
-Route::get('/image/view', [ImageController::class, 'showImagePage'])->name('image.view');
+Route::prefix('image')->group(function () {
+    Route::get('/', [ImageController::class, 'showImagePage'])->name('image.show');
+    Route::get('/encrypt', [ImageController::class, 'showEncryptForm'])->name('image.encrypt.form');
+    Route::get('/decrypt', [ImageController::class, 'showDecryptForm'])->name('image.decrypt.form');
+    Route::post('/encrypt', [ImageController::class, 'encrypt'])->name('image.encrypt');
+    Route::post('/decrypt', [ImageController::class, 'decrypt'])->name('image.decrypt');
+    Route::get('/result', [ImageController::class, 'showResult'])->name('image.result');
+Route::post('/image/upload', [ImageController::class, 'uploadImage'])->name('image.upload');
 
-
+});
 
 // Audio
 Route::prefix('audio')->group(function () {

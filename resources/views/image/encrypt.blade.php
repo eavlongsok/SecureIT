@@ -11,7 +11,7 @@
                 <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-1">
                     <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
                         <div class="flex flex-col space-y-1.5 p-6">
-                            <h3 class="whitespace-nowrap tracking-tight text-2xl font-semibold">Image Decryption</h3>
+                            <h3 class="whitespace-nowrap tracking-tight text-2xl font-semibold">Image Encryption</h3>
                             <p class="text-sm text-muted-foreground">Choose to upload an image or capture a new one for decryption.</p>
                         </div>
                         @if ($errors->any())
@@ -32,7 +32,7 @@
                                         <path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z" />
                                         <circle cx="16.5" cy="7.5" r=".5" />
                                     </svg>
-                                    <span class="text-lg">Input a 16-character key for decryption</span>
+                                    <span class="text-lg">Input a 16-character key for Encryption</span>
                                     <input type="text" name="key" maxlength="16" id="key"
                                         class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip"
                                         placeholder="Enter key here" required />
@@ -136,30 +136,33 @@
     }
 
     async function submitForm() {
-        if (keyInput.value.length !== 16) {
-            alert("Key must be 16 characters long.");
-            return;
-        }
-        showSubmitting();
-
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch('/image/upload', {
-                method: 'POST',
-                body: formData,
-            });
-
-            if (!response.ok) {
-                throw new Error('Image upload failed');
-            }
-
-            window.location.href = '{{ route("image.result") }}';
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error uploading image. Please try again.');
-        }
+    if (keyInput.value.length !== 16) {
+        alert("Key must be 16 characters long.");
+        return;
     }
+
+    showSubmitting();
+
+    const formData = new FormData(form);
+    formData.append('key', keyInput.value);  // Append the key to the form data
+
+    try {
+        const response = await fetch('/image/upload', {
+            method: 'POST',
+            body: formData,
+        });
+
+        if (!response.ok) {
+            throw new Error('Image upload failed');
+        }
+
+        window.location.href = '{{ route("image.result") }}';
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error uploading image. Please try again.');
+    }
+}
+
 
     function checkKeyLength() {
         videoInput.disabled = keyInput.value.length !== 16;
