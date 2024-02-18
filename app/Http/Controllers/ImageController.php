@@ -48,7 +48,6 @@ class ImageController extends Controller
             $this->decryptImage($imagePath, $key);
             // Redirect to the result page for decryption
             return redirect()->route('image.result', ['action' => 'decrypt']);
-
         } else {
             // Handle the case when neither 'encrypt' nor 'decrypt' is present in the request
             return redirect()->back()->with('error', 'Invalid action');
@@ -133,6 +132,4 @@ class ImageController extends Controller
 
         return Redirect::route('image.result');
     }
-
-   
 }

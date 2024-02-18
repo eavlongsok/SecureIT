@@ -26,36 +26,26 @@
                         <div class="p-6">
                             <div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
                                 <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="lucide lucide-key-round">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key-round">
                                         <path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z" />
                                         <circle cx="16.5" cy="7.5" r=".5" />
                                     </svg>
                                     <span class="text-lg">Input a 16-character key for decryption</span>
-                                    <input type="text" name="key" maxlength="16" id="key"
-                                        class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip"
-                                        placeholder="Enter key here" required onkeyup="checkKeyLength()"
-								/>
+                                    <input type="text" name="key" maxlength="16" id="key" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter key here" required onkeyup="checkKeyLength()" />
                                     <!-- <span class="cursor-pointer hover:underline select-none"
                                         onclick="generateKey()">Generate</span> -->
                                 </div>
 
                                 <!-- Image Input Section -->
                                 <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="h-12 w-12">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12">
                                         <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-                                        <path
-                                            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                         <polyline points="11 3 11 11 14 8 17 11 17 3"></polyline>
                                     </svg>
                                     <label class="text-lg">Select a video file from your device.</label>
 
-                                    <input accept="image/png image/jpg " type="file" name="image" id="image" required
-                                        onchange="submitForm()"
-                                        class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 overflow-clip " />
+                                    <input accept="image/png image/jpg " type="file" name="image" id="image" required onchange="submitForm()" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 overflow-clip " />
                                 </div>
                             </div>
                         </div>
@@ -78,7 +68,7 @@
         let recording = false;
         const recorderContainer = document.getElementById('recorder-container'); // Define recorderContainer
 
-        
+
         async function submitForm() {
             if (keyInput.value.length !== 16) {
                 alert("Key must be 16 characters long.");
@@ -86,24 +76,7 @@
             }
             showSubmitting();
 
-            const formData = new FormData(form);
-
-
-            try {
-                const response = await fetch('/image/upload', {
-                    method: 'POST',
-                    body: formData,
-                });
-
-                if (!response.ok) {
-                    throw new Error('Image upload failed');
-                }
-
-                window.location.href = 'http://127.0.0.1:8001/image/decrypt/result';
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Error uploading image. Please try again.');
-            }
+            form.submit();
         }
 
 
@@ -121,14 +94,11 @@
             recorderContainer.classList.remove('hidden');
             recorderContainer.classList.add('flex');
         }
+
         function showSubmitting() {
-        submitting.classList.remove('hidden');
-        submitting.classList.add('block')
-    }
-        
-
-
-
+            submitting.classList.remove('hidden');
+            submitting.classList.add('block')
+        }
 
     </script>
 </body>

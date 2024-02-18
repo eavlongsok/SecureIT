@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\ImageEncryptionController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\DownloadController;
@@ -49,8 +50,7 @@ Route::prefix('image')->group(function () {
     Route::post('/encrypt', [ImageController::class, 'encrypt'])->name('image.encrypt');
     Route::post('/decrypt', [ImageController::class, 'decrypt'])->name('image.decrypt');
     Route::get('/result', [ImageController::class, 'showResult'])->name('image.result');
-Route::post('/image/upload', [ImageController::class, 'uploadImage'])->name('image.upload');
-
+    Route::post('/image/upload', [ImageController::class, 'uploadImage'])->name('image.upload');
 });
 
 // Audio
