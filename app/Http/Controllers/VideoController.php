@@ -44,11 +44,11 @@ class VideoController extends Controller
         // get file extension
         $extension = $file->getClientOriginalExtension();
         // store file
-        $video_path = $file->storeAs("public", "video_to_encrypt." . $extension);
+        $file->storeAs("public", "video_to_encrypt." . $extension);
 //        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
 
-        return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => $video_path]);
+        return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => 'public/encrypted_video.' . $extension]);
     }
 
     public function decrypt(Request $request)
@@ -74,12 +74,12 @@ class VideoController extends Controller
         // get file extension
         $extension = $file->getClientOriginalExtension();
         // store file
-        $video_path = $file->storeAs("public", "video_to_decrypt." . $extension);
+        $file->storeAs("public", "video_to_decrypt." . $extension);
 
 //        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
 
-        return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => $video_path]);
+        return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => 'public/decrypted_video.' . $extension]);
     }
 
     public function showResult()

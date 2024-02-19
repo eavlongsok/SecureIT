@@ -33,6 +33,7 @@ Route::prefix('text')->group(function () {
     Route::post('/encrypt', [TextController::class, 'encryptText'])->name('encrypt.text');
     Route::post('/decrypt', [TextController::class, 'decryptText'])->name('decrypt.text');
 
+    Route::get('/result', [TextController::class, 'showResult'])->name('text.result');
     // Handling results
     Route::post('/decryption', [TextController::class, 'decryptResult'])->name('decrypt.result');
     Route::post('/encryption', [TextController::class, 'encryptResult'])->name('encrypt.result');

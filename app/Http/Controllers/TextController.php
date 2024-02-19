@@ -22,40 +22,49 @@ class TextController extends Controller
     public function encryptText(Request $request)
     {
         $validate = Validator::make($request->all(), [
-            "text" => "required|mimes:txt,csv,doc,docx|max:1024", 
             "key" => "required|size:16"
         ], [
-            "text.required" => "Please upload a text file",
-            "text.mimes" => "The text must be of type txt, csv, doc, or docx",
-            "text.max" => "The text file must be less than 1MB",
             "key.required" => "Please enter a key",
             "key.size" => "The key must be 16 characters long"
         ]);
     
-        if ($validate->fails()) {
+        // Custom validation for text or textFile
+        $textProvided = $request->input('text') !== null && trim($request->input('text')) !== '';
+        $fileProvided = $request->hasFile('textFile');
+    
+        if (!($textProvided xor $fileProvided)) { 
+            $validate->errors()->add('text', 'Please provide either text or a text file, but not both.');
+        }
+    
+        if ($validate->fails() || $validate->errors()->isNotEmpty()) {
             return redirect("/text/encrypt")->withErrors($validate);
         }
     
-        $file = $request->file("text");
-        $key = $request->input("key");
-        $extension = $file->getClientOriginalExtension();
-        $text_path = $file->storeAs("public", "text_to_encrypt." . $extension);
-        
-        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f text -k "' . $key . '" -p "' . base_path() . '\storage\app\public\text_to_encrypt.' . $extension . '"');
+        if ($fileProvided) {
+            $file = $request->file("textFile");
+            $extension = $file->getClientOriginalExtension();
+            $text_path = $file->storeAs("public", "text_to_encrypt." . $extension);
+        } else {
+            $text = $request->input('text');
+        }
     
-        return Redirect::route('encrypt.result')->with(["type" => "encryption", "key" => $key, "text_path" => $text_path]);
+        $key = $request->input("key");
+    
+    
+        return Redirect::route('text.result')->with(["type" => "encryption", "key" => $key, "text" => $text, "text_path" => $text_path ?? 'path/to/text_from_input']);
     }
+    
     
 
     public function decryptText(Request $request)
     {
         $validate = Validator::make($request->all(), [
-            "textFile" => "required|file|mimes:txt,csv,doc,docx|max:2048", 
+            // "textFile" => "required|file|mimes:txt,csv,doc,docx|max:2048", 
             "key" => "required|string|size:16", 
         ], [
             "textFile.required" => "Please upload a text file to decrypt.",
             "textFile.file" => "The uploaded file must be a valid file.",
-            "textFile.mimes" => "Only txt, csv, doc, and docx files are allowed.",
+            // "textFile.mimes" => "Only txt, csv, doc, and docx files are allowed.",
             "textFile.max" => "The text file must not exceed 2MB.",
             "key.required" => "A decryption key is required.",
             "key.size" => "The decryption key must be exactly 16 characters.",
@@ -74,7 +83,7 @@ class TextController extends Controller
         $output = shell_exec($command);
     
         if (!empty($output)) {
-            return Redirect::route('decrypt.result')->with([
+            return Redirect::route('text.ecrypt.result')->with([
                 'message' => 'Decryption successful!',
                 'decryptedData' => $decryptedDataPath
             ]);
@@ -83,30 +92,33 @@ class TextController extends Controller
         }
     }
     
-
-    public function encryptResult(Request $request)
+    public function showResult(Request $request)
     {
-        if (session()->has("type") && session()->has("key") && session()->has("text_path")) {
+        if (session()->has("type") && session()->has("key")) {
+            $type = session("type");
+            $key = session("key");
+            $text = session("text");
+            $textPath = session("text_path");
+    
+            $encryptedText = null;
+    
+            if (file_exists(storage_path('app/' . $textPath))) {
+                $encryptedText = file_get_contents(storage_path('app/' . $textPath));
+            } else {
+                $encryptedText = "The encrypted text could not be found or is not accessible.";
+            }
+    
             return view('text.result', [
-                "type" => session("type"),
-                "key" => session("key"),
-                "text_path" => session("text_path")
+                "type" => $type,
+                "key" => $key,
+                "text" => $text,
+                "encryptedText" => $encryptedText 
             ]);
         }
-        return Redirect::route('text.view');
+        return Redirect::route('text.view'); 
+
     }
     
-    public function decryptResult(Request $request)
-    {
-        if (session()->has("type") && session()->has("key") && session()->has("text_path")) {
-            return view('text.result', [
-                "type" => session("type"),
-                "key" => session("key"),
-                "text_path" => session("text_path")
-            ]);
-        }
-        return Redirect::route('text.view');
-    }
 
     public function showText()
     {
