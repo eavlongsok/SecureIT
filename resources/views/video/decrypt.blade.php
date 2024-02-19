@@ -9,7 +9,7 @@
 
 <div class="flex flex-col min-h-screen">
 	@include("header")
-	<form method="post" action="/video/encrypt" enctype="multipart/form-data" id="form"
+	<form method="post" action="/video/decrypt" enctype="multipart/form-data" id="form"
 	>
 		@csrf
 		<main class="flex-1 py-12 px-4 md:px-6 bg-gray-100">
@@ -21,6 +21,15 @@
 						<p class="text-sm text-muted-foreground">Choose to upload a video for
 							Decryption.</p>
 					</div>
+					@if ($errors->any())
+						<div class="alert alert-danger">
+							<ul>
+								@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif
 					<div class="p-6">
 						<div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
 							<div
@@ -69,7 +78,7 @@
 								<label class="text-lg">Select a video file from your device.</label>
 
 								<input
-									accept="video/mp4 video/webm"
+									accept="video/mp4 video/webm video/x-matroska"
 									type="file"
 									name="video"
 									id="video"
@@ -107,7 +116,7 @@
         showSubmitting();
         submitting.classList.remove('hidden');
         submitting.classList.add('block');
-        cancelRecordVideo();
+
         form.submit();
     }
 
@@ -118,17 +127,6 @@
     function showSubmitting() {
         submitting.classList.remove('hidden');
         submitting.classList.add('block')
-    }
-
-    function cancelRecordVideo() {
-        if (!recording) {
-            recorderContainer.classList.remove('flex');
-            recorderContainer.classList.add('hidden')
-            player.srcObject = null;
-            player.src = null;
-            cancelBtn.classList.remove("hidden");
-            recordingSubmitBtn.classList.add("hidden");
-        }
     }
 
 </script>
