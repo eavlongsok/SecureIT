@@ -32,7 +32,21 @@ class VideoController extends Controller
             return redirect()->route('video.result')->with('filename', $filename)->with('status', 'Video encrypted successfully!');
         }
 
+<<<<<<< Updated upstream
         return back()->withErrors(['video' => 'Please upload a valid video file.']);
+=======
+        // save file from request as its own type
+        $file = $request->file("video");
+        $key = $request->input("key");
+        // get file extension
+        $extension = $file->getClientOriginalExtension();
+        // store file
+        $video_path = $file->storeAs("public", "video_to_encrypt." . $extension);
+//        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+
+        return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => $video_path]);
+>>>>>>> Stashed changes
     }
 
     public function decrypt(Request $request)
@@ -42,6 +56,7 @@ class VideoController extends Controller
         ]);
 
         $file = $request->file("video");
+<<<<<<< Updated upstream
         if ($file) {
             $extension = $file->getClientOriginalExtension();
             $filename = 'decrypted_' . time() . '.' . $extension;
@@ -52,6 +67,17 @@ class VideoController extends Controller
         }
 
         return back()->withErrors(['video' => 'Please upload a valid video file.']);
+=======
+        $key = $request->input("key");
+        // get file extension
+        $extension = $file->getClientOriginalExtension();
+        // store file
+        $video_path = $file->storeAs("public", "video_to_dncrypt." . $extension);
+
+//        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
+        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
+        return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => $video_path]);
+>>>>>>> Stashed changes
     }
 
     public function showResult()

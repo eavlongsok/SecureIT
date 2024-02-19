@@ -26,7 +26,7 @@ def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minu
             decrypted_char, tmp_decrypt_last, tmp_decrypt_second_last = decrypt_text(tmp_cipher_text, c1, c2, decrypt_last, decrypt_second_last, True)
             # print(c, decrypted_char, c == decrypted_char)
             # print(ord(c) - ord(decrypted_char))
-            denormalized += ord(c) - ord(decrypted_char)
+            denormalized = (denormalized + ord(c) - ord(decrypted_char)) % 256
             # print(c, decrypted_char)
             if ord(c) - ord(decrypted_char) == 0:
                 break
