@@ -13,15 +13,16 @@ from decrypt import *
 
 dirname = os.path.join(os.path.dirname(__file__), '..')
 env_file_name = os.path.join(dirname, '.env')
+print (env_file_name )
 dotenv_path = Path(env_file_name)
 load_dotenv(dotenv_path=dotenv_path)
 
-KEY_SYSTEM_C1 = os.getenv("C1")
-KEY_SYSTEM_C2 = os.getenv("C2")
-KEY_SYSTEM_Y_MINUS_1 = os.getenv("KEY_Y_MINUS_1")
-KEY_SYSTEM_Y_MINUS_2 = os.getenv("KEY_Y_MINUS_2")
-MAIN_ALGO_Y_MINUS_1 = os.getenv("KEY_Y_MINUS_1")
-MAIN_ALGO_Y_MINUS_2 = os.getenv("KEY_Y_MINUS_2")
+KEY_SYSTEM_C1 = -0.866154817138970
+KEY_SYSTEM_C2 = -0.866154817138970
+KEY_SYSTEM_Y_MINUS_1 = -0.745383300063278
+KEY_SYSTEM_Y_MINUS_2 = -0.745383300063278
+MAIN_ALGO_Y_MINUS_1 = 0.8455383300063278
+MAIN_ALGO_Y_MINUS_2 = 0.8455383300063278
 
 if KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:
     raise Exception("Failed to load necessary variables")
@@ -62,7 +63,7 @@ if service_type == "encrypt":
         case "audio":
             ...
         case "image":
-            dest = dirname + "/storage/app/public/encrypted_image" + pathlib.Path(file_path).suffix
+            dest = dirname + r"/storage/app/public/encrypted_image" + pathlib.Path(file_path).suffix
             
          #encrypt_image 
 
@@ -71,9 +72,9 @@ if service_type == "encrypt":
 
             tmp_img = np.zeros(img.shape, dtype=np.uint8)
 
-            encrypted_img = _encrypt_image(img, tmp_img, MAIN_ALGO_C1, MAIN_ALGO_C2,MAIN_ALGO_Y_MINUS_1 ,MAIN_ALGO_Y_MINUS_2 , returnVal=false)
-
-            cv.imwrite(dirname+"/storage/app/public/encrypted.png", encrypted_img)
+            encrypted_img ,_,_ = _encrypt_image(img, tmp_img, MAIN_ALGO_C1, MAIN_ALGO_C2,MAIN_ALGO_Y_MINUS_1 ,MAIN_ALGO_Y_MINUS_2 , returnVal=False)
+            print(type(encrypted_img), encrypted_img.shape)
+            cv.imwrite( dest, encrypted_img)
 
             print("done")
             
@@ -126,7 +127,7 @@ elif service_type == "decrypt":
         case "audio":
             ...
         case "image":
-            dest = dirname + "/storage/app/public/decrypted_image" + pathlib.Path(file_path).suffix
+            dest = dirname + r"/storage/app/public/decrypted_image" + pathlib.Path(file_path).suffix
             #decrypt_image 
             img = cv.imread(file_path)
 
@@ -137,7 +138,7 @@ elif service_type == "decrypt":
 
             decrypted_img= _decrypt_image(img, tmp_img, MAIN_ALGO_C1, MAIN_ALGO_C2, last, second_last, returnVal=flase)
 
-            cv.imwrite(dirname+"/storage/app/public/decrypted_image.png", decrypted_img)
+            cv.imwrite(dest, decrypted_img)
 
             print("done")
 

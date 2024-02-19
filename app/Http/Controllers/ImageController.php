@@ -72,7 +72,7 @@ class ImageController extends Controller
         $extension = $file->getClientOriginalExtension();
         $file->storeAs("public", "image_to_encrypt." . $extension);
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f image -k "' . $key . '" -p "' . base_path() . '\storage\app\public\image_to_encrypt.' . $extension . '"');
-
+        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f image -k "' . $key . '" -p "' . base_path() . '\storage\app\public\image_to_encrypt.' . $extension . '"');
     $imagePath = "storage/app/public/image_to_encrypt." . $extension;
 
     return Redirect::route('image.result')->with(["type" => "encryption", "key" => $key, "image_path" => 'public/encrypted_image.' . $extension]);
@@ -108,17 +108,17 @@ class ImageController extends Controller
     }
 
 
-    public function showResult(Request $request)
-{
-    $type = $request->input('action');
-
-    if ($type && session()->has('key') && session()->has('image_path')) {
-        return view('image.result', [
-            'type' => $type,
-            'key' => session('key'),
-            'image_path' => session('image_path'),
-        ]);
-    }
+    
+    public function showResult()
+    {
+        if (session()->has("type") && session()->has("key") && session()->has("image_path")) {
+            return view('image.result', [
+                "type" => session("type"),
+                "key" => session("key"),
+                "image_path" => session("image_path")]);
+        }
+    
+    
 
     // If conditions are not met or session data is missing, redirect to a different route
     // return redirect()->route('image.result');
