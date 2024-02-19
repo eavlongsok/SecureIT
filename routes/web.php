@@ -44,28 +44,14 @@ Route::prefix('text')->group(function () {
 
 // Image
 Route::prefix('image')->group(function () {
-    Route::get('/', [ImageController::class, 'showImagePage'])->name('image.show');
+    Route::get('/', [ImageController::class, 'showImage'])->name('image.view');
     Route::get('/encrypt', [ImageController::class, 'showEncryptForm'])->name('image.encrypt.form');
     Route::get('/decrypt', [ImageController::class, 'showDecryptForm'])->name('image.decrypt.form');
     Route::post('/encrypt', [ImageController::class, 'encrypt'])->name('image.encrypt');
     Route::post('/decrypt', [ImageController::class, 'decrypt'])->name('image.decrypt');
     Route::get('/result', [ImageController::class, 'showResult'])->name('image.result');
 
-    Route::post('/image/upload', [ImageController::class, 'uploadImage'])->name('image.upload');
-});
-
-// Audio
-Route::prefix('audio')->group(function () {
-    Route::get('/encrypt', [AudioController::class, 'showEncryptForm'])->name('audio.encrypt.form');
-    Route::post('/encrypt', [AudioController::class, 'encrypt'])->name('audio.encrypt');
-    Route::get('/encrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.encrypt.result');
-
-    Route::get('/decrypt', [AudioController::class, 'showDecryptForm'])->name('audio.decrypt.form');
-    Route::post('/decrypt', [AudioController::class, 'decrypt'])->name('audio.decrypt');
-    Route::get('/decrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.decrypt.result');
-
-    // Show page
-    Route::get('/', [AudioController::class, 'showAudio'])->name('audio.view');
+    // Route::get('/image/upload', [ImageController::class, 'uploadImage'])->name('image.upload');
 });
 
 // Video
@@ -84,3 +70,16 @@ Route::prefix('video')->group(function () {
 });
 
 Route::post("/download", [DownloadController::class, "download"])->name("download");
+// Audio
+Route::prefix('audio')->group(function () {
+    Route::get('/encrypt', [AudioController::class, 'showEncryptForm'])->name('audio.encrypt.form');
+    Route::post('/encrypt', [AudioController::class, 'encrypt'])->name('audio.encrypt');
+    Route::get('/encrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.encrypt.result');
+
+    Route::get('/decrypt', [AudioController::class, 'showDecryptForm'])->name('audio.decrypt.form');
+    Route::post('/decrypt', [AudioController::class, 'decrypt'])->name('audio.decrypt');
+    Route::get('/decrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.decrypt.result');
+
+    // Show page
+    Route::get('/', [AudioController::class, 'showAudio'])->name('audio.view');
+});

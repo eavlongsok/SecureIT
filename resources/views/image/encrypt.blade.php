@@ -6,8 +6,8 @@
     <div class="flex flex-col min-h-screen">
         @include("header")
         <!-- <form method="post" action="/image/encrypt" enctype="multipart/form-data" id="form"> -->
-        <form id="form" action="{{ route('image.result') }}" method="POST">
-        
+        <!-- <form id="form" action="{{ route('image.result') }}" method="get"> -->
+        <form method="post" action="/image/encrypt" enctype="multipart/form-data" id="form">
             @csrf
             <main class="flex-1 py-12 px-4 md:px-6 bg-gray-100">
                 <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-1">
@@ -79,7 +79,7 @@
                                 <button id="recording-submit-btn" class="w-[10rem] py-4 px-2 bg-blue-700 text-white text-lg font-semibold rounded-xl shadow select-none hidden" onclick="submitForm()" type="button">
                                     Submit
                                 </button>
-                                <button id="cancel-btn" class="w-[10rem] py-4 px-2 bg-gray-700 text-white text-lg font-semibold rounded-xl shadow select-none" onclick="cancelRecordImage()" type="button">
+                                <button id="cancel-btn" class="w-[10rem] py-4 px-2 bg-gray-700 text-white text-lg font-semibold rounded-xl shadow select-none" onclick="cancelTakeImage()" type="button">
                                     Cancel
                                 </button>
                             </div>
@@ -122,18 +122,20 @@
 
         //     form.submit();
         // }
-        function submitForm() {
-      if (keyInput.value.length !== 16) {
-        alert("Key must be 16 characters long.");
-        return;
-      }
-
-    showSubmitting();
-
-    // Assuming form is a reference to your form element
-      form.action = "{{ route('image.result') }}";
-    form.submit();
-   }
+       
+ 
+   function submitForm() {
+            if (keyInput.value.length !== 16) {
+                alert("Key must be 16 characters long.");
+                return;
+            }
+            showSubmitting();
+            submitting.classList.remove('hidden');
+            submitting.classList.add('block');
+            cancelTakeImage();
+            form.submit();
+            recordBtn.disabled = true;
+        }
 
 
         function checkKeyLength() {

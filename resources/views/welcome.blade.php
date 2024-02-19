@@ -70,7 +70,7 @@
                         </a>
                         <a
                             class="flex items-center gap-2 hover:bg-gray-200 p-2 rounded transition-colors duration-200"
-                            href="{{ route('image.show') }}"
+                            href="{{ route('image.view') }}"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
