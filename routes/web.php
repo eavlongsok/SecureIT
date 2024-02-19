@@ -50,6 +50,7 @@ Route::prefix('image')->group(function () {
     Route::post('/encrypt', [ImageController::class, 'encrypt'])->name('image.encrypt');
     Route::post('/decrypt', [ImageController::class, 'decrypt'])->name('image.decrypt');
     Route::get('/result', [ImageController::class, 'showResult'])->name('image.result');
+
     Route::post('/image/upload', [ImageController::class, 'uploadImage'])->name('image.upload');
 });
 

@@ -25,12 +25,12 @@
                         </svg>
                         <span class="text-lg mr-28"> {{session("type") == "encryption" ? "Download Encrypted Image" : "Download Decrypted Image"}} </span>
                         <form method="POST" action={{route("download")}}>
-                            @csrf
-                            <input type="text" name="path" hidden value="{{session("image_path")}}" />
-                            <button class="ml-auto bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                                Download
-                            </button>
-                        </form>
+                        @csrf
+                        <input type="text" name="path" hidden value="{{ session("image_path") }}" />
+                        <button class="ml-auto bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            Download
+                        </button>
+                    </form>
                     </div>
                     <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12">

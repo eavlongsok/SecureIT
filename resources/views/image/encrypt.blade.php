@@ -5,7 +5,9 @@
 <body>
     <div class="flex flex-col min-h-screen">
         @include("header")
-        <form method="post" action="/image/encrypt" enctype="multipart/form-data" id="form">
+        <!-- <form method="post" action="/image/encrypt" enctype="multipart/form-data" id="form"> -->
+        <form id="form" action="{{ route('image.result') }}" method="POST">
+        
             @csrf
             <main class="flex-1 py-12 px-4 md:px-6 bg-gray-100">
                 <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-1">
@@ -110,16 +112,28 @@
             checkKeyLength();
         }
 
-        async function submitForm() {
-            if (keyInput.value.length !== 16) {
-                alert("Key must be 16 characters long.");
-                return;
-            }
+        // async function submitForm() {
+        //     if (keyInput.value.length !== 16) {
+        //         alert("Key must be 16 characters long.");
+        //         return;
+        //     }
 
-            showSubmitting();
+        //     showSubmitting();
 
-            form.submit();
-        }
+        //     form.submit();
+        // }
+        function submitForm() {
+      if (keyInput.value.length !== 16) {
+        alert("Key must be 16 characters long.");
+        return;
+      }
+
+    showSubmitting();
+
+    // Assuming form is a reference to your form element
+      form.action = "{{ route('image.result') }}";
+    form.submit();
+   }
 
 
         function checkKeyLength() {

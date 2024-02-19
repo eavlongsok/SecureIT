@@ -51,7 +51,7 @@
         <div class="buttons">
             <a href="{{ route('image.encrypt') }}" class="button"> Encryption</a>
             <a href="{{ route('image.decrypt') }}" class="button"> Decryption</a>
-            <a href="{{ url('/image.result') }}" class="button"> Result</a>
+            <a href="{{ route('image.result') }}" class="button"> Result</a>
             <a href="{{ url('/') }}" class="button"> Back to Menu</a>
         </div>
     </div>

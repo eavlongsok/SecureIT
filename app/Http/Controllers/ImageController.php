@@ -12,7 +12,7 @@ class ImageController extends Controller
 {
     public function showImagePage()
     {
-        return view('image.image'); // Adjust the path to match your actual folder structure
+        return view('image.image');
     }
 
     public function showEncryptForm()
@@ -25,46 +25,36 @@ class ImageController extends Controller
         return view('image.decrypt');
     }
 
-    public function uploadImage(Request $request)
-    {
-        // Validate the request (add any additional validation if needed)
-        $request->validate([
-            'key' => 'required|string|min:16|max:16',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Adjust accepted image types and size
-        ]);
+            public function uploadImage(Request $request)
+        {
+            $request->validate([
+                'key' => 'required|string|min:16|max:16',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
 
-        // Store the uploaded image in storage/app/public
-        $imagePath = $request->file('image')->store('public');
+            $imagePath = $request->file('image')->store('public');
+            $key = $request->input('key');
 
-        // Get the key from the request
-        $key = $request->input('key');
+            // Set session values
+            session(['key' => $key, 'image_path' => $imagePath]);
 
-        // Encrypt or decrypt the image based on the action parameter
-        if ($request->has('encrypt')) {
-            $this->encryptImage($imagePath, $key);
-            // Redirect to the result page for encryption
-            return redirect()->route('image.result', ['action' => 'encrypt']);
-        } elseif ($request->has('decrypt')) {
-            $this->decryptImage($imagePath, $key);
-            // Redirect to the result page for decryption
-            return redirect()->route('image.result', ['action' => 'decrypt']);
-        } else {
-            // Handle the case when neither 'encrypt' nor 'decrypt' is present in the request
-            return redirect()->back()->with('error', 'Invalid action');
+            if ($request->has('encrypt')) {
+                $this->encryptImage($imagePath, $key);
+                return redirect()->route('image.result', ['action' => 'encrypt']);
+            } elseif ($request->has('decrypt')) {
+                $this->decryptImage($imagePath, $key);
+                return redirect()->route('image.result', ['action' => 'decrypt']);
+            } else {
+                return redirect()->back()->with('error', 'Invalid action');
+            }
         }
-    }
+
 
     public function encrypt(Request $request)
     {
         $validate = Validator::make($request->all(), [
             'key' => 'required|string|min:16|max:16',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ], [
-            'image.required' => 'Please upload an image file or capture one',
-            'image.mimes' => 'The image must be of type jpeg, png, jpg, gif, or svg',
-            'image.max' => 'The image must be less than 2048',
-            'key.required' => 'Please enter a key',
-            'key.size' => 'The key must be 16 characters long',
         ]);
 
         if ($validate->fails()) {
@@ -78,11 +68,7 @@ class ImageController extends Controller
 
         $this->encryptImage('public/image_to_encrypt.' . $extension, $key);
 
-        return Redirect::route('image.result')->with([
-            'type' => 'encryption',
-            'key' => $key,
-            'image_path' => asset('storage/encrypted/' . basename($imagePath)),
-        ]);
+        return redirect()->route('image.result', ['action' => 'encrypt']);
     }
 
     public function decrypt(Request $request)
@@ -90,12 +76,6 @@ class ImageController extends Controller
         $validate = Validator::make($request->all(), [
             'key' => 'required|string|min:16|max:16',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ], [
-            'image.required' => 'Please upload an image file or capture one',
-            'image.mimes' => 'The image must be of type jpeg, png, jpg, gif, or svg',
-            'image.max' => 'The image must be less than 2048',
-            'key.required' => 'Please enter a key',
-            'key.size' => 'The key must be 16 characters long',
         ]);
 
         if ($validate->fails()) {
@@ -109,27 +89,25 @@ class ImageController extends Controller
 
         $this->decryptImage('public/image_to_decrypt.' . $extension, $key);
 
-        return Redirect::route('image.result')->with([
-            'type' => 'decryption',
-            'key' => $key,
-            'image_path' => asset('storage/decrypted/' . basename($imagePath)),
+        return redirect()->route('image.result', ['action' => 'decrypt']);
+    }
+
+    public function showResult(Request $request)
+{
+    $type = $request->input('action');
+
+    if ($type && session()->has('key') && session()->has('image_path')) {
+        return view('image.result', [
+            'type' => $type,
+            'key' => session('key'),
+            'image_path' => session('image_path'),
         ]);
     }
 
-    public function showResult()
-    {
-        if (
-            session()->has('type') &&
-            session()->has('key') &&
-            session()->has('image_path')
-        ) {
-            return view('image.result', [
-                'type' => session('type'),
-                'key' => session('key'),
-                'image_path' => session('image_path'),
-            ]);
-        }
+    // If conditions are not met or session data is missing, redirect to a different route
+    return redirect()->route('image.show');
+    
+}
 
-        return Redirect::route('image.result');
-    }
+
 }

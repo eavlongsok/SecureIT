@@ -63,12 +63,11 @@ if service_type == "encrypt":
             ...
         case "image":
             dest = dirname + "/storage/app/public/encrypted_image" + pathlib.Path(file_path).suffix
-            encrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
-
+            
          #encrypt_image 
 
             img = cv.imread(file_path)
-            height, width, _ = img.shape
+            # height, width, _ = img.shape
 
             tmp_img = np.zeros(img.shape, dtype=np.uint8)
 
@@ -128,10 +127,7 @@ elif service_type == "decrypt":
             ...
         case "image":
             dest = dirname + "/storage/app/public/decrypted_image" + pathlib.Path(file_path).suffix
-            decrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
-
             #decrypt_image 
-
             img = cv.imread(file_path)
 
             last = MAIN_ALGO_Y_MINUS_1
@@ -145,7 +141,6 @@ elif service_type == "decrypt":
 
             print("done")
 
- 
         case "video":
             dest = dirname + "/storage/app/public/decrypted_video" + pathlib.Path(file_path).suffix
             decrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
