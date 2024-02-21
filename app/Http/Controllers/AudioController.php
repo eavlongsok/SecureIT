@@ -56,7 +56,7 @@ class AudioController extends Controller
         $extension = $file->getClientOriginalExtension();
         $file->storeAs("public", "audio_to_encrypt." . $extension);
     
-        $output = shell_exec('py "' . base_path() . '\scripts\main.py" -t encrypt -f audio -k "' . $key . '" -p "' . base_path() . '\storage\app\public\audio_to_encrypt.' . $extension . '"');
+        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f audio -k "' . $key . '" -p "' . base_path() . '\storage\app\public\audio_to_encrypt.' . $extension . '"');
 
         // Redirect to result page with encryption details
         return Redirect::route('audio.result')->with(["type" => "encryption", "key" => $key, "audio_path" => 'public/encrypted_audio.' . $extension]);
@@ -87,7 +87,7 @@ class AudioController extends Controller
         $key = $request->input("key");
         $extension = $file->getClientOriginalExtension();
         $file->storeAs("public", "audio_to_decrypt." . $extension); 
-        $output = shell_exec('py "' . base_path() . '\scripts\main.py" -t decrypt -f audio -k "' . $key . '" -p "' . base_path() . '\storage\app\public\audio_to_decrypt.' . $extension . '"');
+        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f audio -k "' . $key . '" -p "' . base_path() . '\storage\app\public\audio_to_decrypt.' . $extension . '"');
 
         return Redirect::route('audio.result')->with(["type" => "decryption", "key" => $key, "audio_path" => 'public/decrypted_audio.' . $extension]);
     }
