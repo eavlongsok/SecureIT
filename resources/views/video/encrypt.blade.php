@@ -46,6 +46,15 @@
                                         <polyline points="17 8 12 3 7 8"></polyline>
                                         <line x1="12" x2="12" y1="3" y2="15"></line>
                                     </svg>
+                                    <span class="text-lg">Input Absoulte Path For Your Video:</span>
+                                    <input type="text" name="path" id="path" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" onkeyup="if(event.keyCode === 13) { submitForm(); }" placeholder="Enter absolute path here" required onkeyup="checkKeyLength()" />
+                                </div>
+                                <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" x2="12" y1="3" y2="15"></line>
+                                    </svg>
                                     <span class="text-lg">Select a video file from your device.</span>
 
                                     <input accept="video/mp4 video/webm video/x-matroska" type="file" name="video" id="video" required disabled onchange="submitForm()" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 overflow-clip" />

@@ -78,7 +78,7 @@ def _encrypt_image(image: cv.typing.MatLike, cipher_image: np.ndarray[np.uint8],
                 while True:
                     tmp_cipher_pixel = int(denormalized)
                     decrypted_pixel, tmp_decrypt_last, tmp_decrypt_second_last = test_decrypt(tmp_cipher_pixel, c1, c2, last, second_last)
-                    denormalized += pixel - decrypted_pixel
+                    denormalized = (denormalized + pixel - decrypted_pixel) % 256
 
                     if pixel - decrypted_pixel == 0:
                         break
