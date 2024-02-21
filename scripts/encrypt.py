@@ -50,8 +50,39 @@ def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minu
     return cipher_text
 
 
-def encrypt_audio():
-    ...
+@njit
+def encrypt_audio(audio_array: np.ndarray, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> np.ndarray:
+    encrypted_array = np.zeros(len(audio_array), dtype=np.uint8)
+    last = y_minus_1
+    second_last = y_minus_2
+
+    decrypt_last = last
+    decrypt_second_last = second_last
+
+    for i in range(len(audio_array)):
+        encrypted = f(normalize(audio_array[i]) + c1 * last + c2 * second_last)
+
+        denormalized = denormalize(encrypted)
+
+        while True:
+            tmp_cipher_value = int(denormalized)
+            decrypted_value, tmp_decrypt_last, tmp_decrypt_second_last = decrypt_byte(tmp_cipher_value, c1, c2, decrypt_last, decrypt_second_last)
+
+            denormalized = (denormalized + audio_array[i] - decrypted_value) % 256
+
+            if audio_array[i] - decrypted_value == 0:
+                # print(audio_array[i], decrypted_value)
+                break
+
+        decrypt_last = tmp_decrypt_last
+        decrypt_second_last = tmp_decrypt_second_last
+
+        encrypted_array[i] = int(denormalized)
+        second_last = decrypt_second_last
+        last = decrypt_last
+
+    return encrypted_array
+
 
 
 def encrypt_image():
