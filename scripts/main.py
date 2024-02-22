@@ -72,44 +72,43 @@ if service_type == "encrypt":
         case "image":
             ...
         case "video":
-            dest = dirname + "/storage/app/public/encrypted_video" + pathlib.Path(file_path).suffix
-            encrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            # dest = dirname + "/storage/app/public/encrypted_video" + pathlib.Path(file_path).suffix
+            # encrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
 
             # or uncomment the function below
 
-#             cap = cv.VideoCapture(file_path)
-#             fps = int(cap.get(cv.CAP_PROP_FPS))
-#             width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
-#             height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
-#
-#             encrypted_video = cv.VideoWriter(dirname+"/storage/app/public/encrypted.mkv", cv.VideoWriter.fourcc(*"FFV1"), fps,
-#                                              (width, height), True)
-#
-#             last = MAIN_ALGO_Y_MINUS_1
-#             second_last = MAIN_ALGO_Y_MINUS_2
-#
-#             count = 0
-#             while cap.isOpened():
-#                 ret, frame = cap.read()
-#
-#                 if not ret:
-#                     break
-#                 if count == 0:
-#                     tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
-#
-#                 encrypted_frame, last, second_last = _encrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last,
-#                                                                     second_last, returnVal=True)
-#                 encrypted_video.write(encrypted_frame)
-#
-#                 count += 1
-#                 print(count)
-#
-#             cap.release()
+            dest = dirname + "/storage/app/public/encrypted_video.mkv"
 
-            # compressing the encrypted video
+            cap = cv.VideoCapture(file_path)
+            fps = int(cap.get(cv.CAP_PROP_FPS))
+            width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+            height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
 
-#             encrypted_video.release()
-#             print("done")
+            encrypted_video = cv.VideoWriter(dest, cv.VideoWriter.fourcc(*"FFV1"), fps,
+                                             (width, height), True)
+
+            last = MAIN_ALGO_Y_MINUS_1
+            second_last = MAIN_ALGO_Y_MINUS_2
+
+            count = 0
+            while cap.isOpened():
+                ret, frame = cap.read()
+
+                if not ret:
+                    break
+                if count == 0:
+                    tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
+
+                encrypted_frame, last, second_last = _encrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last, second_last, returnVal=True)
+
+                encrypted_video.write(encrypted_frame)
+
+                count += 1
+                print(count)
+
+            cap.release()
+            encrypted_video.release()
+            # print("done")
         case _:
             raise ValueError("file format not supported")
 
@@ -129,39 +128,38 @@ elif service_type == "decrypt":
         case "image":
             ...
         case "video":
-            dest = dirname + "/storage/app/public/decrypted_video" + pathlib.Path(file_path).suffix
-            decrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            # dest = dirname + "/storage/app/public/decrypted_video" + pathlib.Path(file_path).suffix
+            # decrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
             # or uncomment the function below
 
-#             cap = cv.VideoCapture(file_path)
-#             fps = int(cap.get(cv.CAP_PROP_FPS))
-#             width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
-#             height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
-#
-#             decrypted_video = cv.VideoWriter(dirname+"/storage/app/public/decrypted_video.mkv", cv.VideoWriter.fourcc(*"FFV1"), fps,
-#                                              (width, height), True)
-#
-#             last = MAIN_ALGO_Y_MINUS_1
-#             second_last = MAIN_ALGO_Y_MINUS_2
-#
-#             count = 0
-#             while cap.isOpened():
-#                 ret, frame = cap.read()
-#
-#                 if not ret:
-#                     break
-#
-#                 if count == 0:
-#                     tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
-#                 encrypted_frame, last, second_last = _decrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last,
-#                                                                     second_last, returnVal=True)
-#                 decrypted_video.write(encrypted_frame)
-#
-#                 count += 1
-#                 print(count)
-#
-#             cap.release()
-#             decrypted_video.release()
-#             print("done")
+            dest = dirname + "/storage/app/public/decrypted_video.mkv"
+
+            cap = cv.VideoCapture(file_path)
+            fps = int(cap.get(cv.CAP_PROP_FPS))
+            width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+            height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
+
+            decrypted_video = cv.VideoWriter(dest, cv.VideoWriter.fourcc(*"FFV1"), fps, (width, height), True)
+
+            last = MAIN_ALGO_Y_MINUS_1
+            second_last = MAIN_ALGO_Y_MINUS_2
+
+            count = 0
+            while cap.isOpened():
+                ret, frame = cap.read()
+
+                if not ret:
+                    break
+
+                if count == 0:
+                    tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
+                encrypted_frame, last, second_last = _decrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last, second_last, returnVal=True)
+                decrypted_video.write(encrypted_frame)
+
+                count += 1
+                print(count)
+
+            cap.release()
+            decrypted_video.release()
         case _:
             raise ValueError("file format not supported")
