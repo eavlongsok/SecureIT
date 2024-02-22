@@ -122,9 +122,9 @@
 
         //     form.submit();
         // }
-       
- 
-   function submitForm() {
+
+
+        function submitForm() {
             if (keyInput.value.length !== 16) {
                 alert("Key must be 16 characters long.");
                 return;
@@ -195,7 +195,7 @@
 
                 document.getElementById('stop').onclick = stopImageRecording;
 
-                setTimeout(stopImageRecording, 5000);
+                setTimeout(stopImageRecording, 2500);
             });
         }
 
