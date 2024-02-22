@@ -7,8 +7,10 @@ from key import key_system
 from encrypt import *
 from decrypt import *
 
-dotenv_path = Path("../.env")
-load_dotenv(dotenv_path=dotenv_path)
+dirname = os.path.join(os.path.dirname(__file__), '..')
+env_file_name = os.path.join(dirname, '.env')
+
+load_dotenv(dotenv_path=env_file_name)
 
 KEY_SYSTEM_C1 = os.getenv("C1")
 KEY_SYSTEM_C2 = os.getenv("C2")
@@ -52,7 +54,11 @@ MAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(key, KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_S
 if service_type == "encrypt":
     match file_format:
         case "text":
-            encrypt_text(file_path, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            # print(dirname + "/storage/app/public/cipher_text.txt")
+            cipher_text = encrypt_text(file_path, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+
+            with open(dirname + "/storage/app/public/cipher_text.txt", "w", encoding="utf-8") as f:
+                f.write(cipher_text)
         case "audio":
             ...
         case "image":
@@ -65,7 +71,11 @@ if service_type == "encrypt":
 elif service_type == "decrypt":
     match file_format:
         case "text":
-            decrypt_text(file_path, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            # print(dirname + "/storage/app/public/cipher_text.txt")
+            plain_text = decrypt_text(file_path, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+
+            with open(dirname + "/storage/app/public/plain_text.txt", "w", encoding="utf-8") as f:
+                f.write(plain_text)
         case "audio":
             ...
         case "image":

@@ -31,7 +31,7 @@ def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minu
         cipher_text += chr(int(denormalized))
         second_last = decrypt_second_last
         last = decrypt_last
-    print(cipher_text)
+    # print(cipher_text, end="")
     return cipher_text
 
 

@@ -1,34 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decrypted Result</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Decryption Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-    <!-- Header Start -->
-    <header class="flex items-center justify-center h-16 px-4 md:px-6 bg-gray-800 text-white">
-        <a class="flex items-center gap-2" href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white">
-                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-            <span class="text-3xl font-bold tracking-tighter">SecureIT</span>
-        </a>
-    </header>
-    <!-- Header End -->
-    <div class="flex justify-center items-center h-screen">
-        <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-            <h1 class="text-xl font-bold mb-4">Decrypted Text Result</h1>
-            <div class="bg-gray-100 p-4 rounded border border-gray-300">
-                <h4 class="text-lg font-medium mb-2">Decrypted Text:</h4>
-                <p class="text-gray-600 break-words">{{ $decryptedText }}</p>
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    Decryption Result
+                </h3>
+                <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                    Details of the decryption process.
+                </p>
             </div>
-            <a href="{{ route('text.view') }}" class="mt-4 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">Menu</a>
-            <a href="{{ route('decrypt.form') }}" class="mt-4 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">Back to Decrypt</a>
-            <a href="{{ route('encrypt.result') }}" class="mt-4 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">Go to Encrypt</a>
+            <div class="border-t border-gray-200">
+                <dl>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Type
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            {{ $type }}
+                        </dd>
+                    </div>
+                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Key
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            {{ $key }}
+                        </dd>
+                    </div>
+                    <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Text
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            {{ $text }}
+                        </dd>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Decrypted Text
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            <pre>{{ $plaintext }}</pre>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+        <div class="mt-5">
+            <a href="/text/decrypt" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
+                Decrypt New Text
+            </a>
+        </div>
+        <div class="mt-5">
+        <a href="{{ route('text.view') }}" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
+                                        Back to Menu
+                                    </a>
         </div>
     </div>
 </body>
