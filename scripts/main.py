@@ -6,10 +6,12 @@ from pathlib import Path
 
 from decrypt import _decrypt_image
 from encrypt import _encrypt_image
-from helper import parse_arguments
+from helper import parse_arguments, convert_audio_to_np_array, convert_array_to_audio
 from key import key_system
 from encrypt import *
 from decrypt import *
+import wave
+
 
 dirname = os.path.join(os.path.dirname(__file__), '..')
 env_file_name = os.path.join(dirname, '.env')
@@ -60,7 +62,13 @@ if service_type == "encrypt":
         case "text":
             ...
         case "audio":
-            ...
+            with wave.open(file_path, "r") as audio:
+                input_wav_array = convert_audio_to_np_array(audio)
+            encrypted = encrypt_audio(input_wav_array, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+
+            output_wav_path = dirname + "/storage/app/public/encrypted_audio.wav"
+            convert_array_to_audio(audio, encrypted, output_wav_path)
+            
         case "image":
             ...
         case "video":
@@ -109,7 +117,14 @@ elif service_type == "decrypt":
         case "text":
             ...
         case "audio":
-            ...
+            print("starting...")
+            with wave.open(file_path, "r") as audio:
+                decrypt_input_wav_array = convert_audio_to_np_array(audio)
+
+            decrypted = decrypt_audio(decrypt_input_wav_array, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            decrypted_output_wav_path = dirname + "/storage/app/public/decrypted_audio.wav"
+            convert_array_to_audio(audio, decrypted, decrypted_output_wav_path)
+            print("done")
         case "image":
             ...
         case "video":

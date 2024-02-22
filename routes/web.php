@@ -56,14 +56,14 @@ Route::prefix('image')->group(function () {
 });
 
 // Audio
-Route::prefix('audio')->group(function () {
+Route::prefix('aud')->group(function () {
     Route::get('/encrypt', [AudioController::class, 'showEncryptForm'])->name('audio.encrypt.form');
     Route::post('/encrypt', [AudioController::class, 'encrypt'])->name('audio.encrypt');
-    Route::get('/encrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.encrypt.result');
+    Route::get('/result', [AudioController::class, 'showAudioResult'])->name('audio.result');
 
     Route::get('/decrypt', [AudioController::class, 'showDecryptForm'])->name('audio.decrypt.form');
     Route::post('/decrypt', [AudioController::class, 'decrypt'])->name('audio.decrypt');
-    Route::get('/decrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.decrypt.result');
+    // Route::get('/decrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.decrypt.result');
 
     // Show page
     Route::get('/', [AudioController::class, 'showAudio'])->name('audio.view');
