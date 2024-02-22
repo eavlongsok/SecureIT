@@ -42,7 +42,7 @@
                                     </svg>
                                     <span class="text-lg">Select an audio file from your device.</span>
 
-                                    <input accept="audio/wav" type="file"  name="audio" id="audio" required disabled onchange="submitForm()" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 overflow-clip" />
+                                    <input accept="audio/wav" type="file" name="audio" id="audio" required disabled onchange="submitForm()" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 overflow-clip" />
                                 </div>
                                 <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12">
@@ -173,7 +173,7 @@
                 recorder.ondataavailable = e => chunks.push(e.data);
                 recorder.onstop = () => {
                     const completeBlob = new Blob(chunks, {
-                        type: "audio/mpeg"
+                        type: "audio/wav"
                     });
                     const completeAudioURL = URL.createObjectURL(completeBlob);
                     player.srcObject = null;
@@ -183,7 +183,7 @@
                     player.play();
                     let time = new Date().getTime();
                     let file = new File(chunks, "audio-" + time + ".wav", {
-                        type: "audio/mpeg"
+                        type: "audio/wav"
                     });
                     let dataTransfer = new DataTransfer();
                     dataTransfer.items.add(file); // Add the file to the DT object

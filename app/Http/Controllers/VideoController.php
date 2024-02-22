@@ -49,21 +49,21 @@ class VideoController extends Controller
             $extension = $file->getClientOriginalExtension();
             // store file
             $file->storeAs("public", "video_to_encrypt." . $extension);
-            // dd("python '" . base_path() . "\scripts\main.py' -t encrypt -f video -k '" . $key . "' -p '" . base_path() . "\storage\app\public\\video_to_encrypt." . $extension . "'");
-            $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+            // dd("python '" . base_path() . "/scripts/main.py' -t encrypt -f video -k '" . $key . "' -p '" . base_path() . "/storage/app/public//video_to_encrypt." . $extension . "'");
+            $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '/storage/app/public/video_to_encrypt.' . $extension . '"');
 
             // return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => 'public/encrypted_video.' . $extension]);
             return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => 'public/encrypted_video.mkv']);
         } else if (strlen($inputPath) != 0) {
-            // dd("python '" . base_path() . "\scripts\main.py' -t encrypt -f video -k '" . $key . "' -p '" . $inputPath . "'");
-            $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . $inputPath . '"');
+            // dd("python '" . base_path() . "/scripts/main.py' -t encrypt -f video -k '" . $key . "' -p '" . $inputPath . "'");
+            $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t encrypt -f video -k "' . $key . '" -p "' . $inputPath . '"');
             // dd($output);
             return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => 'public/encrypted_video.mkv']);
         } else {
             return redirect("/video/encrypt")->withErrors(["error" => "Please upload a video file or record one"]);
         }
-        //        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
-        // $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+        //        dd('python "' . base_path() . '/scripts/main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '/storage/app/public/video_to_encrypt.' . $extension . '"');
+        // $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '/storage/app/public/video_to_encrypt.' . $extension . '"');
 
     }
 
@@ -96,13 +96,13 @@ class VideoController extends Controller
             // store file
             $file->storeAs("public", "video_to_decrypt." . $extension);
 
-            //        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
-            $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+            //        dd('python "' . base_path() . '/scripts/main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '/storage/app/public/video_to_decrypt.' . $extension . '"');
+            $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '/storage/app/public/video_to_encrypt.' . $extension . '"');
 
             // return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => 'public/decrypted_video.' . $extension]);
             return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => 'public/decrypted_video.mkv']);
         } else if (strlen($inputPath) != 0) {
-            $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . $inputPath . '"');
+            $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t decrypt -f video -k "' . $key . '" -p "' . $inputPath . '"');
             return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => 'public/decrypted_video.mkv']);
         } else {
             return redirect("/video/decrypt")->withErrors(["error" => "Please upload a video file or record one"]);
