@@ -18,6 +18,16 @@ class VideoController extends Controller
         return view('video.decrypt');
     }
 
+    public function showEncryptForm()
+    {
+        return view('video.encrypt');
+    }
+
+    public function showDecryptForm()
+    {
+        return view('video.decrypt');
+    }
+
     public function encrypt(Request $request)
 {
     $validate = Validator::make($request->all(), [

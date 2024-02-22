@@ -22,7 +22,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+})->name('welcome');
 
+
+// Text
+Route::prefix('text')->group(function () {
+    // Display forms
+    Route::get('/encrypt', [TextController::class, 'showEncryptForm'])->name('encrypt.form');
+    Route::get('/decrypt', [TextController::class, 'showDecryptForm'])->name('decrypt.form');
+
+    // Encryption & decryption
+    Route::post('/encrypt', [TextController::class, 'encryptText'])->name('encrypt.text');
+    Route::post('/decrypt', [TextController::class, 'decryptText'])->name('decrypt.text');
+
+    // Handling results
+    Route::post('/decryption', [TextController::class, 'decryptResult'])->name('decrypt.result');
+    Route::post('/encryption', [TextController::class, 'encryptResult'])->name('encrypt.result');
+
+    // Show page
+    Route::get('/', [TextController::class, 'showText'])->name('text.view');
 
 // Text
 Route::prefix('text')->group(function () {
