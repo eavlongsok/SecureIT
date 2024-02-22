@@ -38,7 +38,7 @@ def parse_arguments() -> tuple[str, str, str, str]:
     parser.add_argument("-f", "--format", required=True, help="file format. Available types = [text, audio, image, video]",
                         type=str.lower, choices=["text", "audio", "image", "video"])
     parser.add_argument("-k", "--key", required=True,
-                        help="key for encryption and decryption process. Must be 16 ASCII characters", type=key_type)
+                        help="key for encryption and decryption process. Must be 16 ASCII characters", type=str)
     parser.add_argument("-p", "--path", required=True, help="path of the file for encryption or decryption process",
                         type=file)
 

@@ -55,7 +55,7 @@ class TextController extends Controller
         $text = $request->input('text');
         $key = $request->input("key");
     
-    
+        $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t encrypt -f text -k "' . $key . '" -p "' . $text . '"');
         return Redirect::route('text.result')->with(["type" => "encryption", "key" => $key, "text" => $text, 'path/to/text_from_input']);
     }
     
