@@ -30,28 +30,33 @@ class TextController extends Controller
     
         // Custom validation for text or textFile
         $textProvided = $request->input('text') !== null && trim($request->input('text')) !== '';
-        $fileProvided = $request->hasFile('textFile');
+        // $fileProvided = $request->hasFile('textFile');
     
-        if (!($textProvided xor $fileProvided)) { 
-            $validate->errors()->add('text', 'Please provide either text or a text file, but not both.');
+        if ($validate->fails()) {
+            return redirect("/text/encrypt")->withErrors($validate);
         }
+
+        // if (!($textProvided xor $fileProvided)) { 
+        //     $validate->errors()->add('text', 'Please provide either text or a text file, but not both.');
+        // }
     
         if ($validate->fails() || $validate->errors()->isNotEmpty()) {
             return redirect("/text/encrypt")->withErrors($validate);
         }
     
-        if ($fileProvided) {
-            $file = $request->file("textFile");
-            $extension = $file->getClientOriginalExtension();
-            $text_path = $file->storeAs("public", "text_to_encrypt." . $extension);
-        } else {
-            $text = $request->input('text');
-        }
-    
+        // if ($fileProvided) {
+        //     $file = $request->file("textFile");
+        //     $extension = $file->getClientOriginalExtension();
+        //     $text_path = $file->storeAs("public", "text_to_encrypt." . $extension);
+        // } else {
+        //     $text = $request->input('text');
+        // }
+
+        $text = $request->input('text');
         $key = $request->input("key");
     
     
-        return Redirect::route('text.result')->with(["type" => "encryption", "key" => $key, "text" => $text, "text_path" => $text_path ?? 'path/to/text_from_input']);
+        return Redirect::route('text.result')->with(["type" => "encryption", "key" => $key, "text" => $text, 'path/to/text_from_input']);
     }
     
     
@@ -98,20 +103,22 @@ class TextController extends Controller
             $type = session("type");
             $key = session("key");
             $text = session("text");
+            // $textFile = session("text");
             $textPath = session("text_path");
     
             $encryptedText = null;
     
-            if (file_exists(storage_path('app/' . $textPath))) {
-                $encryptedText = file_get_contents(storage_path('app/' . $textPath));
-            } else {
-                $encryptedText = "The encrypted text could not be found or is not accessible.";
-            }
+            // if (file_exists(storage_path('app/' . $textPath))) {
+            //     $encryptedText = file_get_contents(storage_path('app/' . $textPath));
+            // } else {
+            //     $encryptedText = "The encrypted text could not be found or is not accessible.";
+            // }
     
             return view('text.result', [
                 "type" => $type,
                 "key" => $key,
                 "text" => $text,
+                // "textfile" => $textFile,
                 "encryptedText" => $encryptedText 
             ]);
         }

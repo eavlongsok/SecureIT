@@ -33,10 +33,10 @@
                                     <span class="text-lg">Enter text to encrypt.</span>
                                     <textarea name="text" id="text" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter text here" oninput="toggleInputDisabled('text')"></textarea>
                                 </div>
-                                <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
+                                <!-- <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                                     <span class="text-lg">Or import a text file.</span>
                                     <input type="file" name="textFile" id="textFile" accept=".txt,.csv,.doc,.docx" class="ml-auto w-[20rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" onchange="toggleInputDisabled('file')">
-                                </div>
+                                </div> -->
                                 <div class="space-y-4">
                                     <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
                                         Encrypt
