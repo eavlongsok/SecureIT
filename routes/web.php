@@ -35,10 +35,6 @@ Route::prefix('text')->group(function () {
 
     Route::get('/result', [TextController::class, 'showResult'])->name('text.result');
     Route::get('/deresult', [TextController::class, 'showDeResult'])->name('text.decrypt-result');
-    // Handling results
-    // Route::post('/decryption', [TextController::class, 'decryptResult'])->name('decrypt.result');
-    // Route::post('/encryption', [TextController::class, 'encryptResult'])->name('encrypt.result');
-
     // Show page
     Route::get('/', [TextController::class, 'showText'])->name('text.view');
 });
