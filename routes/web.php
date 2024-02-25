@@ -22,8 +22,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
-})->name('welcome');
-
 
 // Text
 Route::prefix('text')->group(function () {
@@ -41,6 +39,7 @@ Route::prefix('text')->group(function () {
 
     // Show page
     Route::get('/', [TextController::class, 'showText'])->name('text.view');
+});
 
 // Text
 Route::prefix('text')->group(function () {
