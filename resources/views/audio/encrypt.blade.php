@@ -168,6 +168,7 @@
             }).then(stream => {
                 player.srcObject = stream;
                 player.play();
+                player.muted = true;
                 const recorder = new MediaRecorder(stream);
                 const chunks = [];
                 recorder.ondataavailable = e => chunks.push(e.data);
