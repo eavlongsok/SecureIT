@@ -1,20 +1,131 @@
 [
     {
-        "label": "binascii",
-        "kind": 6,
+        "label": "njit",
+        "importPath": "numba",
+        "description": "numba",
         "isExtraImport": true,
-        "importPath": "binascii",
-        "description": "binascii",
-        "detail": "binascii",
+        "detail": "numba",
         "documentation": {}
     },
     {
-        "label": "struct",
+        "label": "njit",
+        "importPath": "numba",
+        "description": "numba",
+        "isExtraImport": true,
+        "detail": "numba",
+        "documentation": {}
+    },
+    {
+        "label": "njit",
+        "importPath": "numba",
+        "description": "numba",
+        "isExtraImport": true,
+        "detail": "numba",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "normalize",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "denormalize",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "normalize",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "denormalize",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "f",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "parse_arguments",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "convert_audio_to_np_array",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "convert_array_to_audio",
+        "importPath": "helper",
+        "description": "helper",
+        "isExtraImport": true,
+        "detail": "helper",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "struct",
-        "description": "struct",
-        "detail": "struct",
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
         "documentation": {}
     },
     {
@@ -24,6 +135,105 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_text",
+        "importPath": "decrypt",
+        "description": "decrypt",
+        "isExtraImport": true,
+        "detail": "decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "test_decrypt",
+        "importPath": "decrypt",
+        "description": "decrypt",
+        "isExtraImport": true,
+        "detail": "decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_byte",
+        "importPath": "decrypt",
+        "description": "decrypt",
+        "isExtraImport": true,
+        "detail": "decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "_decrypt_image",
+        "importPath": "decrypt",
+        "description": "decrypt",
+        "isExtraImport": true,
+        "detail": "decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decrypt",
+        "description": "decrypt",
+        "isExtraImport": true,
+        "detail": "decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "decrypt",
+        "description": "decrypt",
+        "isExtraImport": true,
+        "detail": "decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "wave",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wave",
+        "description": "wave",
+        "detail": "wave",
+        "documentation": {}
+    },
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
         "documentation": {}
     },
     {
@@ -44,53 +254,43 @@
         "documentation": {}
     },
     {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
+        "label": "_encrypt_image",
+        "importPath": "encrypt",
+        "description": "encrypt",
         "isExtraImport": true,
-        "detail": "pathlib",
+        "detail": "encrypt",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "encrypt",
+        "description": "encrypt",
+        "isExtraImport": true,
+        "detail": "encrypt",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "encrypt",
+        "description": "encrypt",
+        "isExtraImport": true,
+        "detail": "encrypt",
         "documentation": {}
     },
     {
         "label": "key_system",
-        "importPath": "helper",
-        "description": "helper",
+        "importPath": "key",
+        "description": "key",
         "isExtraImport": true,
-        "detail": "helper",
+        "detail": "key",
         "documentation": {}
     },
     {
-        "label": "encrypt_text",
-        "importPath": "helper",
-        "description": "helper",
+        "label": "key_system",
+        "importPath": "key",
+        "description": "key",
         "isExtraImport": true,
-        "detail": "helper",
-        "documentation": {}
-    },
-    {
-        "label": "decrypt_text",
-        "importPath": "helper",
-        "description": "helper",
-        "isExtraImport": true,
-        "detail": "helper",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
-        "label": "math",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "math",
-        "description": "math",
-        "detail": "math",
+        "detail": "key",
         "documentation": {}
     },
     {
@@ -160,6 +360,15 @@
         "documentation": {}
     },
     {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
         "label": "abspath",
         "importPath": "os.path",
         "description": "os.path",
@@ -206,15 +415,6 @@
         "importPath": "json",
         "description": "json",
         "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "argparse",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "argparse",
-        "description": "argparse",
-        "detail": "argparse",
         "documentation": {}
     },
     {
@@ -308,12 +508,120 @@
         "documentation": {}
     },
     {
-        "label": "key_system",
+        "label": "decrypt_text",
         "kind": 2,
-        "importPath": "scripts.helper",
-        "description": "scripts.helper",
-        "peekOfCode": "def key_system(key: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[float, float]:\n    if len(key) != 16:\n        raise Exception(\"key must be 16 characters\")\n    encrypted = None\n    last = y_minus_1\n    secondLast = y_minus_2\n    for i in range(16):\n        encrypted = f(ord(key[i]) + c1 * last + c2 * secondLast)\n        secondLast = last\n        last = encrypted",
-        "detail": "scripts.helper",
+        "importPath": "scripts.decrypt",
+        "description": "scripts.decrypt",
+        "peekOfCode": "def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float, test=False) -> Union[str, tuple[str, float, float]]:\n    if len(cipher_text) == 0:\n        raise Exception(\"Cipher text length must be greater than 0\")\n    plain_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    # real_plain_text_len = 10\n    for i in range(len(cipher_text)):\n        # if not test:\n        #     print(\"last:\", last)",
+        "detail": "scripts.decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_audio",
+        "kind": 2,
+        "importPath": "scripts.decrypt",
+        "description": "scripts.decrypt",
+        "peekOfCode": "def decrypt_audio(audio_array: np.ndarray, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> np.ndarray:\n    decrypted_array = np.zeros(len(audio_array), dtype=np.uint8)\n    last = y_minus_1\n    second_last = y_minus_2\n    for i in range(len(audio_array)):\n        normalized = normalize(audio_array[i])\n        decrypted = f(normalize(audio_array[i]) - c1 * last - c2 * second_last)\n        denormalized = denormalize(decrypted)\n        decrypted_array[i] = int(denormalized)\n        second_last = last",
+        "detail": "scripts.decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_image",
+        "kind": 2,
+        "importPath": "scripts.decrypt",
+        "description": "scripts.decrypt",
+        "peekOfCode": "def decrypt_image():\n    ...\ndef decrypt_video():\n    ...\n@njit\ndef test_decrypt(byte: int, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[int, float, float]:\n    last = y_minus_1\n    second_last = y_minus_2\n    normalized = normalize(byte)\n    decrypted = f(normalized - c1 * last - c2 * second_last)",
+        "detail": "scripts.decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_video",
+        "kind": 2,
+        "importPath": "scripts.decrypt",
+        "description": "scripts.decrypt",
+        "peekOfCode": "def decrypt_video():\n    ...\n@njit\ndef test_decrypt(byte: int, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[int, float, float]:\n    last = y_minus_1\n    second_last = y_minus_2\n    normalized = normalize(byte)\n    decrypted = f(normalized - c1 * last - c2 * second_last)\n    second_last = last\n    last = normalized",
+        "detail": "scripts.decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "test_decrypt",
+        "kind": 2,
+        "importPath": "scripts.decrypt",
+        "description": "scripts.decrypt",
+        "peekOfCode": "def test_decrypt(byte: int, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[int, float, float]:\n    last = y_minus_1\n    second_last = y_minus_2\n    normalized = normalize(byte)\n    decrypted = f(normalized - c1 * last - c2 * second_last)\n    second_last = last\n    last = normalized\n    return int(denormalize(decrypted)), last, second_last\n@njit\ndef _decrypt_image(cipher_image: cv.typing.MatLike, plain_image: np.ndarray[np.uint8], c1: float, c2: float, y_minus_1: float, y_minus_2: float, returnVal=False) -> tuple[np.ndarray[np.uint8], float, float]:",
+        "detail": "scripts.decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt_byte",
+        "kind": 2,
+        "importPath": "scripts.decrypt",
+        "description": "scripts.decrypt",
+        "peekOfCode": "def decrypt_byte(byte: int, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[int, float, float]:\n    last = y_minus_1\n    second_last = y_minus_2\n    normalized = normalize(byte)\n    decrypted = f(normalized - c1 * last - c2 * second_last)\n    second_last = last\n    last = normalized\n    return int(denormalize(decrypted)), last, second_last\ndef decrypt(src: str, dest: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float):\n    with open(src, \"rb\") as cipher:",
+        "detail": "scripts.decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "decrypt",
+        "kind": 2,
+        "importPath": "scripts.decrypt",
+        "description": "scripts.decrypt",
+        "peekOfCode": "def decrypt(src: str, dest: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float):\n    with open(src, \"rb\") as cipher:\n        with open(dest, \"wb\") as decipher:\n            while byte := cipher.read(1):\n                result, y1, y2 = decrypt_byte(int.from_bytes(byte, \"big\"), c1, c2, y_minus_1, y_minus_2)\n                decipher.write(result.to_bytes(1, \"big\"))",
+        "detail": "scripts.decrypt",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt_text",
+        "kind": 2,
+        "importPath": "scripts.encrypt",
+        "description": "scripts.encrypt",
+        "peekOfCode": "def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:\n    if len(plain_text) == 0:\n        raise Exception(\"Plain text length must be greater than 0\")\n    cipher_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    decrypt_last = last\n    decrypt_second_last = second_last\n    print(len(plain_text))\n    for i in range(len(plain_text)):",
+        "detail": "scripts.encrypt",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt_audio",
+        "kind": 2,
+        "importPath": "scripts.encrypt",
+        "description": "scripts.encrypt",
+        "peekOfCode": "def encrypt_audio(audio_array: np.ndarray, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> np.ndarray:\n    encrypted_array = np.zeros(len(audio_array), dtype=np.uint8)\n    last = y_minus_1\n    second_last = y_minus_2\n    decrypt_last = last\n    decrypt_second_last = second_last\n    for i in range(len(audio_array)):\n        encrypted = f(normalize(audio_array[i]) + c1 * last + c2 * second_last)\n        denormalized = denormalize(encrypted)\n        while True:",
+        "detail": "scripts.encrypt",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt_image",
+        "kind": 2,
+        "importPath": "scripts.encrypt",
+        "description": "scripts.encrypt",
+        "peekOfCode": "def encrypt_image():\n    ...\ndef encrypt_video():\n    ...\n@njit\ndef _encrypt_image(image: cv.typing.MatLike, cipher_image: np.ndarray[np.uint8], c1: float, c2: float, y_minus_1: float, y_minus_2: float,\n                   returnVal=False) -> [np.ndarray[np.uint8], float, float]:\n    last = y_minus_1\n    second_last = y_minus_2\n    for row in range(image.shape[0]):",
+        "detail": "scripts.encrypt",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt_video",
+        "kind": 2,
+        "importPath": "scripts.encrypt",
+        "description": "scripts.encrypt",
+        "peekOfCode": "def encrypt_video():\n    ...\n@njit\ndef _encrypt_image(image: cv.typing.MatLike, cipher_image: np.ndarray[np.uint8], c1: float, c2: float, y_minus_1: float, y_minus_2: float,\n                   returnVal=False) -> [np.ndarray[np.uint8], float, float]:\n    last = y_minus_1\n    second_last = y_minus_2\n    for row in range(image.shape[0]):\n        for col in range(image.shape[1]):\n            for channel in range(image.shape[2]):",
+        "detail": "scripts.encrypt",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt_byte",
+        "kind": 2,
+        "importPath": "scripts.encrypt",
+        "description": "scripts.encrypt",
+        "peekOfCode": "def encrypt_byte(byte: int, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[int, float, float]:\n    last = y_minus_1\n    second_last = y_minus_2\n    encrypted = f(normalize(byte) + c1 * last + c2 * second_last)\n    denormalized = denormalize(encrypted)\n    while True:\n        tmp_cipher_byte = int(denormalized)\n        decrypted_byte, tmp_decrypt_last, tmp_decrypt_second_last = test_decrypt(tmp_cipher_byte, c1, c2, last, second_last)\n        denormalized = (denormalized + byte - decrypted_byte) % 256\n        if byte - decrypted_byte == 0:",
+        "detail": "scripts.encrypt",
+        "documentation": {}
+    },
+    {
+        "label": "encrypt",
+        "kind": 2,
+        "importPath": "scripts.encrypt",
+        "description": "scripts.encrypt",
+        "peekOfCode": "def encrypt(src: str, dest: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float):\n    with open(src, \"rb\") as plain:\n        with open(dest, \"wb\") as cipher:\n            while byte := plain.read(1):\n                result, y1, y2 = encrypt_byte(int.from_bytes(byte, \"big\"), c1, c2, y_minus_1, y_minus_2)\n                cipher.write(result.to_bytes(1, \"big\"))",
+        "detail": "scripts.encrypt",
         "documentation": {}
     },
     {
@@ -321,62 +629,224 @@
         "kind": 2,
         "importPath": "scripts.helper",
         "description": "scripts.helper",
-        "peekOfCode": "def f(x: float) -> float:\n    return (x % 2) - 1\ndef encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:\n    if len(plain_text) == 0:\n        raise Exception(\"Plain text length must be greater than 0\")\n    cipher_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    # for c in plain_text:\n        # encrypted = normalizeY(normalizeASCII(ord(c)) + c1 * last + c2 * second_last)",
+        "peekOfCode": "def f(x: float) -> float:\n    return ((x + 1) % 2) - 1\n@njit\ndef normalize(x: float | int | np.uint8) -> float:\n    return (x - 128) / 128\n@njit\ndef denormalize(x: float | int | np.uint8) -> float:\n    return (x * 128) + 128\ndef file(path: str):\n    from os.path import exists",
         "detail": "scripts.helper",
         "documentation": {}
     },
     {
-        "label": "encrypt_text",
+        "label": "normalize",
         "kind": 2,
         "importPath": "scripts.helper",
         "description": "scripts.helper",
-        "peekOfCode": "def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:\n    if len(plain_text) == 0:\n        raise Exception(\"Plain text length must be greater than 0\")\n    cipher_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    # for c in plain_text:\n        # encrypted = normalizeY(normalizeASCII(ord(c)) + c1 * last + c2 * second_last)\n        # cipher_text += chr(round(denormalizeASCII(encrypted)))\n        # second_last = last",
+        "peekOfCode": "def normalize(x: float | int | np.uint8) -> float:\n    return (x - 128) / 128\n@njit\ndef denormalize(x: float | int | np.uint8) -> float:\n    return (x * 128) + 128\ndef file(path: str):\n    from os.path import exists\n    if not exists(path):\n        raise ValueError(\"Path doesn't exist\")\n    return path",
         "detail": "scripts.helper",
         "documentation": {}
     },
     {
-        "label": "decrypt_text",
+        "label": "denormalize",
         "kind": 2,
         "importPath": "scripts.helper",
         "description": "scripts.helper",
-        "peekOfCode": "def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> str:\n    if len(cipher_text) == 0:\n        raise Exception(\"Cipher text length must be greater than 0\")\n    plain_text = \"\"\n    last = y_minus_1\n    second_last = y_minus_2\n    # for c in cipher_text:\n    #     normalized = normalizeASCII(ord(c))\n    #     decrypted = denormalizeASCII(denormalizeY(normalized) - c1 * last - c2 * second_last)\n    #     plain_text += chr(round(decrypted))",
+        "peekOfCode": "def denormalize(x: float | int | np.uint8) -> float:\n    return (x * 128) + 128\ndef file(path: str):\n    from os.path import exists\n    if not exists(path):\n        raise ValueError(\"Path doesn't exist\")\n    return path\ndef key_type(key: str):\n    if len(key) != 16:\n        print(\"length\")",
         "detail": "scripts.helper",
         "documentation": {}
     },
     {
-        "label": "normalizeASCII",
+        "label": "file",
         "kind": 2,
         "importPath": "scripts.helper",
         "description": "scripts.helper",
-        "peekOfCode": "def normalizeASCII(x: float) -> float:\n    return (x - 127.5) / 127.5\ndef denormalizeASCII(x: float) -> float:\n    return x * 127.5 + 127.5\ndef normalizeY(y: float) -> float:\n    return y / 3\ndef denormalizeY(y: float) -> float:\n    return y * 3",
+        "peekOfCode": "def file(path: str):\n    from os.path import exists\n    if not exists(path):\n        raise ValueError(\"Path doesn't exist\")\n    return path\ndef key_type(key: str):\n    if len(key) != 16:\n        print(\"length\")\n        raise ValueError(\"Key must be 16 character long\")\n    if not key.isascii():",
         "detail": "scripts.helper",
         "documentation": {}
     },
     {
-        "label": "denormalizeASCII",
+        "label": "key_type",
         "kind": 2,
         "importPath": "scripts.helper",
         "description": "scripts.helper",
-        "peekOfCode": "def denormalizeASCII(x: float) -> float:\n    return x * 127.5 + 127.5\ndef normalizeY(y: float) -> float:\n    return y / 3\ndef denormalizeY(y: float) -> float:\n    return y * 3",
+        "peekOfCode": "def key_type(key: str):\n    if len(key) != 16:\n        print(\"length\")\n        raise ValueError(\"Key must be 16 character long\")\n    if not key.isascii():\n        print(\"ascii\")\n        raise ValueError(\"Key must be valid ASCII characters\")\n    return key\ndef parse_arguments() -> tuple[str, str, str, str]:\n    parser = argparse.ArgumentParser(prog=\"SecureIT\", description=\"Secure your data with our service\")",
         "detail": "scripts.helper",
         "documentation": {}
     },
     {
-        "label": "normalizeY",
+        "label": "parse_arguments",
         "kind": 2,
         "importPath": "scripts.helper",
         "description": "scripts.helper",
-        "peekOfCode": "def normalizeY(y: float) -> float:\n    return y / 3\ndef denormalizeY(y: float) -> float:\n    return y * 3",
+        "peekOfCode": "def parse_arguments() -> tuple[str, str, str, str]:\n    parser = argparse.ArgumentParser(prog=\"SecureIT\", description=\"Secure your data with our service\")\n    parser.add_argument(\"-t\", \"--type\", required=True, help=\"type of service. Available types = [encrypt, decrypt]\",\n                        type=str.lower, choices=[\"encrypt\", \"decrypt\"])\n    parser.add_argument(\"-f\", \"--format\", required=True, help=\"file format. Available types = [text, audio, image, video]\",\n                        type=str.lower, choices=[\"text\", \"audio\", \"image\", \"video\"])\n    parser.add_argument(\"-k\", \"--key\", required=True,\n                        help=\"key for encryption and decryption process. Must be 16 ASCII characters\", type=key_type)\n    parser.add_argument(\"-p\", \"--path\", required=True, help=\"path of the file for encryption or decryption process\",\n                        type=file)",
         "detail": "scripts.helper",
         "documentation": {}
     },
     {
-        "label": "denormalizeY",
+        "label": "convert_array_to_audio",
         "kind": 2,
         "importPath": "scripts.helper",
         "description": "scripts.helper",
-        "peekOfCode": "def denormalizeY(y: float) -> float:\n    return y * 3",
+        "peekOfCode": "def convert_array_to_audio(original_audio: wave.Wave_read, audio_array, output_wav_path):\n    audio_array_16bit = np.zeros(len(audio_array) // 2, dtype=np.int16)\n    for i in range(0, len(audio_array), 2):\n        first_8bit = audio_array[i]\n        last_8bit = audio_array[i + 1]\n        audio_array_16bit[i // 2] = (first_8bit << 8) | last_8bit\n    with wave.open(output_wav_path, \"w\") as audio:\n        audio.setnchannels(1)\n        audio.setsampwidth(original_audio.getsampwidth())\n        audio.setframerate(original_audio.getframerate())",
         "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "convert_audio_to_np_array",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def convert_audio_to_np_array(audio_obj: wave.Wave_read):\n    if audio_obj is None:\n        raise Exception(\"audio_obj is None\")\n    if audio_obj.getnchannels() > 1:\n        raise Exception(\"Audio must be mono\")\n    else:\n        # Read audio data\n        audio_data = audio_obj.readframes(audio_obj.getnframes())\n        # Convert audio data to numpy array\n        audio_array = np.frombuffer(audio_data, dtype=np.int16)",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "merge_channels",
+        "kind": 2,
+        "importPath": "scripts.helper",
+        "description": "scripts.helper",
+        "peekOfCode": "def merge_channels(audio):\n    num_frames = audio.getnframes()\n    num_channels = audio.getnchannels()\n    audio_data = audio.readframes(num_frames)\n    audio_array = np.frombuffer(audio_data, dtype=np.int16)\n    return np.mean(audio_array.reshape(-1, num_channels), axis=1).astype(np.int16)",
+        "detail": "scripts.helper",
+        "documentation": {}
+    },
+    {
+        "label": "key_system",
+        "kind": 2,
+        "importPath": "scripts.key",
+        "description": "scripts.key",
+        "peekOfCode": "def key_system(key: str, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[float, float]:\n    if len(key) != 16:\n        raise Exception(\"key must be 16 characters\")\n    encrypted = None\n    last = y_minus_1\n    secondLast = y_minus_2\n    for i in range(16):\n        encrypted = f(ord(key[i]) + c1 * last + c2 * secondLast)\n        secondLast = last\n        last = encrypted",
+        "detail": "scripts.key",
+        "documentation": {}
+    },
+    {
+        "label": "dirname",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "dirname = os.path.join(os.path.dirname(__file__), '..')\nenv_file_name = os.path.join(dirname, '.env')\ndotenv_path = Path(env_file_name)\nload_dotenv(dotenv_path=dotenv_path)\nKEY_SYSTEM_C1 = os.getenv(\"C1\")\nKEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "env_file_name",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "env_file_name = os.path.join(dirname, '.env')\ndotenv_path = Path(env_file_name)\nload_dotenv(dotenv_path=dotenv_path)\nKEY_SYSTEM_C1 = os.getenv(\"C1\")\nKEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "dotenv_path",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "dotenv_path = Path(env_file_name)\nload_dotenv(dotenv_path=dotenv_path)\nKEY_SYSTEM_C1 = os.getenv(\"C1\")\nKEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C1",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_C1 = os.getenv(\"C1\")\nKEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C2",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_C2 = os.getenv(\"C2\")\nKEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nKEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nMAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_1 = os.getenv(\"KEY_Y_MINUS_1\")\nMAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_2 = os.getenv(\"KEY_Y_MINUS_2\")\nif KEY_SYSTEM_C1 is None or KEY_SYSTEM_C2 is None or KEY_SYSTEM_Y_MINUS_1 is None or KEY_SYSTEM_Y_MINUS_2 is None:\n    raise Exception(\"Failed to load necessary variables\")\nif MAIN_ALGO_Y_MINUS_1 is None or MAIN_ALGO_Y_MINUS_2 is None:\n    MAIN_ALGO_Y_MINUS_1 = KEY_SYSTEM_Y_MINUS_1\n    MAIN_ALGO_Y_MINUS_2 = KEY_SYSTEM_Y_MINUS_2\nKEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C1",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\n'''\ndefine the arguments of the script here\nshould look something like this when running the script\n    python main.py --type encrypt --format text --key 1234567890123456 --path \"C://...../storage/image.jpg\"",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_C2",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\n'''\ndefine the arguments of the script here\nshould look something like this when running the script\n    python main.py --type encrypt --format text --key 1234567890123456 --path \"C://...../storage/image.jpg\"\n    or",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\n'''\ndefine the arguments of the script here\nshould look something like this when running the script\n    python main.py --type encrypt --format text --key 1234567890123456 --path \"C://...../storage/image.jpg\"\n    or\n    python main.py -t encrypt -f text -k 1234567890123456 -p \"C://...../storage/image.jpg\"",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "KEY_SYSTEM_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\n'''\ndefine the arguments of the script here\nshould look something like this when running the script\n    python main.py --type encrypt --format text --key 1234567890123456 --path \"C://...../storage/image.jpg\"\n    or\n    python main.py -t encrypt -f text -k 1234567890123456 -p \"C://...../storage/image.jpg\"\nprobably will use argument parser library",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_1",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\n'''\ndefine the arguments of the script here\nshould look something like this when running the script\n    python main.py --type encrypt --format text --key 1234567890123456 --path \"C://...../storage/image.jpg\"\n    or\n    python main.py -t encrypt -f text -k 1234567890123456 -p \"C://...../storage/image.jpg\"\nprobably will use argument parser library\n'''",
+        "detail": "scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "MAIN_ALGO_Y_MINUS_2",
+        "kind": 5,
+        "importPath": "scripts.main",
+        "description": "scripts.main",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\n'''\ndefine the arguments of the script here\nshould look something like this when running the script\n    python main.py --type encrypt --format text --key 1234567890123456 --path \"C://...../storage/image.jpg\"\n    or\n    python main.py -t encrypt -f text -k 1234567890123456 -p \"C://...../storage/image.jpg\"\nprobably will use argument parser library\n'''\nservice_type, file_format, key, file_path = parse_arguments()",
+        "detail": "scripts.main",
         "documentation": {}
     },
     {
@@ -447,7 +917,7 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "KEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)",
+        "peekOfCode": "KEY_SYSTEM_C1 = float(KEY_SYSTEM_C1)\nKEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"abcdefghijklmnop\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\n# MAIN_ALGO_C1, MAIN_ALGO_C2 = (1, 10)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2)\nencrypted = encrypt_text(\"Hello world, my name is Eav Long, this is the final project for CS312 :)\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)",
         "detail": "scripts.test",
         "documentation": {}
     },
@@ -456,7 +926,7 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "KEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))",
+        "peekOfCode": "KEY_SYSTEM_C2 = float(KEY_SYSTEM_C2)\nKEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"abcdefghijklmnop\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\n# MAIN_ALGO_C1, MAIN_ALGO_C2 = (1, 10)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2)\nencrypted = encrypt_text(\"Hello world, my name is Eav Long, this is the final project for CS312 :)\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted:\", encrypted, len(encrypted))",
         "detail": "scripts.test",
         "documentation": {}
     },
@@ -465,7 +935,7 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "KEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_1 = float(KEY_SYSTEM_Y_MINUS_1)\nKEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"abcdefghijklmnop\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\n# MAIN_ALGO_C1, MAIN_ALGO_C2 = (1, 10)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2)\nencrypted = encrypt_text(\"Hello world, my name is Eav Long, this is the final project for CS312 :)\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted:\", encrypted, len(encrypted))\ndecrypted = decrypt_text(encrypted,  MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)",
         "detail": "scripts.test",
         "documentation": {}
     },
@@ -474,7 +944,7 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "KEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "peekOfCode": "KEY_SYSTEM_Y_MINUS_2 = float(KEY_SYSTEM_Y_MINUS_2)\nMAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"abcdefghijklmnop\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\n# MAIN_ALGO_C1, MAIN_ALGO_C2 = (1, 10)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2)\nencrypted = encrypt_text(\"Hello world, my name is Eav Long, this is the final project for CS312 :)\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted:\", encrypted, len(encrypted))\ndecrypted = decrypt_text(encrypted,  MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"decrypted:\", decrypted, len(decrypted))",
         "detail": "scripts.test",
         "documentation": {}
     },
@@ -483,7 +953,7 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "MAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_1 = float(MAIN_ALGO_Y_MINUS_1)\nMAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"abcdefghijklmnop\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\n# MAIN_ALGO_C1, MAIN_ALGO_C2 = (1, 10)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2)\nencrypted = encrypt_text(\"Hello world, my name is Eav Long, this is the final project for CS312 :)\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted:\", encrypted, len(encrypted))\ndecrypted = decrypt_text(encrypted,  MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"decrypted:\", decrypted, len(decrypted))",
         "detail": "scripts.test",
         "documentation": {}
     },
@@ -492,7 +962,7 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "MAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"OMGOMGOMGOMGOMGO\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nencrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "peekOfCode": "MAIN_ALGO_Y_MINUS_2 = float(MAIN_ALGO_Y_MINUS_2)\nMAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(\"abcdefghijklmnop\", KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_SYSTEM_Y_MINUS_1, KEY_SYSTEM_Y_MINUS_2)\n# MAIN_ALGO_C1, MAIN_ALGO_C2 = (1, 10)\nprint(MAIN_ALGO_C1, MAIN_ALGO_C2)\nencrypted = encrypt_text(\"Hello world, my name is Eav Long, this is the final project for CS312 :)\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted:\", encrypted, len(encrypted))\ndecrypted = decrypt_text(encrypted,  MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"decrypted:\", decrypted, len(decrypted))",
         "detail": "scripts.test",
         "documentation": {}
     },
@@ -501,7 +971,7 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "encrypted = encrypt_text(\"paragon\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\ndecrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "peekOfCode": "encrypted = encrypt_text(\"Hello world, my name is Eav Long, this is the final project for CS312 :)\", MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted:\", encrypted, len(encrypted))\ndecrypted = decrypt_text(encrypted,  MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"decrypted:\", decrypted, len(decrypted))",
         "detail": "scripts.test",
         "documentation": {}
     },
@@ -510,143 +980,8 @@
         "kind": 5,
         "importPath": "scripts.test",
         "description": "scripts.test",
-        "peekOfCode": "decrypted = decrypt_text(encrypted, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"encrypted\", encrypted, len(encrypted))\nprint(\"decrypted\", decrypted, len(decrypted))",
+        "peekOfCode": "decrypted = decrypt_text(encrypted,  MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)\nprint(\"decrypted:\", decrypted, len(decrypted))",
         "detail": "scripts.test",
-        "documentation": {}
-    },
-    {
-        "label": "key_system",
-        "kind": 2,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "def key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):\n        temp = ord(key[i]) + c1 * y_array[i - 1] + c2 * y_array[i - 2]\n        y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(16):",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "encrypt",
-        "kind": 2,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "def encrypt(plaintext, c1Prime, c2Prime):\n    answer_array.append(ord(plaintext[0]) + c1Prime * yneg1prime + c2Prime * yneg2prime)\n    answer_array.append(ord(plaintext[1]) + c1Prime * answer_array[0] + c2Prime * yneg1prime)\n    for i in range(2, len(plaintext)):\n        answer_array.append(ord(plaintext[i]) + c1Prime * answer_array[i - 1] + c2Prime * answer_array[i - 2])\n    for i in range(len(plaintext)):\n        print(chr(round(answer_array[i])))\n    decrypt(answer_array, c1Prime, c2Prime)\ndef decrypt(answer_array, c1Prime, c2Prime):\n    decrypt_array.append((answer_array[0]) - c1Prime * yneg1prime - c2Prime * yneg2prime)",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "decrypt",
-        "kind": 2,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "def decrypt(answer_array, c1Prime, c2Prime):\n    decrypt_array.append((answer_array[0]) - c1Prime * yneg1prime - c2Prime * yneg2prime)\n    decrypt_array.append((answer_array[1]) - c1Prime * answer_array[0] - c2Prime * yneg1prime)\n    for i in range(2, len(plaintext)):\n        decrypt_array.append((answer_array[i]) - c1Prime * answer_array[i - 1] - c2Prime * answer_array[i - 2])\n    for i in range(len(decrypt_array)):\n        print(chr(round(decrypt_array[i])))\nkey = input(\"Enter your 16-character key: \")\nplaintext = input(\"Enter your plain text: \")\nif len(key) != 16:",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "c1",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "c1 = -0.125\nc2 = 0.234\nyneg1 = 0.492\nyneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "c2",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "c2 = 0.234\nyneg1 = 0.492\nyneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "yneg1",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "yneg1 = 0.492\nyneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "yneg2",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "yneg2 = -0.133\nyneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "yneg1prime",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "yneg1prime = 0.242\nyneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "yneg2prime",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "yneg2prime = -0.955\ny_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "y_array",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "y_array = []\nanswer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "answer_array",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "answer_array = []\ndecrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "decrypt_array",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "decrypt_array = []\ntemp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):\n        temp = ord(key[i]) + c1 * y_array[i - 1] + c2 * y_array[i - 2]",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "temp",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "temp = 0\ndef key_system(key):\n    global temp\n    temp = ord(key[0]) + c1 * yneg1 + c2 * yneg2\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    temp = ord(key[1]) + c1 * y_array[0] + c2 * yneg1\n    y_array.append(math.fmod(temp, 2.0) - 1)\n    for i in range(2, 16):\n        temp = ord(key[i]) + c1 * y_array[i - 1] + c2 * y_array[i - 2]\n        y_array.append(math.fmod(temp, 2.0) - 1)",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "key",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "key = input(\"Enter your 16-character key: \")\nplaintext = input(\"Enter your plain text: \")\nif len(key) != 16:\n    print(\"Key is not 16 characters long.\")\nelse:\n    key_system(key)",
-        "detail": "scripts.tmp",
-        "documentation": {}
-    },
-    {
-        "label": "plaintext",
-        "kind": 5,
-        "importPath": "scripts.tmp",
-        "description": "scripts.tmp",
-        "peekOfCode": "plaintext = input(\"Enter your plain text: \")\nif len(key) != 16:\n    print(\"Key is not 16 characters long.\")\nelse:\n    key_system(key)",
-        "detail": "scripts.tmp",
         "documentation": {}
     },
     {

@@ -32,8 +32,23 @@ def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_min
     return plain_text
 
 
-def decrypt_audio():
-    ...
+
+def decrypt_audio(audio_array: np.ndarray, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> np.ndarray:
+    decrypted_array = np.zeros(len(audio_array), dtype=np.uint8)
+    last = y_minus_1
+    second_last = y_minus_2
+
+    for i in range(len(audio_array)):
+        normalized = normalize(audio_array[i])
+        decrypted = f(normalize(audio_array[i]) - c1 * last - c2 * second_last)
+
+        denormalized = denormalize(decrypted)
+
+        decrypted_array[i] = int(denormalized)
+        second_last = last
+        last = normalized
+
+    return decrypted_array
 
 
 def decrypt_image():
@@ -80,7 +95,7 @@ def _decrypt_image(cipher_image: cv.typing.MatLike, plain_image: np.ndarray[np.u
     return plain_image, last, second_last  # type: ignore
     # return plain_image  # type: ignore
 
-
+@njit
 def decrypt_byte(byte: int, c1: float, c2: float, y_minus_1: float, y_minus_2: float) -> tuple[int, float, float]:
     last = y_minus_1
     second_last = y_minus_2
@@ -100,4 +115,3 @@ def decrypt(src: str, dest: str, c1: float, c2: float, y_minus_1: float, y_minus
             while byte := cipher.read(1):
                 result, y1, y2 = decrypt_byte(int.from_bytes(byte, "big"), c1, c2, y_minus_1, y_minus_2)
                 decipher.write(result.to_bytes(1, "big"))
-                

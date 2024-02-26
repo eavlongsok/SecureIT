@@ -68,15 +68,14 @@ Route::prefix('video')->group(function () {
 
 Route::post("/download", [DownloadController::class, "download"])->name("download");
 // Audio
-Route::prefix('audio')->group(function () {
+Route::prefix('aud')->group(function () {
     Route::get('/encrypt', [AudioController::class, 'showEncryptForm'])->name('audio.encrypt.form');
     Route::post('/encrypt', [AudioController::class, 'encrypt'])->name('audio.encrypt');
-    Route::get('/encrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.encrypt.result');
-
+    Route::get('/result', [AudioController::class, 'showAudioResult'])->name('audio.result');
 
     Route::get('/decrypt', [AudioController::class, 'showDecryptForm'])->name('audio.decrypt.form');
     Route::post('/decrypt', [AudioController::class, 'decrypt'])->name('audio.decrypt');
-    Route::get('/decrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.decrypt.result');
+    // Route::get('/decrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.decrypt.result');
 
     // Show page
     Route::get('/', [AudioController::class, 'showAudio'])->name('audio.view');
@@ -84,12 +83,11 @@ Route::prefix('audio')->group(function () {
 
 // Video
 Route::prefix('video')->group(function () {
-    Route::get('/video/encrypt', [VideoController::class, 'showEncryptForm'])->name('video.encrypt.form');
-    Route::get('/video/decrypt', [VideoController::class, 'showDecryptForm'])->name('video.decrypt.form');
+    Route::get('/encrypt', [VideoController::class, 'showEncryptForm'])->name('video.encrypt.form');
+    Route::get('/decrypt', [VideoController::class, 'showDecryptForm'])->name('video.decrypt.form');
 
     Route::post('/encrypt', [VideoController::class, 'encrypt'])->name('video.encrypt');
 
-    Route::get('/decrypt', [VideoController::class, 'showDecryptForm'])->name('video.decrypt.form');
     Route::post('/decrypt', [VideoController::class, 'decrypt'])->name('video.decrypt');
 
     Route::get('/result', [VideoController::class, 'showResult'])->name('video.result');
@@ -97,3 +95,5 @@ Route::prefix('video')->group(function () {
     // Show page
     Route::get('/', [VideoController::class, 'showVideo'])->name('video.view');
 });
+
+Route::post("/download", [DownloadController::class, "download"])->name("download");

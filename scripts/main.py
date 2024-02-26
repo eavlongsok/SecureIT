@@ -6,10 +6,12 @@ from pathlib import Path
 
 from decrypt import _decrypt_image
 from encrypt import _encrypt_image
-from helper import parse_arguments
+from helper import parse_arguments, convert_audio_to_np_array, convert_array_to_audio
 from key import key_system
 from encrypt import *
 from decrypt import *
+import wave
+
 
 dirname = os.path.join(os.path.dirname(__file__), '..')
 env_file_name = os.path.join(dirname, '.env')
@@ -64,7 +66,13 @@ if service_type == "encrypt":
             with open(dirname + "/storage/app/public/cipher_text.txt", "w", encoding="utf-8") as f:
                 f.write(cipher_text)
         case "audio":
-            ...
+            with wave.open(file_path, "r") as audio:
+                input_wav_array = convert_audio_to_np_array(audio)
+            encrypted = encrypt_audio(input_wav_array, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+
+            output_wav_path = dirname + "/storage/app/public/encrypted_audio.wav"
+            convert_array_to_audio(audio, encrypted, output_wav_path)
+
         case "image":
             dest = dirname + r"/storage/app/public/encrypted_image" + pathlib.Path(file_path).suffix
 
@@ -82,44 +90,43 @@ if service_type == "encrypt":
             print("done")
 
         case "video":
-            dest = dirname + "/storage/app/public/encrypted_video" + pathlib.Path(file_path).suffix
-            encrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            # dest = dirname + "/storage/app/public/encrypted_video" + pathlib.Path(file_path).suffix
+            # encrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
 
             # or uncomment the function below
 
-#             cap = cv.VideoCapture(file_path)
-#             fps = int(cap.get(cv.CAP_PROP_FPS))
-#             width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
-#             height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
-#
-#             encrypted_video = cv.VideoWriter(dirname+"/storage/app/public/encrypted.mkv", cv.VideoWriter.fourcc(*"FFV1"), fps,
-#                                              (width, height), True)
-#
-#             last = MAIN_ALGO_Y_MINUS_1
-#             second_last = MAIN_ALGO_Y_MINUS_2
-#
-#             count = 0
-#             while cap.isOpened():
-#                 ret, frame = cap.read()
-#
-#                 if not ret:
-#                     break
-#                 if count == 0:
-#                     tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
-#
-#                 encrypted_frame, last, second_last = _encrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last,
-#                                                                     second_last, returnVal=True)
-#                 encrypted_video.write(encrypted_frame)
-#
-#                 count += 1
-#                 print(count)
-#
-#             cap.release()
+            dest = dirname + "/storage/app/public/encrypted_video.mkv"
 
-            # compressing the encrypted video
+            cap = cv.VideoCapture(file_path)
+            fps = int(cap.get(cv.CAP_PROP_FPS))
+            width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+            height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
 
-#             encrypted_video.release()
-#             print("done")
+            encrypted_video = cv.VideoWriter(dest, cv.VideoWriter.fourcc(*"FFV1"), fps,
+                                             (width, height), True)
+
+            last = MAIN_ALGO_Y_MINUS_1
+            second_last = MAIN_ALGO_Y_MINUS_2
+
+            count = 0
+            while cap.isOpened():
+                ret, frame = cap.read()
+
+                if not ret:
+                    break
+                if count == 0:
+                    tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
+
+                encrypted_frame, last, second_last = _encrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last, second_last, returnVal=True)
+
+                encrypted_video.write(encrypted_frame)
+
+                count += 1
+                print(count)
+
+            cap.release()
+            encrypted_video.release()
+            # print("done")
         case _:
             raise ValueError("file format not supported")
 
@@ -132,7 +139,14 @@ elif service_type == "decrypt":
             with open(dirname + "/storage/app/public/plain_text.txt", "w", encoding="utf-8") as f:
                 f.write(plain_text)
         case "audio":
-            ...
+            print("starting...")
+            with wave.open(file_path, "r") as audio:
+                decrypt_input_wav_array = convert_audio_to_np_array(audio)
+
+            decrypted = decrypt_audio(decrypt_input_wav_array, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            decrypted_output_wav_path = dirname + "/storage/app/public/decrypted_audio.wav"
+            convert_array_to_audio(audio, decrypted, decrypted_output_wav_path)
+            print("done")
         case "image":
             dest = dirname + r"/storage/app/public/decrypted_image" + pathlib.Path(file_path).suffix
             #decrypt_image
@@ -150,39 +164,38 @@ elif service_type == "decrypt":
             print("done")
 
         case "video":
-            dest = dirname + "/storage/app/public/decrypted_video" + pathlib.Path(file_path).suffix
-            decrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+            # dest = dirname + "/storage/app/public/decrypted_video" + pathlib.Path(file_path).suffix
+            # decrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
             # or uncomment the function below
 
-#             cap = cv.VideoCapture(file_path)
-#             fps = int(cap.get(cv.CAP_PROP_FPS))
-#             width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
-#             height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
-#
-#             decrypted_video = cv.VideoWriter(dirname+"/storage/app/public/decrypted_video.mkv", cv.VideoWriter.fourcc(*"FFV1"), fps,
-#                                              (width, height), True)
-#
-#             last = MAIN_ALGO_Y_MINUS_1
-#             second_last = MAIN_ALGO_Y_MINUS_2
-#
-#             count = 0
-#             while cap.isOpened():
-#                 ret, frame = cap.read()
-#
-#                 if not ret:
-#                     break
-#
-#                 if count == 0:
-#                     tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
-#                 encrypted_frame, last, second_last = _decrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last,
-#                                                                     second_last, returnVal=True)
-#                 decrypted_video.write(encrypted_frame)
-#
-#                 count += 1
-#                 print(count)
-#
-#             cap.release()
-#             decrypted_video.release()
-#             print("done")
+            dest = dirname + "/storage/app/public/decrypted_video.mkv"
+
+            cap = cv.VideoCapture(file_path)
+            fps = int(cap.get(cv.CAP_PROP_FPS))
+            width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+            height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
+
+            decrypted_video = cv.VideoWriter(dest, cv.VideoWriter.fourcc(*"FFV1"), fps, (width, height), True)
+
+            last = MAIN_ALGO_Y_MINUS_1
+            second_last = MAIN_ALGO_Y_MINUS_2
+
+            count = 0
+            while cap.isOpened():
+                ret, frame = cap.read()
+
+                if not ret:
+                    break
+
+                if count == 0:
+                    tmp_frame = np.zeros(frame.shape, dtype=np.uint8)
+                encrypted_frame, last, second_last = _decrypt_image(frame, tmp_frame, MAIN_ALGO_C1, MAIN_ALGO_C2, last, second_last, returnVal=True)
+                decrypted_video.write(encrypted_frame)
+
+                count += 1
+                print(count)
+
+            cap.release()
+            decrypted_video.release()
         case _:
             raise ValueError("file format not supported")
