@@ -12,8 +12,8 @@
         <div class="rounded-lg border bg-card text-card-foreground shadow-sm px-10 py-4 mx-auto mt-12" data-v0-t="card">
             <div class="flex flex-col space-y-1.5 p-6 text-center">
                 <h3 class="text-2xl font-semibold whitespace-nowrap leading-none tracking-tight"> Download {{session("type") == "encryption" ? "Encrypted" : "Decrypted"}}
-                    Video </h3>
-                <p class="text-sm text-muted-foreground"> Download the {{session("type") == "encryption" ? "encrypted" : "decrypted"}} video and view the key .</p>
+                   Image</h3>
+                <p class="text-sm text-muted-foreground"> Download the {{session("type") == "encryption" ? "encrypted" : "decrypted"}} image and view the key .</p>
             </div>
             <div class="p-6 flex items-center justify-center">
                 <div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
@@ -23,14 +23,14 @@
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" x2="12" y1="15" y2="3"></line>
                         </svg>
-                        <span class="text-lg mr-28"> {{session("type") == "encryption" ? "Download Encrypted Video" : "Download Decrypted Video"}} </span>
+                        <span class="text-lg mr-28"> {{session("type") == "encryption" ? "Download Encrypted Image" : "Download Decrypted Image"}} </span>
                         <form method="POST" action={{route("download")}}>
-                            @csrf
-                            <input type="text" name="path" hidden value="{{session("video_path")}}" />
-                            <button class="ml-auto bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                                Download
-                            </button>
-                        </form>
+                        @csrf
+                        <input type="text" name="path" hidden value="{{ session("image_path") }}" />
+                        <button class="ml-auto bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                            Download
+                        </button>
+                    </form>
                     </div>
                     <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12">
@@ -53,12 +53,12 @@
                 </a>
                 <a href="encrypt">
                     <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gray-300 hover:bg-gray-400 text-gray-800 h-10 px-4 py-2">
-                        Video Encryption Page
+                        Image Encryption Page
                     </button>
                 </a>
                 <a href="decrypt">
                     <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gray-300 hover:bg-gray-400 text-gray-800 h-10 px-4 py-2">
-                        Video Decryption Page
+                        Image Decryption Page
                     </button>
                 </a>
             </div>
