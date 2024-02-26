@@ -60,7 +60,11 @@ MAIN_ALGO_C1, MAIN_ALGO_C2 = key_system(key, KEY_SYSTEM_C1, KEY_SYSTEM_C2, KEY_S
 if service_type == "encrypt":
     match file_format:
         case "text":
-            ...
+            # print(dirname + "/storage/app/public/cipher_text.txt")
+            cipher_text = encrypt_text(file_path, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+
+            with open(dirname + "/storage/app/public/cipher_text.txt", "w", encoding="utf-8") as f:
+                f.write(cipher_text)
         case "audio":
             with wave.open(file_path, "r") as audio:
                 input_wav_array = convert_audio_to_np_array(audio)
@@ -68,9 +72,23 @@ if service_type == "encrypt":
 
             output_wav_path = dirname + "/storage/app/public/encrypted_audio.wav"
             convert_array_to_audio(audio, encrypted, output_wav_path)
-            
+
         case "image":
-            ...
+            dest = dirname + r"/storage/app/public/encrypted_image" + pathlib.Path(file_path).suffix
+
+         #encrypt_image
+
+            img = cv.imread(file_path)
+            # height, width, _ = img.shape
+
+            tmp_img = np.zeros(img.shape, dtype=np.uint8)
+
+            encrypted_img ,_,_ = _encrypt_image(img, tmp_img, MAIN_ALGO_C1, MAIN_ALGO_C2,MAIN_ALGO_Y_MINUS_1 ,MAIN_ALGO_Y_MINUS_2 , returnVal=False)
+            print(type(encrypted_img), encrypted_img.shape)
+            cv.imwrite( dest, encrypted_img)
+
+            print("done")
+
         case "video":
             # dest = dirname + "/storage/app/public/encrypted_video" + pathlib.Path(file_path).suffix
             # encrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
@@ -115,7 +133,11 @@ if service_type == "encrypt":
 elif service_type == "decrypt":
     match file_format:
         case "text":
-            ...
+            # print(dirname + "/storage/app/public/cipher_text.txt")
+            plain_text = decrypt_text(file_path, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)
+
+            with open(dirname + "/storage/app/public/plain_text.txt", "w", encoding="utf-8") as f:
+                f.write(plain_text)
         case "audio":
             print("starting...")
             with wave.open(file_path, "r") as audio:
@@ -126,7 +148,21 @@ elif service_type == "decrypt":
             convert_array_to_audio(audio, decrypted, decrypted_output_wav_path)
             print("done")
         case "image":
-            ...
+            dest = dirname + r"/storage/app/public/decrypted_image" + pathlib.Path(file_path).suffix
+            #decrypt_image
+            img = cv.imread(file_path)
+
+            last = MAIN_ALGO_Y_MINUS_1
+            second_last = MAIN_ALGO_Y_MINUS_2
+
+            tmp_img = np.zeros(img.shape, dtype=np.uint8)
+
+            decrypted_img, _, _= _decrypt_image(img, tmp_img, MAIN_ALGO_C1, MAIN_ALGO_C2, last, second_last, returnVal=False)
+
+            cv.imwrite(dest, decrypted_img)
+
+            print("done")
+
         case "video":
             # dest = dirname + "/storage/app/public/decrypted_video" + pathlib.Path(file_path).suffix
             # decrypt(file_path, dest, MAIN_ALGO_C1, MAIN_ALGO_C2, MAIN_ALGO_Y_MINUS_1, MAIN_ALGO_Y_MINUS_2)

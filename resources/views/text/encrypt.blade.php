@@ -1,63 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Encrypt</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("text").addEventListener("input", function() {
-                if (this.value.length > 0) {
-                    document.getElementById("file").disabled = true;
-                } else {
-                    document.getElementById("file").disabled = false;
-                }
-            });
-
-            document.getElementById("file").addEventListener("change", function() {
-                if (this.files.length > 0) {
-                    document.getElementById("text").disabled = true;
-                } else {
-                    document.getElementById("text").disabled = false;
-                }
-            });
-        });
-    </script>
-</head>
-<body class="bg-gray-100">
-    <!-- Header Start -->
-    <header class="flex items-center justify-center h-16 px-4 md:px-6 bg-gray-800 text-white">
-        <a class="flex items-center gap-2" href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white">
-                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-            <span class="text-3xl font-bold tracking-tighter">SecureIT</span>
-        </a>
-    </header>
-    <!-- Header End -->
-    <div class="flex justify-center items-center h-screen">
-        <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-            <h1 class="text-xl font-bold mb-4">Text Encryption</h1>
-            <form action="{{ route('encrypt.text') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
-                @csrf
-                <div>
-                    <label for="encryptionKey" class="block text-sm font-medium text-gray-700">Encryption Key:</label>
-                    <input type="text" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" id="encryptionKey" name="encryptionKey" required>
+@include("head")
+<body>
+    <div class="flex flex-col min-h-screen">
+        @include("header")
+        <form method="post" action="/text/encrypt" enctype="multipart/form-data" id="form">
+            @csrf
+            <main class="flex-1 py-12 px-4 md:px-6 bg-gray-100">
+                <div class="max-w-6xl mx-auto grid gap-10 md:grid-cols-1">
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="whitespace-nowrap tracking-tight text-2xl font-semibold">Text Encryption</h3>
+                            <p class="text-sm text-muted-foreground">Enter text or import a text file for encryption.</p>
+                        </div>
+                        @if ($errors->any())
+                        <div class="text-red-700 font-bold px-6">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        <div class="p-6">
+                            <div class="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
+                                <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
+                                    <span class="text-lg">Input a 16-character key for encryption and decryption.</span>
+                                    <input type="text" name="key" maxlength="16" id="key" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter key here" required onkeyup="checkKeyLength()" />
+                                    <span class="cursor-pointer hover:underline select-none" onclick="generateKey()">Generate</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
+                                    <span class="text-lg">Enter text to encrypt.</span>
+                                    <textarea name="text" id="text" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter text here" oninput="toggleInputDisabled('text')"></textarea>
+                                </div>
+                                <!-- <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
+                                    <span class="text-lg">Or import a text file.</span>
+                                    <input type="file" name="textFile" id="textFile" accept=".txt,.csv,.doc,.docx" class="ml-auto w-[20rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" onchange="toggleInputDisabled('file')">
+                                </div> -->
+                                <div class="space-y-4">
+                                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
+                                        Encrypt
+                                    </button>
+                                    <a href="{{ route('text.view') }}" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
+                                        Back to Menu
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label for="text" class="block text-sm font-medium text-gray-700">Text to encrypt:</label>
-                    <textarea class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm" id="text" name="text" rows="3" required></textarea>
-                </div>
-                <div>
-                    <label for="file" class="block text-sm font-medium text-gray-700">Or Upload File (TXT only):</label>
-                    <input type="file" class="mt-1 block w-full" id="file" name="file" accept=".txt">
-                </div>
-                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">Encrypt</button>
-                <a href="{{ route('text.view') }}" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">Back to Menu</a>
-            </form>
-        </div>
+                <p class="font-bold text-2xl text-center mt-6 hidden" id="submitting">Submitting...</p>
+            </main>
+        </form>
     </div>
+
+    <script>
+        const keyInput = document.getElementById('key');
+        const textArea = document.getElementById('text');
+        const textFile = document.getElementById('textFile');
+        const form = document.getElementById('form');
+
+        function generateKey() {
+            let key = "";
+            let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-:/?,.+=!@#$%^&*(){}[]|";
+            for (let i = 0; i < 16; i++) {
+                key += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            keyInput.value = key;
+            navigator.clipboard.writeText(key);
+            checkKeyLength();
+        }
+
+        function checkKeyLength() {
+            // Adjusted to consider both inputs
+            const isDisabled = keyInput.value.length !== 16 || textArea.value.length > 0 || textFile.value.length > 0;
+            textArea.disabled = isDisabled;
+            textFile.disabled = isDisabled;
+        }
+
+        function toggleInputDisabled(inputType) {
+            if (inputType === 'text' && textArea.value.length > 0) {
+                textFile.disabled = true;
+            } else if (inputType === 'file' && textFile.value.length > 0) {
+                textArea.disabled = true;
+            } else {
+                textFile.disabled = false;
+                textArea.disabled = false;
+            }
+        }
+    </script>
 </body>
 </html>

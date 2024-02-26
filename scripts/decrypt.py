@@ -16,10 +16,8 @@ def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_min
     # real_plain_text_len = 10
     for i in range(len(cipher_text)):
         # if not test:
-        #     print("last:", last)
         c = cipher_text[i]
         # if test:
-        #     print(i, last, second_last)
         normalized = normalize(ord(c))
 
         decrypted = f(normalized - c1 * last - c2 * second_last)
@@ -30,7 +28,7 @@ def decrypt_text(cipher_text: str, c1: float, c2: float, y_minus_1: float, y_min
 
     if test:
         return plain_text, last, second_last
-
+    print(plain_text)
     return plain_text
 
 

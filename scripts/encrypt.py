@@ -1,7 +1,5 @@
 from typing import Union
-
 from numba import njit
-
 from decrypt import decrypt_text, test_decrypt, decrypt_byte
 from helper import f, normalize, denormalize
 import cv2 as cv
@@ -18,25 +16,17 @@ def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minu
     decrypt_last = last
     decrypt_second_last = second_last
 
-    print(len(plain_text))
     for i in range(len(plain_text)):
-        # print("last:", last)
+
         c = plain_text[i]
         encrypted = f(normalize(ord(c)) + c1 * last + c2 * second_last)
-
-        # print(i, last, second_last)
-        # print("decrypt last:", decrypt_last)
 
         denormalized = denormalize(encrypted)
         while True:
             tmp_cipher_text = chr(int(denormalized))
-            decrypted_char, tmp_decrypt_last, tmp_decrypt_second_last = decrypt_text(tmp_cipher_text, c1, c2,
-                                                                                     decrypt_last, decrypt_second_last,
-                                                                                     True)
-            # print(c, decrypted_char, c == decrypted_char)
-            # print(ord(c) - ord(decrypted_char))
-            denormalized += ord(c) - ord(decrypted_char)
-            # print(c, decrypted_char)
+            decrypted_char, tmp_decrypt_last, tmp_decrypt_second_last = decrypt_text(tmp_cipher_text, c1, c2, decrypt_last, decrypt_second_last, True)
+            denormalized = (denormalized + ord(c) - ord(decrypted_char)) % 256
+
             if ord(c) - ord(decrypted_char) == 0:
                 break
 
@@ -46,7 +36,7 @@ def encrypt_text(plain_text: str, c1: float, c2: float, y_minus_1: float, y_minu
         cipher_text += chr(int(denormalized))
         second_last = decrypt_second_last
         last = decrypt_last
-
+    # print(cipher_text, end="")
     return cipher_text
 
 
@@ -95,7 +85,7 @@ def encrypt_video():
 
 @njit
 def _encrypt_image(image: cv.typing.MatLike, cipher_image: np.ndarray[np.uint8], c1: float, c2: float, y_minus_1: float, y_minus_2: float,
-                   returnVal=False) -> [np.ndarray[np.uint8], float, float]:
+                returnVal=False) -> [np.ndarray[np.uint8], float, float]:
     last = y_minus_1
     second_last = y_minus_2
 
@@ -108,7 +98,7 @@ def _encrypt_image(image: cv.typing.MatLike, cipher_image: np.ndarray[np.uint8],
                 denormalized = denormalize(encrypted)
                 while True:
                     tmp_cipher_pixel = int(denormalized)
-                    decrypted_pixel, tmp_decrypt_last, tmp_decrypt_second_last = test_decrypt(tmp_cipher_pixel, c1, c2, last, second_last)
+                    decrypted_pixel, tmp_decrypt_last, tmp_decrypt_second_last = test_decrypt(tmp_cipher_pixel, c1,c2,last,second_last)
                     denormalized = (denormalized + pixel - decrypted_pixel) % 256
 
                     if pixel - decrypted_pixel == 0:

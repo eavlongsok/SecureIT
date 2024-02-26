@@ -12,7 +12,7 @@ class DownloadController extends Controller
     {
         $path = $request->input('path');
         // check if file exists
-        if (Storage::disk("local")->exists($path)) {
+        if (Storage::exists($path)) {
             // return file
             return Storage::download($path);
         }
