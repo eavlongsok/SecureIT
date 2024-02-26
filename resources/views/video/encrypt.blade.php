@@ -172,7 +172,11 @@
             recordingSubmitBtn.classList.add('hidden');
             // record video
             navigator.mediaDevices.getUserMedia({
-                video: true
+                video: {
+                    frameRate: {
+                        exact: 15
+                    }
+                }
                 , audio: false
             }).then(stream => {
                 player.srcObject = stream;
@@ -185,7 +189,7 @@
                 recorder.onstop = () => {
                     const completeBlob = new Blob(chunks, {
                         type: "video/x-matroska"
-                    });
+                    , });
                     const completeVideoURL = URL.createObjectURL(completeBlob);
                     player.srcObject = null;
                     player.src = completeVideoURL;
