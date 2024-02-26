@@ -11,7 +11,7 @@
                     <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
                         <div class="flex flex-col space-y-1.5 p-6">
                             <h3 class="whitespace-nowrap tracking-tight text-2xl font-semibold">Text Decryption</h3>
-                            <p class="text-sm text-muted-foreground">Enter text or import a text file for Decryption.</p>
+                            <p class="text-sm text-muted-foreground">Enter text for Decryption.</p>
                         </div>
                         @if ($errors->any())
                         <div class="text-red-700 font-bold px-6">
@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                                     <span class="text-lg">Enter text to decrypt.</span>
-                                    <textarea name="text" id="text" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter text here" oninput="toggleInputDisabled('text')"></textarea>
+                                    <textarea name="text" id="text" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter text here"></textarea>
                                 </div>
                                 <!-- <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                                     <span class="text-lg">Or import a text file.</span>
@@ -57,7 +57,6 @@
     <script>
         const keyInput = document.getElementById('key');
         const textArea = document.getElementById('text');
-        const textFile = document.getElementById('textFile');
         const form = document.getElementById('form');
 
         function generateKey() {
@@ -73,21 +72,10 @@
 
         function checkKeyLength() {
             // Adjusted to consider both inputs
-            const isDisabled = keyInput.value.length !== 16 || textArea.value.length > 0 || textFile.value.length > 0;
+            const isDisabled = keyInput.value.length !== 16 || textArea.value.length > 0
             textArea.disabled = isDisabled;
-            textFile.disabled = isDisabled;
         }
 
-        function toggleInputDisabled(inputType) {
-            if (inputType === 'text' && textArea.value.length > 0) {
-                textFile.disabled = true;
-            } else if (inputType === 'file' && textFile.value.length > 0) {
-                textArea.disabled = true;
-            } else {
-                textFile.disabled = false;
-                textArea.disabled = false;
-            }
-        }
     </script>
 </body>
 </html>

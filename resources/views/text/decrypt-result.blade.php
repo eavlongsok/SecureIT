@@ -55,14 +55,19 @@
             </div>
         </div>
         <div class="mt-5">
+            <a href="/text/encrypt" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
+                Encrypt New Text
+            </a>
+        </div>
+        <div class="mt-5">
             <a href="/text/decrypt" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
                 Decrypt New Text
             </a>
         </div>
         <div class="mt-5">
-        <a href="{{ route('text.view') }}" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
-                                        Back to Menu
-                                    </a>
+            <a href="{{ route('text.view') }}" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
+                Back to Menu
+            </a>
         </div>
     </div>
 </body>

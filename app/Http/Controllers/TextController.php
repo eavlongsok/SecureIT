@@ -27,23 +27,23 @@ class TextController extends Controller
             "key.required" => "Please enter a key",
             "key.size" => "The key must be 16 characters long"
         ]);
-    
+
         // Custom validation for text or textFile
         $textProvided = $request->input('text') !== null && trim($request->input('text')) !== '';
         // $fileProvided = $request->hasFile('textFile');
-    
+
         if ($validate->fails()) {
             return redirect("/text/encrypt")->withErrors($validate);
         }
 
-        // if (!($textProvided xor $fileProvided)) { 
+        // if (!($textProvided xor $fileProvided)) {
         //     $validate->errors()->add('text', 'Please provide either text or a text file, but not both.');
         // }
-    
+
         if ($validate->fails() || $validate->errors()->isNotEmpty()) {
             return redirect("/text/encrypt")->withErrors($validate);
         }
-    
+
         // if ($fileProvided) {
         //     $file = $request->file("textFile");
         //     $extension = $file->getClientOriginalExtension();
@@ -54,16 +54,16 @@ class TextController extends Controller
 
         $text = $request->input('text');
         $key = $request->input("key");
-    
+
         // dd('python "' . base_path() . '/scripts/main.py" -t encrypt -f text -k "' . $key . '" -p "' . $text . '"');
         $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t encrypt -f text -k "' . $key . '" -p "' . $text . '" 2>&1');
- 
+
         $encryptedFileContent = file_get_contents(base_path() . "/storage/app/public/cipher_text.txt");
 
         return Redirect::route('text.result')->with(["type" => "encryption", "key" => $key, "text" => $text, "ciphertext" => $encryptedFileContent]);
     }
-    
-    
+
+
     public function decryptText(Request $request)
     {
         $validate = Validator::make($request->all(), [
@@ -72,23 +72,23 @@ class TextController extends Controller
             "key.required" => "Please enter a key",
             "key.size" => "The key must be 16 characters long"
         ]);
-    
+
         // Custom validation for text or textFile
         $textProvided = $request->input('text') !== null && trim($request->input('text')) !== '';
         // $fileProvided = $request->hasFile('textFile');
-    
+
         if ($validate->fails()) {
             return redirect("/text/decrypt")->withErrors($validate);
         }
 
-        // if (!($textProvided xor $fileProvided)) { 
+        // if (!($textProvided xor $fileProvided)) {
         //     $validate->errors()->add('text', 'Please provide either text or a text file, but not both.');
         // }
-    
+
         if ($validate->fails() || $validate->errors()->isNotEmpty()) {
             return redirect("/text/decrypt")->withErrors($validate);
         }
-    
+
         // if ($fileProvided) {
         //     $file = $request->file("textFile");
         //     $extension = $file->getClientOriginalExtension();
@@ -99,15 +99,15 @@ class TextController extends Controller
 
         $text = $request->input('text');
         $key = $request->input("key");
-    
+
         // dd('python "' . base_path() . '/scripts/main.py" -t encrypt -f text -k "' . $key . '" -p "' . $text . '"');
         $output = shell_exec('python "' . base_path() . '/scripts/main.py" -t decrypt -f text -k "' . $key . '" -p "' . $text . '" 2>&1');
- 
+
         $decryptedFileContent = file_get_contents(base_path() . "/storage/app/public/plain_text.txt");
 
         return Redirect::route('text.decrypt-result')->with(["type" => "decryption", "key" => $key, "text" => $text, "plaintext" => $decryptedFileContent]);
     }
-    
+
     public function showResult(Request $request)
     {
         if (session()->has("type") && session()->has("key")) {
@@ -117,19 +117,18 @@ class TextController extends Controller
             // $textFile = session("text");
             $textPath = session("text_path");
             $ciphertext = session("ciphertext");
-    
+
             return view('text.result', [
                 "type" => $type,
                 "key" => $key,
                 "text" => $text,
                 // "textfile" => $textFile,
-                "ciphertext" => $ciphertext 
+                "ciphertext" => $ciphertext
             ]);
         }
-        return Redirect::route('text.view'); 
-
+        return Redirect::route('text.view');
     }
-    
+
     public function showDeResult(Request $request)
     {
         if (session()->has("type") && session()->has("key")) {
@@ -139,18 +138,17 @@ class TextController extends Controller
             // $textFile = session("text");
             $textPath = session("text_path");
             $plaintext = session("plaintext");
-    
+
 
             return view('text.decrypt-result', [
                 "type" => $type,
                 "key" => $key,
                 "text" => $text,
                 // "textfile" => $textFile,
-                "plaintext" => $plaintext 
+                "plaintext" => $plaintext
             ]);
         }
-        return Redirect::route('text.view'); 
-
+        return Redirect::route('text.view');
     }
 
     public function showText()
