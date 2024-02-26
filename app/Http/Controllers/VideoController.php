@@ -18,68 +18,43 @@ class VideoController extends Controller
         return view('video.decrypt');
     }
 
-    public function showEncryptForm()
-    {
-        return view('video.encrypt');
-    }
-
-    public function showDecryptForm()
-    {
-        return view('video.decrypt');
-    }
-
     public function encrypt(Request $request)
-{
-    $validate = Validator::make($request->all(), [
-        "video" => "required|mimes:mp4,webm,mkv|max:10240",
-        "key" => "required|size:16"
-    ], [
-        "video.required" => "Please upload a video file or record one",
-        "video.mimes" => "The video must be of type mp4, webm, or mkv",
-        "video.max" => "The video must be less than 10mb",
-        "key.required" => "Please enter a key",
-        "key.size" => "The key must be 16 characters long"
-    ]);
+    {
 
-    if ($validate->fails()) {
-        return redirect("/video/encrypt")->withErrors($validate);
+        //        dd($request, $request->file("video")->getMimeType(), $request->file("video")->getClientMimeType());
+
+        $validate = Validator::make($request->all(), [
+            "video" => "required|mimes:mp4,webm,mkv|max:10240",
+            "key" => "required|size:16"
+        ], [
+            "video.required" => "Please upload a video file or record one",
+            "video.mimes" => "The video must be of type mp4 or webm or mkv",
+            "video.max" => "The video must be less than 10mb",
+            "key.required" => "Please enter a key",
+            "key.size" => "The key must be 16 characters long"
+        ]);
+
+        if ($validate->fails()) {
+            return redirect("/video/encrypt")->withErrors($validate);
+        }
+
+        // save file from request as its own type
+        $file = $request->file("video");
+        $key = $request->input("key");
+        // get file extension
+        $extension = $file->getClientOriginalExtension();
+        // store file
+        $file->storeAs("public", "video_to_encrypt." . $extension);
+        //        dd('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+        $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
+
+        return Redirect::route('video.result')->with(["type" => "encryption", "key" => $key, "video_path" => 'public/encrypted_video.' . $extension]);
     }
-
-    $file = $request->file("video");
-    $key = $request->input("key");
-    $extension = $file->getClientOriginalExtension();
-    $storagePath = $file->storeAs("public", "video_to_encrypt." . $extension);
-
-    // Check if the file exists after storage
-    if (!file_exists(storage_path("app/public/video_to_encrypt." . $extension))) {
-        return response()->json(['error' => 'File not found after storage']);
-    }
-
-    // Execute the encryption command
-    $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t encrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_encrypt.' . $extension . '"');
-
-    // Debugging: Output from Python script
-    dd($output);
-
-    // Check if the encrypted file exists
-    if (!file_exists(storage_path("app/public/video_to_encrypt." . $extension))) {
-        return response()->json(['error' => 'Encrypted video file not found']);
-    }
-
-    $videoPath = "storage/app/public/video_to_encrypt." . $extension;
-
-    return Redirect::route('video.result')->with([
-        "type" => "encryption",
-        "key" => $key,
-        "video_path" => asset(urldecode($videoPath)),
-    ]);
-}
-
 
     public function decrypt(Request $request)
     {
 
-//        dd($request->files, $request->file("video")->getClientMimeType(), $request->file("video")->getMimeType());
+        //        dd($request->files, $request->file("video")->getClientMimeType(), $request->file("video")->getMimeType());
         $validate = Validator::make($request->all(), [
             "video" => "required|max:10240",
             "key" => "required|size:16"
@@ -101,9 +76,10 @@ class VideoController extends Controller
         // store file
         $file->storeAs("public", "video_to_decrypt." . $extension);
 
-//        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
+        //        dd('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
         $output = shell_exec('python "' . base_path() . '\scripts\main.py" -t decrypt -f video -k "' . $key . '" -p "' . base_path() . '\storage\app\public\video_to_decrypt.' . $extension . '"');
 
+        return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => 'public/decrypted_video.' . $extension]);
         return Redirect::route('video.result')->with(["type" => "decryption", "key" => $key, "video_path" => 'public/decrypted_video.' . $extension]);
     }
 
@@ -113,7 +89,8 @@ class VideoController extends Controller
             return view('video.result', [
                 "type" => session("type"),
                 "key" => session("key"),
-                "video_path" => session("video_path")]);
+                "video_path" => session("video_path")
+            ]);
         }
         return Redirect::route('video.view');
     }
@@ -122,5 +99,4 @@ class VideoController extends Controller
     {
         return view('video.video');
     }
-
 }

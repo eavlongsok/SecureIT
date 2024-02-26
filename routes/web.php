@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ImageEncryptionController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\ImageController;
@@ -23,23 +22,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-// Text
-Route::prefix('text')->group(function () {
-    // Display forms
-    Route::get('/encrypt', [TextController::class, 'showEncryptForm'])->name('encrypt.form');
-    Route::get('/decrypt', [TextController::class, 'showDecryptForm'])->name('decrypt.form');
-
-    // Encryption & decryption
-    Route::post('/encrypt', [TextController::class, 'encryptText'])->name('encrypt.text');
-    Route::post('/decrypt', [TextController::class, 'decryptText'])->name('decrypt.text');
-
-    // Handling results
-    Route::post('/decryption', [TextController::class, 'decryptResult'])->name('decrypt.result');
-    Route::post('/encryption', [TextController::class, 'encryptResult'])->name('encrypt.result');
-
-    // Show page
-    Route::get('/', [TextController::class, 'showText'])->name('text.view');
-});
 
 // Text
 Route::prefix('text')->group(function () {
@@ -51,10 +33,8 @@ Route::prefix('text')->group(function () {
     Route::post('/encrypt', [TextController::class, 'encryptText'])->name('encrypt.text');
     Route::post('/decrypt', [TextController::class, 'decryptText'])->name('decrypt.text');
 
-    // Handling results
-    Route::post('/decryption', [TextController::class, 'decryptResult'])->name('decrypt.result');
-    Route::post('/encryption', [TextController::class, 'encryptResult'])->name('encrypt.result');
-
+    Route::get('/result', [TextController::class, 'showResult'])->name('text.result');
+    Route::get('/deresult', [TextController::class, 'showDeResult'])->name('text.decrypt-result');
     // Show page
     Route::get('/', [TextController::class, 'showText'])->name('text.view');
 });
@@ -93,10 +73,27 @@ Route::prefix('audio')->group(function () {
     Route::post('/encrypt', [AudioController::class, 'encrypt'])->name('audio.encrypt');
     Route::get('/encrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.encrypt.result');
 
+
     Route::get('/decrypt', [AudioController::class, 'showDecryptForm'])->name('audio.decrypt.form');
     Route::post('/decrypt', [AudioController::class, 'decrypt'])->name('audio.decrypt');
     Route::get('/decrypt/result', [AudioController::class, 'showAudioResult'])->name('audio.decrypt.result');
 
     // Show page
     Route::get('/', [AudioController::class, 'showAudio'])->name('audio.view');
+});
+
+// Video
+Route::prefix('video')->group(function () {
+    Route::get('/video/encrypt', [VideoController::class, 'showEncryptForm'])->name('video.encrypt.form');
+    Route::get('/video/decrypt', [VideoController::class, 'showDecryptForm'])->name('video.decrypt.form');
+
+    Route::post('/encrypt', [VideoController::class, 'encrypt'])->name('video.encrypt');
+
+    Route::get('/decrypt', [VideoController::class, 'showDecryptForm'])->name('video.decrypt.form');
+    Route::post('/decrypt', [VideoController::class, 'decrypt'])->name('video.decrypt');
+
+    Route::get('/result', [VideoController::class, 'showResult'])->name('video.result');
+
+    // Show page
+    Route::get('/', [VideoController::class, 'showVideo'])->name('video.view');
 });
