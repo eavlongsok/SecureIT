@@ -172,11 +172,7 @@
             recordingSubmitBtn.classList.add('hidden');
             // record video
             navigator.mediaDevices.getUserMedia({
-                video: {
-                    frameRate: {
-                        exact: 15
-                    }
-                }
+                video: true
                 , audio: false
             }).then(stream => {
                 player.srcObject = stream;
