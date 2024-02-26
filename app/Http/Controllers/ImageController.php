@@ -85,10 +85,10 @@ class ImageController extends Controller
     {
         $validate = Validator::make($request->all(), [
             'key' => 'required|string|min:16|max:16',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10000'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:50000'
         ], [
             "image.required" => "Please upload a image file or record one",
-            "image.max" => "The image must be less than 10mb",
+            "image.max" => "The image must be less than 50mb",
             "key.required" => "Please enter a key",
             "key.size" => "The key must be 16 characters long"
         ]);
