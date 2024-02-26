@@ -48,7 +48,7 @@
                             Encrypted Text
                         </dt>
                         <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                            <pre>{{ $encryptedText }}</pre>
+                        <pre>{{ $ciphertext }}</pre>
                         </dd>
                     </div>
                 </dl>
@@ -59,6 +59,10 @@
                 Encrypt New Text
             </a>
         </div>
-    </div>
+        <div class="mt-5">
+        <a href="{{ route('text.view') }}" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800">
+                                        Back to Menu
+                                    </a>
+        </div>
 </body>
 </html>
