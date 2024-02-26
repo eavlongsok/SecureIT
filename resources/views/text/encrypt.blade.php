@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                                     <span class="text-lg">Enter text to encrypt.</span>
-                                    <textarea name="text" id="text" class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter text here"></textarea>
+                                    <textarea name="text" id="text" disabled class="ml-auto w-[13rem] text-gray-800 font-semibold py-2 px-4 border-2 focus:outline-1 focus:outline-gray-300 overflow-clip" placeholder="Enter text here"></textarea>
                                 </div>
                                 <!-- <div class="flex items-center gap-2 p-2 rounded transition-colors duration-200">
                                     <span class="text-lg">Or import a text file.</span>
